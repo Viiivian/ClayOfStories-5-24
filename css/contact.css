@@ -1,0 +1,158 @@
+/* 主要區----------------------------------------------------------------------------- */
+.allbar{
+    height: 100px;
+    background-color: #ffdedb;
+}
+.bg{
+    width: 100%;
+    background-color: #ffdedb;
+    height: 600px;
+    
+}
+.upper-content {
+    transition: opacity 0.5s ease-in-out;
+    width: 50%;
+    margin-top: 20px;
+    
+}
+
+
+.paper {
+    width: 35%;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+#paper{
+        transition: transform 2s ease-in-out;
+}
+
+.hidden-message{
+    position: absolute; 
+    top: 25%;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    color: rgb(82, 82, 82);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.hidden-message {
+    opacity: 0;
+}
+
+.visible-message {
+    opacity: 1;
+}
+.upper-part, .lower-part {
+    width: 100%;
+    height: 50%;
+    background-color: #FFF9E2;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 20px; */
+    /* box-sizing: border-box; */
+    z-index: 9;
+}
+
+.paper h1{
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+}
+input{
+    width: 100%;
+    margin: auto;
+    border: none;
+    background-color: #FFF9E2;
+    border-bottom: 1px gray solid;
+    margin-bottom: 5px;
+}
+input:focus{
+    outline: none;
+}
+
+.upper-content p{
+    margin-top: 5px;
+}
+
+.upper-part {
+    transition: transform 1s ease-in-out;
+    transform-origin: bottom center;
+    overflow: hidden;
+}
+.lower-content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.shrunk {
+    transform: scale(0.7);
+}
+textarea{
+    resize: none;
+    width: 100%;
+    height: 150px;
+    outline: none;
+
+}
+
+textarea:focus{
+    outline: #FFC7C2 2px;
+}
+.lower-content button{
+    width: 50%;
+    margin: auto;
+    /* margin-top: px; */
+}
+
+.hidden-content {
+    opacity: 0;
+}  
+
+.folded {
+    transform: perspective(600px) rotateX(-180deg);
+}
+
+button {
+    background-color: #FFC7C2;
+    border: none;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #fadbd8;
+}
+#image {
+    position: absolute;
+    width: 530px; /* 设置图片的宽度 */
+    height: 280px; /* 保持图片的高度自动调整 */
+    top: 50%; /* 距离顶部50% */
+    left: 50%; /* 距离左边50% */
+    transform: translate(-50%, -50%); /* 使图片居中 */
+    opacity: 0; /* 设置初始透明度为0 */
+    transition: opacity 1s ease; /* 添加过渡效果，持续2秒，并使用缓动函数 */
+}
+
+
+
+/* test========================================= */
+
+
+
+
+/* 
+@keyframes pushLetter {
+  0% {transform: translateY(-8rem) scale(0.3, 0.5);}
+  50% {transform: translateY(-8rem) scale(0.3, 0.5);}
+  90% {transform: translateY(-8.5rem) scale(0.3, 0.5);}
+  100% {transform: translateY(-8rem) scale(0.3, 0.5);}
+} */
+

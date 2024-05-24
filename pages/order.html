@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClayOfStories|手作黏土</title>
+    <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
+    <link rel="stylesheet" href="../css/default-set.css">
+    <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<script>
+    $(document).ready(function () {
+        $('.btn').on('click', function () {
+            $('.open').toggleClass('active'); // 切换显示与隐藏
+            // $('.order-detail-box').toggleClass('active'); // 切换按钮的活动状态
+        });
+    });
+    // $(document).ready(function () {
+    //     $('.btn2').on('click', function () {
+    //         $('.open2').toggleClass('active'); // 切换显示与隐藏
+    //         // $('.order-detail-box').toggleClass('active'); // 切换按钮的活动状态
+    //     });
+    // });
+
+</script>
+
+<body>
+
+    <!-- 頁首區 -->
+    <header class="topbar">
+        <div class="container">
+            <div class="left-bar">
+                <!-- 漢堡按鈕位置
+                    <div class="burger-btn"></div> -->
+                <h1 class="logo">
+                    <a class="logo-s" href="./index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
+
+                    <a class="logo-m" href="./index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                </h1>
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="./index.html" class="home">
+                                <span class="translate-en">HOME</span>
+                                <span class="translate-ch">首頁</span>
+                            </a> </li>
+
+                        <li><a href="./about.html" class="about">
+                                <span class="translate-en">ABOUT</span>
+                                <span class="translate-ch">關於</span>
+                            </a></li>
+
+                        <li class="product"> <a href="./allproduct.html" class="product">
+                                <span class="translate-en">PRODUCT</span>
+                                <span class="translate-ch">所有產品</span>
+                            </a>
+
+                            <!-- 下拉式選單 -->
+                            <ul class="menu-drop-L">
+                                <li>
+                                    <a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon1.png" alt="" />
+                                            <h3>VIEW ALL</h3>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon2.png" alt="" />
+                                            <h3>MIRROR</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon3.png" alt="" />
+                                            <h3>TRAY</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li> <a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon4.png" alt="" />
+                                            <h3>ACCESSORY</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon5.png" alt="" />
+                                            <h3>VASE</h3>
+                                        </div>
+                                    </a></li>
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon6.png" alt="" />
+                                            <h3>HOLDER</h3>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="./customintro.html" class="customized">
+                                <span class="translate-en">CUSTOM</span>
+                                <span class="translate-ch">客製化</span>
+                            </a></li>
+                        <li><a href="./contact.html" class="contact">
+                                <span class="translate-en">CONTACT</span>
+                                <span class="translate-ch">聯絡我們</span>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <ul class="right-bar icon">
+                <li><a href="#" class="icon-search"></a></li>
+                <li><a href="./membership.html" class="icon-user"></a></li>
+                <li><a href="./fqa.html" class="icon-fqa"></a></li>
+                <li><a href="./shopcart.html" class="icon-cart"></a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- 主要內容區 -->
+    <main>
+        <section class="background">
+            <div class="allbar"></div>
+            <div class="mainbar">
+                <h5>Member Area</h5>
+            </div>
+            <div class="list">
+                <a id="btnbar" class="gap" href="./membership.html">Personal Information</a>
+                <a id="btnbar" class="gap first" href="./order.html">Order Management</a>
+                <a id="btnbar" class="gap " href="./discount.html">Coupon</a>
+                <a id="btnbar" class="gap" href="./revisepwd.html">Change Password</a>
+            </div>
+            <section class="order-box">
+                <div class="none"></div>
+                <section class="box-1">
+                    <div class="box-1-1">
+                        <div class="bar-gap">Order Num</div>
+                        <div class="bar-gap">Purchase Date</div>
+                        <div class="bar-gap totalrwd">Total</div>
+                        <div class="bar-gap">Status</div>
+                    </div>
+                    <div class="box-1-2">
+                        <div class="bar-gap-2">834758238</div>
+                        <div class="bar-gap-2">2024/06/06</div>
+                        <div class="bar-gap-2">NT$1089</div>
+                        <div class="bar-gap-2">In Transit</div>
+                        <button class="btn">Details</button>
+                    </div>
+                    <div class="phonerwd">123453</div>
+                </section>
+                <section class="order-detail-box open">
+                    <div class="odb-1">
+                        <div class="dtlbar">
+                            <p class="gap">Product</p>
+                            <p>Price</p>
+                            <p>Quatity</p>
+                            <p>Total</p>
+                        </div>
+                    </div>
+                    <div class="odb-2">
+                        <img src="../imagesAll/images/order_pic.svg" alt="">
+                        <p class="odrname">Water Bottle/ Sea</p>
+                        <p>NT$189</p>
+                        <p>1</p>
+                        <p>NT$189</p>
+                    </div>
+                    <div class="odb-2">
+                        <img src="../imagesAll/images/order_pic2.svg" alt="">
+                        <p class="odrname">A Box of Sea</p>
+                        <p>NT$420</p>
+                        <p>2</p>
+                        <p>NT$840</p>
+                    </div>
+                    <div class="odr-money">
+                        <div class="odr-money-1">
+                            <div class="money-gap">Subtotal</div>
+                            <div class="money-gap">Discount</div>
+                            <div class="money-gap">Freight</div>
+                            <div class="money-gap">Total</div>
+                        </div>
+                        <div class="odr-money-2">
+                            <div class="money-gap">NT$1029</div>
+                            <div class="money-gap">NT$-0</div>
+                            <div class="money-gap">NT$60</div>
+                            <div class="money-gap">NT$1089</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="package-dtl">
+                            <div class="cus-dtl">Receiver</div>
+                            <div class="cus-dtl">Phone</div>
+                            <div class="cus-dtl">Payment</div>
+                            <div class="cus-dtl">Store</div>
+                        </div>
+                        <div class="package-dtl-2">
+                            <div class="cus-dtl">李小明</div>
+                            <div class="cus-dtl">0932666891</div>
+                            <div class="cus-dtl">Cridit Card</div>
+                            <div class="cus-dtl">711信義門市</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                </section>
+            </section>
+            <section class="order-box">
+                <div class="none"></div>
+                <section class="box-1">
+                    <div class="box-1-1">
+                        <div class="bar-gap">Order Num</div>
+                        <div class="bar-gap">Purchase Date</div>
+                        <div class="bar-gap">Total</div>
+                        <div class="bar-gap">Status</div>
+                    </div>
+                    <div class="box-1-2">
+                        <div class="bar-gap-2">834758238</div>
+                        <div class="bar-gap-2">2024/08/06</div>
+                        <div class="bar-gap-2">NT$1089</div>
+                        <div class="bar-gap-2">In Transit</div>
+                        <button class="btn btn2">Details</button>
+                    </div>
+                </section>
+                <section class="order-detail-box open2">
+                    <div class="odb-1">
+                        <p class="gap">Product</p>
+                        <p>Price</p>
+                        <p>Quatity</p>
+                        <p>Total</p>
+                    </div>
+                    <div class="odb-2">
+                        <img src="../imagesAll/images/order_pic.svg" alt="">
+                        <p class="odrname">Water Bottle/ Sea</p>
+                        <p>NT$189</p>
+                        <p>1</p>
+                        <p>NT$189</p>
+                    </div>
+                    <div class="odb-2">
+                        <img src="../imagesAll/images/order_pic2.svg" alt="">
+                        <p class="odrname">A Box of Sea</p>
+                        <p>NT$420</p>
+                        <p>2</p>
+                        <p>NT$840</p>
+                    </div>
+                    <div class="odr-money">
+                        <div class="odr-money-1">
+                            <div class="money-gap">Subtotal</div>
+                            <div class="money-gap">Discount</div>
+                            <div class="money-gap">Freight</div>
+                            <div class="money-gap">Total</div>
+                        </div>
+                        <div class="odr-money-2">
+                            <div class="money-gap">NT$1029</div>
+                            <div class="money-gap">NT$-0</div>
+                            <div class="money-gap">NT$60</div>
+                            <div class="money-gap">NT$1089</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="package-dtl">
+                            <div class="cus-dtl">Receiver</div>
+                            <div class="cus-dtl">Phone</div>
+                            <div class="cus-dtl">Payment</div>
+                            <div class="cus-dtl">Store</div>
+                        </div>
+                        <div class="package-dtl-2">
+                            <div class="cus-dtl">李小明</div>
+                            <div class="cus-dtl">0932666891</div>
+                            <div class="cus-dtl">Cridit Card</div>
+                            <div class="cus-dtl">711信義門市</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                </section>
+            </section>
+            <div class="nbsp">&nbsp;</div>
+            <div class="flower">
+                <img src="../imagesAll/images/membership_flower.svg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="rela"></div>
+    <!-- 頁尾區 -->
+    <footer>
+        <div class="footer-container">
+            <!-- section 1 -->
+            <div class="menu">
+                <ul class="menu-1">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./allproduct.html">PRODUCT</a></li>
+
+                </ul>
+
+                <ul class="menu-2">
+                    <li><a href="./customintro.html">CUSTOMIZED</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li><a href="./fqa.html">FAQ</a></li>
+                </ul>
+
+            </div>
+            <div class="border-s border"></div>
+
+            <!-- section 2 -->
+            <div class="container">
+                <ul class="icons">
+                    <li><img src="../imagesAll/indexPic/footer-icon1.png" alt=""></li>
+                    <li><img src="../imagesAll/indexPic/footer-icon2.png" alt=""></li>
+                    <li><img src="../imagesAll/indexPic/footer-icon3.png" alt=""></li>
+                </ul>
+
+                <div class="border"></div>
+
+                <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
+            </div>
+
+            <!-- section 3 -->
+            <div class="information">
+                <h4>CONTACT US</h4>
+                <p>clayofstories@gmail.com</p>
+                <p>0800-523-066</p>
+                <ul class="social-media">
+                    <li><a href="#" class="ig"></a></li>
+                    <li><a href="#" class="line"></a></li>
+                    <li><a href="#" class="fb"></a></li>
+                </ul>
+            </div>
+
+            <div class="border-s border"></div>
+            <div class="copyright-ms">               
+                <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <!-- 啟用jquery原生碼 -->
+    <script src="../js/jquery/jquery-3.7.1.min.js"></script>
+    <!-- 自訂的js -->
+    <script src="../js/index.js"></script>
+
+
+</body>
+
+</html>

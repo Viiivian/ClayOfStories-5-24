@@ -1,0 +1,260 @@
+;
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Carian';
+    /* 全部的字大小 */
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+.bg {
+    width: 100%;
+    background-color: #FFF9E2;
+    height: 1000px;
+}
+
+.allbar {
+    width: 100%;
+    height: 200px;
+    background-color: #FFF9E2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    /* padding-top: 160px; */
+}
+
+.cart {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    width: 52%;
+    margin: auto ;
+}
+
+.prtbar {
+    display: flex;
+    background-color: #FFDBCE;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.prtbar h3 {
+    font-size: 1.2rem;
+    margin: auto 0;
+
+
+}
+
+.prtbar>h3 {
+    margin-left: 35px;
+    margin-right: 45%;
+}
+
+.prtbar .child {
+    display: flex;
+    margin-left: 5%;
+}
+
+.child h3 {
+    margin-right: 70px;
+    width: 40px;
+}
+
+.product-1 {
+    border-bottom: gray solid 1px;
+    display: flex;
+    width: 100%;
+
+}
+
+.product-2 {
+    display: flex;
+    width: 100%;
+
+}
+
+.product-1 h5 {
+    width: 50%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.product-1 button {
+    border: none;
+    width: 70px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.product-1 button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.product-2 button {
+    border: none;
+    width: 70px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.product-2 button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.product-2 h5 {
+    width: 50%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.prt-detail {
+    display: flex;
+    margin: auto;
+    margin-left: 50px;
+}
+
+.prt-detail p {
+    margin-right: 50px;
+    width: 60px;
+    text-align: center;
+}
+
+img {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    width: 10%;
+}
+
+/* 訂單備註區-------------------------------------------------------------- */
+.cus-detail {
+    background-color: #FFDBCE;
+    width: 52%;
+    margin: 20px auto;
+    display: flex;
+    height: 200px;
+    border-radius: 0 0 10px 10px;
+}
+
+.note {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.note textarea {
+    resize: none;
+    height: 100px;
+    outline: none;
+}
+.note textarea:focus {
+    color: rgb(83, 83, 83) ;
+}
+.pack-infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    text-align: center;
+}
+.coupon{
+    text-align: center;
+    padding-top: 10px;
+}
+.store-infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.store-con {
+    margin-top: 20px;
+}
+
+.store-con button {
+    background-color: transparent;
+    border: none;
+    border-bottom: #1404fa 1px solid;
+    color: #1000f7;
+    margin-left: 10px;
+
+}
+
+.store-con button:hover {
+    color: #ff0000;
+    border-bottom: #ff0000;
+    cursor: pointer;
+}
+
+.store-infor>div {
+    display: flex;
+}
+
+.cus-detail .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pay {
+    margin: auto;
+    background-color: #FFDBCE;
+    border-radius: 10px;
+    width: 52%;
+    display: flex;
+    height: 100px;
+}
+
+.payment {
+    margin: auto 20px auto 60px;
+}
+
+.pay select {
+    margin: 20px;
+}
+
+.price {
+    margin: auto 20px auto 175px;
+}
+
+.pay p {
+    font-size: 1.5rem;
+    margin: auto 0px auto 50px;
+}
+
+.pay-btn {
+    margin: auto 0 auto 100px;
+    width: 100px;
+    
+}
+
+.pay-btn button {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFEEF4;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.pay-btn button:hover {
+    background-color: #f8c5d7;
+
+}

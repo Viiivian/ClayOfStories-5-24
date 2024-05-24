@@ -1,0 +1,103 @@
+
+/* FAQ */
+#topic {
+    background-color: #FFF9E2;
+    padding-top: 100px;
+    padding-left: 60px;
+    font-size: 25px;
+    font-family: "newyork", "Microsoft JhengHei", sans-serif;
+}
+
+#faq {
+    background-color: #FFF9E2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 12% 2%;
+}
+
+#faq .animals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+#faq .ani-pic img{
+    width: 200px;
+}
+#faq .faqbk1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5% 15%;
+}
+.faqbk1 .faqsizemaker {
+    padding-left: 5%;
+}
+.faqbk1 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.faqbk1 .text {
+    position: relative;
+    z-index: 2;
+    font-family: 'Noto Sans Carian';
+    letter-spacing: 5%;
+    line-height: 35.8px;
+}
+.text h1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
+.text p{
+    font-size: 16px;
+}
+/* 平板 */
+@media (max-width:820px) {
+    #faq .animals {
+        padding-bottom: 5%;
+    }
+    .text h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .text p{
+        font-size: 12px;
+        text-align: center;
+    }
+    .faqbk1 .text {
+        padding-top: 10%;
+        line-height: 25px;
+    }
+    .faqbk1 img{
+        width: 100%;
+        height: 110%;
+    }
+}
+  /* 手機版 */
+@media (max-width:640px) {
+    #faq {
+        padding: 0% 3% 5%;
+    }
+    .ani-pic {
+        width: 40%;
+    }
+    .faqbk1 img{
+        width: 100%;
+        height: 100%;
+    }
+    .faqbk1 .text {
+        padding-top: 3%;
+        line-height: 25px;
+    }
+}

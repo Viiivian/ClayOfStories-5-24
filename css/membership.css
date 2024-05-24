@@ -1,0 +1,122 @@
+/* 主要區----------------------------------------------- */
+.background{
+    background-color: #FFF9E2;
+    width: 100%;
+    height: 710px;  
+
+    
+}
+.mainbar{
+    background-color: #FFECE4;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+}
+.mainbar h5{
+    text-align: center;
+    font-size: 2rem;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 2px;
+
+}
+
+.list a {
+    background-color: #FFC7C2;
+    margin: auto;
+    padding-top: 25px;
+    width: 25%;
+    text-align: center;
+    height: 80px;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+    font-size: 18px;
+}
+
+
+.list a:hover{
+    background-color: #FFECE4;
+    cursor: pointer;
+}
+.list .first{
+    background-color: #ffece4;
+}
+.list .gap{
+    margin-right: 2px;
+}
+
+.act-bar{
+    background-color: #FFECE4;
+    width: 50%;
+    display: flex;
+    margin: auto;
+    padding-top: 50px;
+}
+.allbar{
+    width: 100%;
+    height: 100px;
+    background-color: #FFF9E2;
+}
+.act-bar p{
+    background-color: #e6e5e5;
+    padding: 5px;
+    font-size: 1.1rem;
+    margin: 10px;
+
+}
+.act-bar small{
+    margin-top: 12px;
+    background-color: white;
+    padding: 5px;
+    padding-right: 30px;
+}
+.sub{
+    padding-left: 18%;
+    text-align: center;
+}
+.act-detail{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.fin-bar{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFECE4;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 3%;
+    border-radius: 0 0 20px 20px;
+}
+.confirm{
+    display: flex;
+    padding-left: 19%;
+    padding-top: 5%;
+}
+
+button{
+    border: none;
+    width: 10%;
+    border-radius: 30px;
+    background-color: #FFC7C2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 19%;
+    margin-top: 20px;
+}
+button:hover{
+    background-color:#ffb0a8; 
+    cursor: pointer;
+}
+.flower{
+    width: 8%;
+    padding-left: 70%;
+    margin-top: -13%;
+}

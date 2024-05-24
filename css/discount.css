@@ -1,0 +1,111 @@
+/* 主要區----------------------------------------------- */
+.background{
+    background-color: #FFF9E2;
+    width: 100%;
+    height: 710px;  
+}
+.allbar{
+    width: 100%;
+    height: 100px;
+    background-color: #FFF9E2;
+}
+.mainbar{
+    background-color: #FFECE4;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+}
+.mainbar h5{
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+}
+.list .first{
+    background-color: #ffece4   ;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 2px;
+
+}
+.list a {
+    background-color: #FFC7C2;
+    margin: auto;
+    padding-top: 25px;
+    width: 25%;
+    text-align: center;
+    height: 80px;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+    font-size: 18px;
+}
+
+
+.list a:hover{
+    background-color: #FFECE4;
+    cursor: pointer;
+}
+.first{
+    background-color: #ffece4   ;
+}
+.list .gap{
+    margin-right: 2px;
+}
+.discount-box{
+    background-color: #FFECE4;
+    width: 50%;
+    height: 400px;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+}
+
+.dis-title{
+    font-size: 1.5rem;
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+.ticket-box{
+    width: 80%;
+    height: 300px;
+    background-color: white;
+    margin: auto;
+}
+.ticket-sub{
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+.ticket-sub p{
+    margin: auto;
+    /* margin-right: 60px; */
+    padding-top: 20px;
+    /* padding-left: 23px; */
+    text-align: center;
+    font-weight: 900;
+    color: #07013f;
+}
+.ticket{
+    display: flex;
+    border-bottom: 1px solid #cecece;
+}
+.ticket p{
+    /* margin: auto; */
+    /* margin-right: 0px; */
+    margin: auto;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.flower{
+    width: 8%;
+    padding-left: 70%;
+    margin-top: -13%;
+}
