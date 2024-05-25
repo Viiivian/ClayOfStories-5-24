@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClayOfStories|手作黏土</title>
+    <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
+    <link rel="stylesheet" href="../css/default-set.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <div class="left-bar">
+                <!-- 漢堡按鈕位置
+                    <div class="burger-btn"></div> -->
+                <h1 class="logo">
+                    <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
+
+                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                </h1>
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html" class="home">
+                                <span class="translate-en">HOME</span>
+                                <span class="translate-ch">首頁</span>
+                            </a> </li>
+
+                        <li><a href="./about.html" class="about">
+                                <span class="translate-en">ABOUT</span>
+                                <span class="translate-ch">關於</span>
+                            </a></li>
+
+                        <li class="product"> <a href="./allproduct.html" class="product">
+                                <span class="translate-en">PRODUCT</span>
+                                <span class="translate-ch">所有產品</span>
+                            </a>
+
+                            <!-- 下拉式選單 -->
+                            <ul class="menu-drop-L">
+                                <li>
+                                    <a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon1.png" alt="" />
+                                            <h3>VIEW ALL</h3>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon2.png" alt="" />
+                                            <h3>MIRROR</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon3.png" alt="" />
+                                            <h3>TRAY</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li> <a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon4.png" alt="" />
+                                            <h3>ACCESSORY</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon5.png" alt="" />
+                                            <h3>VASE</h3>
+                                        </div>
+                                    </a></li>
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon6.png" alt="" />
+                                            <h3>HOLDER</h3>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="./customintro.html" class="customized">
+                                <span class="translate-en">CUSTOM</span>
+                                <span class="translate-ch">客製化</span>
+                            </a></li>
+                        <li><a href="./contact.html" class="contact">
+                                <span class="translate-en">CONTACT</span>
+                                <span class="translate-ch">聯絡我們</span>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <ul class="right-bar icon">
+                <li><a href="#" class="icon-search"></a></li>
+                <li><a href="./membership.html" class="icon-user"></a></li>
+                <li><a href="./fqa.html" class="icon-fqa"></a></li>
+                <li><a href="./shopcart.html" class="icon-cart"></a></li>
+            </ul>
+        </div>
+
+    </header>
+    <main>
+        <!-- notes -->
+        <section class="notes">
+            <div class="container1">
+                <div class="container2">
+                    <img src="../imagesAll/formPic/notes-bgk.png" alt="">
+                    <div class="text">
+                        
+                        <ul>
+                            <li>Please read before you fill out the form.</li>
+                            <li>1. All products are handmade, and take 1~2 week to make.</li>
+                            <li>2. Stone Clay is a natural and safe ingredient but not water-proof. DON'T WASH IT! </li>
+                            <li>3. We'll contact you within 48 hours after you submit the form.</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <img class="icon-vase" src="../imagesAll/formPic/notes-vase.png" alt="">
+            </div>
+
+        </section>
+
+        <!-- form -->
+        <section class="product-form">
+            <div class="form-container">
+                <header class="title">
+                    <h2> CUSTOMIZED FORM</h2>
+                </header>
+
+                <form action="" method="post" name="order-form" id="order-form" title="Product-order-form">
+                    <!-- 姓名欄位 -->
+                    <div class="container input-style1">
+                        <label for="customer-name">NAME*</label>
+                        <input type="text" name="customer-name" id="customer-name" title="Enter Your Name"
+                            placeholder="" required>
+                    </div>
+
+                    <!-- 信箱欄位 -->
+                    <div class="container input-style1">
+                        <label for="email">EMAIL*</label>
+                        <input type="email" name="email" id="email" title="Enter Your EMAIL" placeholder="" multiple>
+                    </div>
+
+                    <!-- 電話欄位 -->
+                    <div class="container input-style1">
+                        <label for="tel">PHONE*</label>
+                        <input type="tel" name="tel" id="tel" title="Enter Your Number" placeholder="" maxlength="10">
+                    </div>
+
+                    <!-- 單選區 -->
+                    <div class="container type-container">
+                        <legend>PRODUCT TYPES*</legend>
+                        <div class="type-flex">
+                            <div class="type-flex-box">
+                                <div>
+                                    <input type="radio" id="type1" name="type" value="Jewlery-Tray">
+                                    <label for="type1">Jewlery Tray
+                                        <img src="../imagesAll/formPic/p1.png" alt="Image 1">
+                                    </label>
+                                </div>
+
+
+                            </div>
+                            <div class="type-flex-box">
+                                <div>
+                                    <input type="radio" id="type2" name="type" value="Flower-Vase">
+                                    <label for="type2">Flower Vase
+                                        <img src="../imagesAll/formPic/p2.png" alt="Image 2">
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="type-flex-box">
+                                <div>
+                                    <input type="radio" id="type3" name="type" value="Mirror">
+                                    <label for="type3">Mirror
+                                        <img src="../imagesAll/formPic/p3.png" alt="Image 3">
+                                    </label>
+
+                                </div>
+
+                            </div>
+                            <div class="type-flex-box">
+                                <div>
+                                    <input type="radio" id="type4" name="type" value="Photo-holder"> <label
+                                        for="type4">Photo holder
+                                        <img src="../imagesAll/formPic/p4.png" alt="Image 4"></label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 備註欄位 -->
+                    <div class="container">
+                        <label for="notes">NOTES*</label>
+                        <textarea name="notes" id="notes" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <!-- 同意事項 -->
+                    <div class="container rule-container">
+                        <div class="agree">
+                            <input type="checkbox" id="agreement" name="rule" value="rule">
+                            <label for="agreement">I have read, understand and agree to comply with all of the
+                                restrictions set forth above.</label>
+                        </div>
+
+                        <button type="submit" class="button-confirm">
+                            SUBMIT
+                        </button>
+
+                    </div>
+
+
+                </form>
+            </div>
+
+        </section>
+
+        <!-- reminder -->
+        <section class="reminder">
+            <div class="container1">
+                <img class="reminder-bear" src="../imagesAll/formPic/reminder-bear.png" alt="">
+                <div class="container2">
+                    <img src="../imagesAll/formPic/reminder-bkg.png" alt="">
+                    <div class="text">
+                        <ul>
+                            <li>1. All products are handmade, and take 1~2 week to make.</li>
+                            <li>2. Stone Clay is a natural and safe ingredient but not water-proof. DON'T WASH IT! </li>
+                            <li>3. We'll contact you within 48 hours after you submit the form.</li>
+                            <li>4. Custom products NO LONGER eligible for returns</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- section 1 -->
+            <div class="menu">
+                <ul class="menu-1">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./allproduct.html">PRODUCT</a></li>
+
+                </ul>
+
+                <ul class="menu-2">
+                    <li><a href="./customintro.html">CUSTOMIZED</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li><a href="./fqa.html">FAQ</a></li>
+                </ul>
+
+            </div>
+            <div class="border-s border"></div>
+
+            <!-- section 2 -->
+            <div class="container">
+                <ul class="icons">
+                    <li><img src="../imagesAll/indexPic/footer-icon1.png" alt=""></li>
+                    <li><img src="../imagesAll/indexPic/footer-icon2.png" alt=""></li>
+                    <li><img src="../imagesAll/indexPic/footer-icon3.png" alt=""></li>
+                </ul>
+
+                <div class="border"></div>
+
+                <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
+            </div>
+
+            <!-- section 3 -->
+            <div class="information">
+                <h4>CONTACT US</h4>
+                <p>clayofstories@gmail.com</p>
+                <p>0800-523-066</p>
+                <ul class="social-media">
+                    <li><a href="#" class="ig"></a></li>
+                    <li><a href="#" class="line"></a></li>
+                    <li><a href="#" class="fb"></a></li>
+                </ul>
+            </div>
+
+            <div class="border-s border"></div>
+            <div class="copyright-ms">               
+                <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+        <!-- 啟用jquery原生碼 -->
+        <script src="../js/jquery/jquery-3.7.1.min.js"></script>
+        <!-- 自訂的js -->
+        <script src="../js/index.js"></script>
+</body>
+
+</html>

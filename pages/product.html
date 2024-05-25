@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clayofstories</title>
+    <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
+    <!-- <link rel="stylesheet" href="../css/default-set.css"> -->
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="topbar">
+        <div class="container">
+            <div class="left-bar">
+                <!-- 漢堡按鈕位置
+                    <div class="burger-btn"></div> -->
+                <h1 class="logo">
+                    <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
+
+                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                </h1>
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html" class="home">
+                                <span class="translate-en">HOME</span>
+                                <span class="translate-ch">首頁</span>
+                            </a> </li>
+
+                        <li><a href="./about.html" class="about">
+                                <span class="translate-en">ABOUT</span>
+                                <span class="translate-ch">關於</span>
+                            </a></li>
+
+                        <li class="product"> <a href="./allproduct.html" class="product">
+                                <span class="translate-en">PRODUCT</span>
+                                <span class="translate-ch">所有產品</span>
+                            </a>
+
+                            <!-- 下拉式選單 -->
+                            <ul class="menu-drop-L">
+                                <li>
+                                    <a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon1.png" alt="" />
+                                            <h3>VIEW ALL</h3>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon2.png" alt="" />
+                                            <h3>MIRROR</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon3.png" alt="" />
+                                            <h3>TRAY</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li> <a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon4.png" alt="" />
+                                            <h3>ACCESSORY</h3>
+                                        </div>
+                                    </a></li>
+
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon5.png" alt="" />
+                                            <h3>VASE</h3>
+                                        </div>
+                                    </a></li>
+                                <li><a href="./allproduct.html">
+                                        <div class="drop-category">
+                                            <img src="../imagesAll/indexPic/menu-icon6.png" alt="" />
+                                            <h3>HOLDER</h3>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="./customintro.html" class="customized">
+                                <span class="translate-en">CUSTOM</span>
+                                <span class="translate-ch">客製化</span>
+                            </a></li>
+                        <li><a href="./contact.html" class="contact">
+                                <span class="translate-en">CONTACT</span>
+                                <span class="translate-ch">聯絡我們</span>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <ul class="right-bar icon">
+                <li><a href="#" class="icon-search"></a></li>
+                <li><a href="./membership.html" class="icon-user"></a></li>
+                <li><a href="./fqa.html" class="icon-fqa"></a></li>
+                <li><a href="./shopcart.html" class="icon-cart"></a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+    <!-- 主要內容區 -->
+    <main>
+        <div class="bgimg">
+            <div class="allbar"></div>
+            <div class="container">
+
+                <div class="smlpic">
+                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
+                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
+                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
+                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
+                </div>
+                <div class="bigpic">
+                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
+                </div>
+                <div class="detail">
+                    <small>JEWELRY TRAY</small>
+                    <h1>Dance with the clouds jewelry tray</h1><br>
+                    <h2>NT$790</h2><br>
+                    <P>Product size： 8.5*8.5*1.5 <br>
+                        Product description: <br>
+                        djknvwlfjnlvjegflnbhjnegljrfmlvjerltjgnkjern
+                        lvjknlsdkjfnhjnglvjknfgkjvnlkjgfnvljkgfnkvjb
+                        ngjknbjgnbjkb.
+                    </P>
+                    <div class="btn-con">
+                        <button onclick="decrease()"><img src="../imagesAll/images/decrease.svg" alt=""></button>
+                        <span class="count" id="count">1</span>
+                        <button onclick="increase()"><img src="../imagesAll/images/increase.svg" alt=""></button>
+                    </div>
+                    <section class="add">
+                        <!-- <button>ADD TO CART</button> -->
+                        <!-- Product information -->
+                        <button class="add-to-cart" onclick="addToCart()">Add To Cart</button>
+                        <img src="../imagesAll/images/product1 1.svg" alt="Product Image">
+                    </section>
+                    <!-- <button id="shopCart" class="cart">SHOPCART<img src="">
+                    </button>
+                    <div class="cart-dtl">
+                        <img src="./images/product1 1.svg" alt="">
+                        <div class="cart-wrd">Dance with the clouds jewelry tray</div>
+                        <div class="trashcan"><img src="./images/Trash.svg" alt=""></div>
+                    </div>
+                    <div class="cart-dtl-2">
+                        <img src="./images/product1 1.svg" alt="">
+                        <div class="cart-wrd">Dance with the clouds jewelry tray</div>
+                        <div class="trashcan"><img src="./images/Trash.svg" alt=""></div>
+                    </div> -->
+                </div>
+            </div>
+
+
+
+
+            <section>
+                <h1 class="ymal">You may also like</h1>
+                <div class="list-box">
+                    <div class="box">
+                        <img src="../imagesAll/images/product1 1.svg" alt="">
+                        <h1>Blue Sky</h1>
+                        <small>Blue Sky and white cloud.</small>
+                        <div class="num-con">
+                            <h6>price <br>num</h6>
+                            <p>$700 <br>
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </p>
+                        </div>
+                        <button>ADD TO CART</button>
+                    </div>
+                    <div class="box">
+                        <img src="../imagesAll/images/product1 1.svg" alt="">
+                        <h1>Blue Sky</h1>
+                        <small>Blue Sky and white cloud.</small>
+                        <div class="num-con">
+                            <h6>price <br>num</h6>
+                            <p>$700 <br>
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </p>
+                        </div>
+                        <button>ADD TO CART</button>
+                    </div>
+                    <div class="box">
+                        <img src="../imagesAll/images/product1 1.svg" alt="">
+                        <h1>Blue Sky</h1>
+                        <small>Blue Sky and white cloud.</small>
+                        <div class="num-con">
+                            <h6>price <br>num</h6>
+                            <p>$700 <br>
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </p>
+                        </div>
+                        <button>ADD TO CART</button>
+                    </div>
+                    <div class="box">
+                        <img src="../imagesAll/images/product1 1.svg" alt="">
+                        <h1>Blue Sky</h1>
+                        <small>Blue Sky and white cloud.</small>
+                        <div class="num-con">
+                            <h6>price <br>num</h6>
+                            <p>$700 <br>
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </p>
+                        </div>
+                        <button>ADD TO CART</button>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+
+
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer>
+        <div class="footer-container">
+            <!-- section 1 -->
+            <div class="menu">
+                <ul class="menu-1">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./allproduct.html">PRODUCT</a></li>
+
+                </ul>
+
+                <ul class="menu-2">
+                    <li><a href="./customintro.html">CUSTOMIZED</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li><a href="./fqa.html">FAQ</a></li>
+                </ul>
+
+            </div>
+            <div class="border-s border"></div>
+
+            <!-- section 2 -->
+            <div class="container">
+                <ul class="icons">
+                    <li><img src="../imagesAll/indexPic/footer-icon1.png" alt=""></li>
+                    <li><img src="../imagesAll/indexPic/footer-icon2.png" alt=""></li>
+                    <li><img src="../imagesAll/indexPic/footer-icon3.png" alt=""></li>
+                </ul>
+
+                <div class="border"></div>
+
+                <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
+            </div>
+
+            <!-- section 3 -->
+            <div class="information">
+                <h4>CONTACT US</h4>
+                <p>clayofstories@gmail.com</p>
+                <p>0800-523-066</p>
+                <ul class="social-media">
+                    <li><a href="#" class="ig"></a></li>
+                    <li><a href="#" class="line"></a></li>
+                    <li><a href="#" class="fb"></a></li>
+                </ul>
+            </div>
+
+            <div class="border-s border"></div>
+            <div class="copyright-ms">
+                <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <!-- 啟用jquery原生碼 -->
+    <script src="../js/jquery/jquery-3.7.1.min.js"></script>
+    <!-- 自訂的js -->
+    <script src="../js/index.js"></script>
+    <script src="../js/product.js"></script>
+
+    <script>
+        // $(document).ready(function () {
+        //     $('.cart').on('click', function () {
+        //         $('.cart-dtl ').toggleClass('active'); // 切换显示与隐藏
+        //         $('.cart-dtl-2 ').toggleClass('active-2'); // 切换显示与隐藏
+        //         // $('.order-detail-box').toggleClass('active'); // 切换按钮的活动状态
+        //         $('')
+        //     });
+        // });
+
+        var count = 0;
+        var cartCount = 0;
+        function increase() {
+            count++;
+            document.getElementById('count').innerText = count;
+        }
+
+        function decrease() {
+            if (count > 1) {
+                count--;
+            }
+            document.getElementById('count').innerText = count;
+        };
+        function addToCart() {
+            cartCount += count;
+            document.getElementById('cart-count').innerText = cartCount;
+            count = 1;  // Reset the product count after adding to cart
+            document.getElementById('count').innerText = count;
+        }
+    </script>
+
+
+</body>
+
+</html>
