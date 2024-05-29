@@ -229,7 +229,9 @@ ul {
         display: none;
     }
 }
-
+.icon{
+    padding-right: 30px;
+}
 
 .icon a {
     width: 20px;
@@ -418,6 +420,14 @@ footer .information ul {
 }
 
 /* 主要區------------------------------------------------------- */
+.icon span{
+    color: #fff;
+    margin-left: -15px;
+    background-color: #e90000;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50px;
+}
 .bgimg {
     background-image: url(../imagesAll/images/information.png);
     width: 100%;
