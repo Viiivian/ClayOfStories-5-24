@@ -8,6 +8,7 @@
     <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
     <!-- <link rel="stylesheet" href="../css/default-set.css"> -->
     <link rel="stylesheet" href="../css/product.css">
+    <!-- <link rel="stylesheet" href="../css/default-set.css"> -->
 </head>
 
 <body>
@@ -20,7 +21,8 @@
                 <h1 class="logo">
                     <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
-                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png"
+                            alt="品牌LOGO"></a>
                 </h1>
 
                 <nav>
@@ -114,42 +116,12 @@
 
     <!-- 主要內容區 -->
     <main>
-        <div class="bgimg">
-            <div class="allbar"></div>
-            <div class="container">
 
-                <div class="smlpic">
-                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
-                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
-                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
-                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
-                </div>
-                <div class="bigpic">
-                    <figure><img src="../imagesAll/images/product1.jpg" alt=""></figure>
-                </div>
-                <div class="detail">
-                    <small>JEWELRY TRAY</small>
-                    <h1>Dance with the clouds jewelry tray</h1><br>
-                    <h2>NT$790</h2><br>
-                    <P>Product size： 8.5*8.5*1.5 <br>
-                        Product description: <br>
-                        Free like the ocean,Leisurely like the clouds.
-                    </P>
-                    <div class="btn-con">
-                        <button onclick="decrease()"><img src="../imagesAll/images/decrease.svg" alt=""></button>
-                        <span class="count" id="count">1</span>
-                        <button onclick="increase()"><img src="../imagesAll/images/increase.svg" alt=""></button>
-                    </div>
-                    <section class="add">
-                        <!-- <button>ADD TO CART</button> -->
-                        <!-- Product information -->
-                        <button class="add-to-cart" onclick="addToCart()">Add To Cart</button>
-                        <img src="../imagesAll/images/product1 1.svg" alt="Product Image">
-                    </section>
-                    
-                </div>
+
+        <section class="bgimg">
+            <div id="root">
+
             </div>
-
 
 
 
@@ -228,7 +200,7 @@
                 </div>
 
             </section>
-        </div>
+        </section>
 
 
 
@@ -289,21 +261,92 @@
 
 
     </footer>
+    <!-- 載入axios -->
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <!-- 載入REACT -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- 啟用jquery原生碼 -->
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
-    <script src="../js/product.js"></script>
+    <!-- <script src="../js/product.js"></script> -->
+
+    <script type="text/babel">
+
+        const { useState, useEffect } = React;
+
+        function Product({ product }) {
+            const imgSrc = `../imagesAll/productsDetail/product${product.id}`;
+            return (
+                <>
+                    <section className="product-container">
+                        <div className="smlpic">
+                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
+                            <figure><img src={`${imgSrc}-b.JPG`} alt="" /></figure>
+                            <figure><img src={`${imgSrc}-c.JPG`} alt="" /></figure>
+                            <figure><img src={`${imgSrc}-d.JPG`} alt="" /></figure>
+                        </div>
+                        <div className="bigpic">
+                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
+                        </div>
+                        <div className="detail">
+                            <small>{product.category}</small>
+                            <h1>{product.name}</h1><br />
+                            <h2>NT${product.price}</h2><br />
+                            <p>Product size： {product.price} <br />
+                                Product description: <br />
+                                {product.description}
+                            </p>
+                            <div className="btn-con">
+                                <button onClick={decrease}><img src="../imagesAll/images/decrease.svg" alt="" /></button>
+                                <span className="count" id="count">1</span>
+                                <button onClick={increase}><img src="../imagesAll/images/increase.svg" alt="" /></button>
+                            </div>
+                            <section className="add">
+                                <button className="add-to-cart" onClick={addToCart}>Add To Cart</button>
+                                <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
+                            </section>
+                        </div>
+                    </section>
+                </>
+            );
+        }
+
+        function MyApp() {
+            const [product, setProduct] = useState([]);
+            const productId = new URLSearchParams(window.location.search).get('id');
+
+            useEffect(() => {
+                if (productId) {
+                    axios.get(`http://localhost:3000/products/?id=${productId}`)
+                        .then(res => {
+                            setProduct(res.data[0]);
+                            console.log(res.data[0]);
+                            console.log(res.data)
+                            
+                        })
+                        .catch(err => {
+                            console.error("Error fetching product:", err);
+                            setProduct(null);
+                        });
+                }
+            }, [productId]);
+
+            if (!product) {
+                return <p>Loading...</p>;
+            }
+
+            return <Product key={product.id} product={product} />;
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<MyApp />);
+
+    </script>
 
     <script>
-        // $(document).ready(function () {
-        //     $('.cart').on('click', function () {
-        //         $('.cart-dtl ').toggleClass('active'); // 切换显示与隐藏
-        //         $('.cart-dtl-2 ').toggleClass('active-2'); // 切换显示与隐藏
-        //         // $('.order-detail-box').toggleClass('active'); // 切换按钮的活动状态
-        //         $('')
-        //     });
-        // });
 
         var count = 0;
         var cartCount = 0;

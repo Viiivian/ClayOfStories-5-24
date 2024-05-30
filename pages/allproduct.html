@@ -277,7 +277,7 @@
     function Product({ product }) {
       const imgSrc = `../imagesAll/psphoto/psphoto${product.id}.png`;
       return (
-        <a href="product.html" key={product.id}>
+        <a href={`product.html?id=${product.id}`} key={product.id}>
           <div className="allproducts">
             <img className="default-img" src={imgSrc} alt={product.name} />
             <h3>{product.name}</h3>
@@ -318,6 +318,10 @@
     const container = document.getElementById('root');
     const root = ReactDOM.createRoot(container);
     root.render(<MyApp />);
+
+  </script>
+
+  <script>
 
   </script>
 
