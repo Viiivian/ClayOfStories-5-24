@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
         passwordField.setAttribute('type', type);
 
         if (type === 'password') {
-            togglePassword.setAttribute('src', 'images/eye.png'); // Show icon
+            togglePassword.setAttribute('src', '../imagesAll/images/eye.png'); // Show icon
         } else {
-            togglePassword.setAttribute('src', 'images/eye-off.png'); // Hide icon (replace with the correct path)
+            togglePassword.setAttribute('src', '../imagesAll/images/eye-off.png'); // Hide icon (replace with the correct path)
         }
     });
 });

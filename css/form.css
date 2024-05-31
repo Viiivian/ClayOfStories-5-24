@@ -17,6 +17,7 @@
 .notes .container1{
     display: flex;
     max-width: 90%;
+    justify-content: right;
 }
 
 .notes .container2 {
@@ -25,12 +26,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
 .container2 img{
-    width:800px;
+    width:100%;
+    height: 100%;
 }
 
 /* 平板 */
@@ -39,11 +40,24 @@
     .form-container{
         width: 600px;
     }
+    .notes {
+        padding-top: 20%;
+    }
+    .container2 img{
+        width:100%;
+        height: 180%;
+    }
+    .container2 .text span {
+        display: none;
+    }
 }
 /* 手機 */
 @media (max-width:640px){
     .form-container{
         width: 450px;
+    }
+    .container2 .text {
+        font-size: 14px;
     }
 } 
 
@@ -141,10 +155,15 @@ div.text ul{
     .type-flex-box{
         width: 40%;
     }
+    .form-container header h2{
+        font-size: 26px;
+    }
 }
 /* 手機 */
 @media (max-width:640px){
-    
+    .form-container header h2{
+        font-size: 22px;
+    }
 } 
 
 
@@ -170,9 +189,28 @@ div.text ul{
     box-shadow: 4px 4px #555;
     color: black;
     padding: 5px 10px;
-    outline: none;
-    
+    outline: none;  
 }
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #555;
+    background-color: white;
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:checked {
+    background-color: #555;
+    box-shadow: 0 0 0 2px white inset;
+}
+
 
 /* 平板 */
 @media (max-width:820px){
@@ -193,10 +231,47 @@ div.text ul{
 
 .agree input[type="checkbox"] {
     margin-right: 10px;
+    padding: 7px;
 }
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #555;
+    background-color: white;
+    border-radius: 20%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #555;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    /* 使用 Unicode 符號表示勾號 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 .agree label {
     cursor: pointer;
+    line-height: 20px;
 }
 
 
@@ -238,7 +313,9 @@ div.text ul{
 
 }
 .reminder .container1 .reminder-bear{
+    margin-top: 5%;
     width: 23%;
+    height: 83%;
 }
 
 .reminder .container2 {
@@ -247,11 +324,46 @@ div.text ul{
     display: flex;
     justify-content: center;
     align-items: center;
-
+}
+.reminder .container2 .text{
+    display: flex;
+    justify-content: center;
 }
 .reminder .container2 ul{
     text-align: center;
+    width: 60%;
+    letter-spacing: 5%;
+    line-height: 35px;
 }
-
-
+.text .h-li {
+    font-size: 25px;
+    font-weight: 500;
+}
+@media (max-width:1024px){
+    .container2 .text span {
+        display: none;
+    }
+}
+/* 平板 */
+@media (max-width:820px){
+    .reminder .container1 {
+        margin-top: 5%;
+    }
+    .reminder .container2 {
+        height: 70%;
+    }
+    .reminder .container2 ul {
+        line-height: 30px;
+    }
+}
+/* 手機 */
+@media (max-width:640px){
+    .reminder .container2 ul {
+        line-height: 22px;
+    }
+} 
+/* 手機 */
+@media (max-width:390px){
+    
+} 
 

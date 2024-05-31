@@ -667,7 +667,7 @@ input.submit {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .feedback-title {
@@ -675,13 +675,14 @@ input.submit {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 .feedback-title h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #F380A3;
     text-align: center;
+    font-family: 'New York';
 }
 
 .feedback-title img {
