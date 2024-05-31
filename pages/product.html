@@ -295,7 +295,7 @@
                             <small>{product.category}</small>
                             <h1>{product.name}</h1><br />
                             <h2>NT${product.price}</h2><br />
-                            <p>Product size： {product.price} <br />
+                            <p>Product size： {product.size} cm <br />
                                 Product description: <br />
                                 {product.description}
                             </p>
@@ -323,9 +323,7 @@
                     axios.get(`http://localhost:3000/products/?id=${productId}`)
                         .then(res => {
                             setProduct(res.data[0]);
-                            console.log(res.data[0]);
-                            console.log(res.data)
-                            
+                           
                         })
                         .catch(err => {
                             console.error("Error fetching product:", err);

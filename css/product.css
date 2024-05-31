@@ -28,13 +28,6 @@ body {
         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
 
-nav a {
-    display: block;
-    text-decoration: none;
-    /* 除去超連結預設底線 */
-    color: #555;
-    /* 超連結顏色 */
-}
 
 
 a {
