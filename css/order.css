@@ -195,16 +195,15 @@ ul{
 
 .box-1 .box-1-1 .bar-gap {
     display: flex;
-    margin-right: 6%;
-    /* padding-left: 20px; */
+    margin-right: 8%;
     text-align: center;
-    /* width: 70px; */
+
+
 }
-    /* @media  (max-width:1440px){
-        .box-1-1 .totalrwd{
-            display: none;
-        }
-    } */
+.blank{
+    width: 90px;
+}
+
 
 .box-1-2 {
     display: flex;
@@ -212,8 +211,25 @@ ul{
     width: 100%;
     margin: auto;
 }
-
-
+.rwdtitle{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    padding-left: 20px;
+    /* padding-left: 10px; */
+    /* margin-left: -50px; */
+}
+.rwdbox{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+}
 .phone-bar{
     background-color: white;
     width: 100%;
