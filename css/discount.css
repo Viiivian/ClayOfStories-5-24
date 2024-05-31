@@ -18,6 +18,16 @@
     padding-bottom: 10px;
     margin-bottom: 3px;
 }
+@media (min-width:821px) and (max-width:1440px){
+    .mainbar{
+        width: 70%;
+    }
+}
+@media (max-width:821px){
+    .mainbar{
+        width: 95%;
+    }
+}
 .mainbar h5{
     text-align: center;
     font-size: 2rem;
@@ -32,8 +42,18 @@
     width: 50%;
     margin: auto;
     margin-top: 2px;
-
 }
+@media (min-width:821px) and (max-width:1440px){
+    .list{
+        width: 70%;
+    }
+}
+@media (max-width:821px){
+    .list{
+        width: 95%;
+    }
+}
+
 .list a {
     background-color: #FFC7C2;
     margin: auto;
@@ -64,7 +84,16 @@
     margin: auto;
     border-radius: 0 0 20px 20px;
 }
-
+@media (min-width:821px) and (max-width:1440px){
+    .discount-box{
+        width: 70%;
+    }
+}
+@media (max-width:821px){
+    .discount-box{
+        width: 95%;
+    }
+}
 .dis-title{
     font-size: 1.5rem;
     padding-left: 10%;
