@@ -147,6 +147,7 @@ ul{
     width: 50%;
     /* height: 900px; */
     margin: auto;
+
 }
 @media (min-width:821px) and (max-width:1010px){
     .order-box{
@@ -181,6 +182,7 @@ ul{
     height: 110px;
     margin: auto;
     margin-top: 50px;
+    /* text-align: center; */
 }
 
 .box-1-1 {
@@ -188,19 +190,20 @@ ul{
     border-bottom: 1px solid #cecece;
     padding-top: 20px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .box-1 .box-1-1 .bar-gap {
     display: flex;
-    margin-right: 6%;
-    padding-left: 20px;
+    margin-right: 8%;
     text-align: center;
+
+
 }
-    /* @media  (max-width:1440px){
-        .box-1-1 .totalrwd{
-            display: none;
-        }
-    } */
+.blank{
+    width: 90px;
+}
+
 
 .box-1-2 {
     display: flex;
@@ -208,11 +211,35 @@ ul{
     width: 100%;
     margin: auto;
 }
+.rwdtitle{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    padding-left: 20px;
+    /* padding-left: 10px; */
+    /* margin-left: -50px; */
+}
+.rwdbox{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+}
+.phone-bar{
+    background-color: white;
+    width: 100%;
+    height: 50px;
+}
 
 
 .box-1-2 .bar-gap-2 {
     margin-right: 6%;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     /* width: %; */
     text-align: center;
 }
