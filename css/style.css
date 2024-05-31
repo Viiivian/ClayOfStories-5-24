@@ -409,9 +409,8 @@
 }
 
 .customized-txt .intro {
-
-    letter-spacing: 2px;
     line-height: 30px;
+    letter-spacing: 5%;
 }
 
 .customized-txt .intro-m {
@@ -717,6 +716,8 @@ input.submit {
     border-radius: 30px;
     padding: 10px 30px;
     text-align: center;
+    letter-spacing: 5%;
+    line-height: 30px;
 }
 
 @keyframes float {
@@ -730,11 +731,11 @@ input.submit {
     animation-play-state: paused;
 } */
 
-.comment1 { background-color: #E3ECFF; width: 50%; }
-.comment2 { background-color: #F5F5F5; width: 30%; }
-.comment3 { background-color: #FFF9E2; width: 60%; }
-.comment4 { background-color: #F5F5F5; width: 40%; }
-.comment5 { background-color: #E3ECFF; width: 35%; }
+.comment1 { background-color: #E3ECFF; width: 40%; }
+.comment2 { background-color: #F5F5F5; width: 50%; }
+.comment3 { background-color: #FFF9E2; width: 55%; }
+.comment4 { background-color: #F5F5F5; width: 30%; }
+.comment5 { background-color: #E3ECFF; width: 50%; }
 
 
 
@@ -771,8 +772,7 @@ input.submit {
 .story-pic .left-pic {
     position: relative;
     width: 65%;
-    height: 80%;
-
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -817,18 +817,23 @@ input.submit {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5%;
     align-items: center;
     text-align: center;
 }
 
 .story-container .story-intro h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: 'New York';
 }
 
 .story-container .story-intro p {
-    line-height: 20px;
-    letter-spacing: 2px;
+    /* line-height: 20px;
+    letter-spacing: 2px; */
+    letter-spacing: 5%;
+    line-height: 35.8px;
+    /* font-size: 20px; */
 }
 
 
