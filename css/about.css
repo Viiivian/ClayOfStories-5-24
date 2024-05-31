@@ -18,6 +18,7 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 50px;
+    font-family: 'New York';
 }
 #banner .container {
     display: flex;
@@ -52,6 +53,7 @@
 }
 #aboutus h1{
     font-size: 60px;
+    font-family: 'New York';
 }
 #aboutus p{
     padding-top: 30px;
@@ -76,6 +78,7 @@
 #choose h1 {
     font-size: 60px;
     text-align: left;
+    font-family: 'New York';
 }
 #choose p{
     font-size: 20px;
