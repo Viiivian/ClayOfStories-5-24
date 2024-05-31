@@ -127,6 +127,11 @@ ul{
     color: rgb(49, 49, 49);
     font-size: 18px;
 }
+@media (max-width:819px){
+    .list a{
+        font-size: 13px;
+    }
+}
 
 
 .list a:hover {
@@ -397,12 +402,12 @@ ul{
     border-radius: 0 0 20px 20px;
 }
 @media (min-width:821px) and (max-width:1010px){
-    .nsbp{
+    .nbsp{
         width: 90%;
     }
 }
 @media (min-width:1011px) and (max-width:1180px){
-    .nsbp{
+    .nbsp{
         width: 70%;
     }
 }

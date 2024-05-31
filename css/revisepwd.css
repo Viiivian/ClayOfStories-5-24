@@ -60,7 +60,7 @@ ul{
 }
 @media (max-width:820px){
     .mainbar{
-        width: 75%;
+        width: 85%;
     }
 }
 .mainbar h5{
@@ -79,7 +79,7 @@ ul{
 }
 @media (max-width:820px){
     .list{
-        width: 75%;
+        width: 85%;
     }
 }
 .list a {
@@ -92,6 +92,11 @@ ul{
     font-weight: bold;
     color: rgb(49, 49, 49);
     font-size: 18px;
+}
+@media (max-width:819px){
+    .list a{
+        font-size: 13px;
+    }
 }
 
 
@@ -114,7 +119,7 @@ ul{
 }
 @media (max-width:820px){
     .revise-box{
-        width: 75%;
+        width: 85%;
     }
 }
 .revise-box input{

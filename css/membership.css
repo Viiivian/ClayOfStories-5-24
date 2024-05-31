@@ -59,6 +59,11 @@
     color: rgb(49, 49, 49);
     font-size: 18px;
 }
+@media (max-width:819px){
+    .list a{
+        font-size: 13px;
+    }
+}
 
 
 .list a:hover{
@@ -156,6 +161,9 @@
     position: absolute;
     right: 0;
     margin-top: -80px;
+}
+.confirm label{
+    font-size: 16px;
 }
 
 button{
