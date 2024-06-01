@@ -21,7 +21,7 @@
     }
 }
 @media (max-width:820px){
-    .mainbar{
+    .mainbar{ 
         width: 95%;;
     }
 }
@@ -100,6 +100,13 @@
     width: 100%;
     margin: auto;
     justify-content: center;
+    display: none;
+}
+@media (min-width:820px){
+    .memberrwd{
+        display: block;
+        display: flex;
+    }
 }
 
 .allbar{
@@ -113,6 +120,7 @@
     font-size: 1.1rem;
     margin: 10px;
     text-align: center;
+    border-radius: 5px;
 
 }
 .act-bar small{
@@ -120,6 +128,24 @@
     background-color: white;
     padding: 5px;
     padding-right: 30px;
+    border-radius: 5px;
+}
+.phonerwd{
+    /* display: flex; */
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+@media (max-width:819px){
+    .phonerwd{
+        display: block;
+        display: flex;
+    }
+}
+.phonerwd2{
+    display: flex;
+    flex-direction: column;
 }
 
 .sub{
@@ -162,8 +188,13 @@
     right: 0;
     margin-top: -80px;
 }
+@media (max-width:819px){
+    .confirm img{
+        display: none;
+    }
+}
 .confirm label{
-    font-size: 16px;
+    font-size: 20px;
 }
 
 button{
