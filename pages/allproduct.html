@@ -196,7 +196,7 @@
 
   <script type="text/babel">
     const { useState, useEffect } = React;
-
+    import axios from '../axios';
     function Product({ product }) {
       const imgSrc = `../imagesAll/psphoto/psphoto${product.id}.png`;
       return (
@@ -205,7 +205,7 @@
           <div className="allproducts">
             <img className="default-img" src={imgSrc} alt={product.name} />
             <h3>{product.name}</h3>
-            <button>add-${product.price}</button>
+            <button>NT${product.price}</button>
           </div>
         </a>
 
@@ -214,17 +214,35 @@
 
     function MyApp() {
       const [products, setProducts] = useState([]);
+      // 選定的種類
+      const [filteredProducts, setFilteredProducts] = useState([]);
+      // 選定全部
+      const [selectedCategory, setSelectedCategory] = useState('all');
+
 
       useEffect(() => {
         axios.get("../json/db.json")
           .then(res => {
             setProducts(res.data.products);
+            setFilteredProducts(res.data.products);
           })
           .catch(err => {
             console.error("Error fetching products:", err);
             setProducts([]);
+            setFilteredProducts([]);
+
           });
       }, []);
+
+      const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+        if (category === 'all') {
+          setFilteredProducts(products);
+        } else {
+          const filtered = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
+          setFilteredProducts(filtered);
+        }
+      };
 
       return (
         <div className="sidebarcontainer">
@@ -233,31 +251,31 @@
               <h2>Product Type</h2>
               <ul>
                 <li>
-                  <input type="radio" id="type-all" name="category" value="all" />
+                  <input type="radio" id="type-all" name="category" value="all" onChange={() => handleCategoryChange('all')} checked={selectedCategory === 'all'} />
                   <label htmlFor="type-all">All</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-tray" name="category" value="jewelrytray" />
+                  <input type="radio" id="type-tray" name="category" value="jewelrytray" onChange={() => handleCategoryChange('Jewelry-Tray')} checked={selectedCategory === 'Jewelry-Tray'} />
                   <label htmlFor="type-tray">Jewelry Tray</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-holder" name="category" value="photoholder" />
+                  <input type="radio" id="type-holder" name="category" value="photoholder" onChange={() => handleCategoryChange('Photo-Holder')} checked={selectedCategory === 'Photo-Holder'} />
                   <label htmlFor="type-holder">Photo holder</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-vase" name="category" value="flowervase" />
+                  <input type="radio" id="type-vase" name="category" value="flowervase" onChange={() => handleCategoryChange('Flower-Vase')} checked={selectedCategory === 'Flower-Vase'} />
                   <label htmlFor="type-vase">Flower Vase</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-accessory" name="category" value="accessory" />
+                  <input type="radio" id="type-accessory" name="category" value="accessory" onChange={() => handleCategoryChange('Accessory')} checked={selectedCategory === 'Accessory'} />
                   <label htmlFor="type-accessory">Accessory</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-frame" name="category" value="photoframe" />
-                  <label htmlFor="type-frame">Photo Frame</label>
+                  <input type="radio" id="type-frame" name="category" value="ringholder" onChange={() => handleCategoryChange('Ring-Holder')} checked={selectedCategory === 'Ring-Holder'} />
+                  <label htmlFor="type-frame">Ring Holder</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-mirror" name="category" value="mirror" />
+                  <input type="radio" id="type-mirror" name="category" value="mirror" onChange={() => handleCategoryChange('Mirror')} checked={selectedCategory === 'Mirror'} />
                   <label htmlFor="type-mirror">Mirror</label>
                 </li>
               </ul>
@@ -289,16 +307,13 @@
 
           <div className="main-content">
             <div className="product-list">
-              <div>
-                 {products && products.length > 0 ?
-                (products.map(product => (
+              {filteredProducts && filteredProducts.length > 0 ? (
+                filteredProducts.map(product => (
                   <Product key={product.id} product={product} />
                 ))
-                ) :
-                (<p>No products available now.</p>
-                )}
-              </div>
-             
+              ) : (
+                <p>No products available now.</p>
+              )}
             </div>
           </div>
 
