@@ -51,7 +51,7 @@
 }
 
 /* 分類+產品排版 */
-.sidebarcontainer {
+ .sidebarcontainer {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -125,7 +125,7 @@ input[type="radio"]:checked::before {
 
 
 /* 產品列表樣式 */
-.main-content {
+ .main-content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

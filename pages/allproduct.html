@@ -121,88 +121,10 @@
     </div>
 
     <!-- Sidebar for sorting -->
-    <div class="sidebarcontainer">
-      <div class="sidebar">
-        <div class="sidebar1">
-          <h2>Product Type</h2>
-          <ul>
-            <li>
-              <input type="radio" id="type-all" name="category" value="all" />
-              <label for="type-all">All</label>
-            </li>
-            <li>
-              <input type="radio" id="type-tray" name="category" value="jewelrytray" />
-              <label for="type-tray">Jewelry Tray</label>
-            </li>
-            <li>
-              <input type="radio" id="type-holder" name="category" value="photoholder" />
-              <label for="type-holder">Photo holder</label>
-            </li>
-            <li>
-              <input type="radio" id="type-vase" name="category" value="flowervase" />
-              <label for="type-vase">Flower Vase</label>
-            </li>
-            <li>
-              <input type="radio" id="type-accessory" name="category" value="accessory" />
-              <label for="type-accessory">Accessory</label>
-            </li>
-            <li>
-              <input type="radio" id="type-frame" name="category" value="photoframe" />
-              <label for="type-frame">Photo Frame</label>
-            </li>
-            <li>
-              <input type="radio" id="type-mirror" name="category" value="mirror" />
-              <label for="type-mirror">Mirror</label>
-            </li>
-          </ul>
-          <br />
-        </div>
-        
-        <br />
 
-        <h2>Sort by</h2>
-        <ul>
-          <li>
-            <input type="radio" id="sort-bestselling" name="sorting" value="bestselling" />
-            <label for="sort-bestselling">Bestselling</label>
-          </li>
-          <li>
-            <input type="radio" id="sort-newest" name="sorting" value="newest" />
-            <label id="sort-newest">Newest</label>
-          </li>
-          <li>
-            <input type="radio" id="sort-priceLh" name="sorting" value="price" />
-            <label for="sort-priceLh">Price (low to high)</label>
-          </li>
-          <li>
-            <input type="radio" id="sort-priceHl" name="sorting" value="price" />
-            <label for="sort-priceHl">Price (high to low)</label>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Product List -->
-      <div class="main-content">
-        <div class="product-list">
-
-          <!-- React元件化 -->
-          <div id="root">
-          </div>
-          <!-- 
-          原本寫法
-          <a href="product.html" key={product.id}>
-            <div className="allproducts">
-              <img src={imgSrc} alt={product.name} />
-              <h3>{product.name}</h3>
-              <button>add-${product.price}</button>
-            </div>
-          </a> -->
-
-        </div>
-      </div>
-
-
+    <div id="root">
     </div>
+
 
     <ul class="pagination">
       <li><a href="#"> &lt; </a></li>
@@ -213,6 +135,8 @@
       <li><a href="#">5</a></li>
       <li><a href="#"> &gt; </a></li>
     </ul>
+
+
   </main>
   <footer>
     <div class="footer-container">
@@ -271,12 +195,12 @@
 
 
   <script type="text/babel">
-
     const { useState, useEffect } = React;
 
     function Product({ product }) {
       const imgSrc = `../imagesAll/psphoto/psphoto${product.id}.png`;
       return (
+
         <a href={`product.html?id=${product.id}`} key={product.id}>
           <div className="allproducts">
             <img className="default-img" src={imgSrc} alt={product.name} />
@@ -284,6 +208,7 @@
             <button>add-${product.price}</button>
           </div>
         </a>
+
       );
     }
 
@@ -291,26 +216,94 @@
       const [products, setProducts] = useState([]);
 
       useEffect(() => {
-        axios.get("http://localhost:3000/products")
+        axios.get("../json/db.json")
           .then(res => {
-            setProducts(res.data);
-            // console.log("success");
+            setProducts(res.data.products);
           })
           .catch(err => {
             console.error("Error fetching products:", err);
-            setProducts([]); 
+            setProducts([]);
           });
       }, []);
 
       return (
-        <div>
-          {products && products.length > 0 ? (
-            products.map(product => (
-              <Product key={product.id} product={product} />
-            ))
-          ) : (
-            <p>No products available Now.</p>
-          )}
+        <div className="sidebarcontainer">
+          <div className="sidebar">
+            <div className="sidebar1">
+              <h2>Product Type</h2>
+              <ul>
+                <li>
+                  <input type="radio" id="type-all" name="category" value="all" />
+                  <label htmlFor="type-all">All</label>
+                </li>
+                <li>
+                  <input type="radio" id="type-tray" name="category" value="jewelrytray" />
+                  <label htmlFor="type-tray">Jewelry Tray</label>
+                </li>
+                <li>
+                  <input type="radio" id="type-holder" name="category" value="photoholder" />
+                  <label htmlFor="type-holder">Photo holder</label>
+                </li>
+                <li>
+                  <input type="radio" id="type-vase" name="category" value="flowervase" />
+                  <label htmlFor="type-vase">Flower Vase</label>
+                </li>
+                <li>
+                  <input type="radio" id="type-accessory" name="category" value="accessory" />
+                  <label htmlFor="type-accessory">Accessory</label>
+                </li>
+                <li>
+                  <input type="radio" id="type-frame" name="category" value="photoframe" />
+                  <label htmlFor="type-frame">Photo Frame</label>
+                </li>
+                <li>
+                  <input type="radio" id="type-mirror" name="category" value="mirror" />
+                  <label htmlFor="type-mirror">Mirror</label>
+                </li>
+              </ul>
+              <br />
+            </div>
+
+            <br />
+
+            <h2>Sort by</h2>
+            <ul>
+              <li>
+                <input type="radio" id="sort-bestselling" name="sorting" value="bestselling" />
+                <label htmlFor="sort-bestselling">Bestselling</label>
+              </li>
+              <li>
+                <input type="radio" id="sort-newest" name="sorting" value="newest" />
+                <label htmlFor="sort-newest">Newest</label>
+              </li>
+              <li>
+                <input type="radio" id="sort-priceLh" name="sorting" value="price" />
+                <label htmlFor="sort-priceLh">Price (low to high)</label>
+              </li>
+              <li>
+                <input type="radio" id="sort-priceHl" name="sorting" value="price" />
+                <label htmlFor="sort-priceHl">Price (high to low)</label>
+              </li>
+            </ul>
+          </div>
+
+          <div className="main-content">
+            <div className="product-list">
+              <div>
+                 {products && products.length > 0 ?
+                (products.map(product => (
+                  <Product key={product.id} product={product} />
+                ))
+                ) :
+                (<p>No products available now.</p>
+                )}
+              </div>
+             
+            </div>
+          </div>
+
+
+
         </div>
       );
     }
@@ -318,7 +311,6 @@
     const container = document.getElementById('root');
     const root = ReactDOM.createRoot(container);
     root.render(<MyApp />);
-
   </script>
 
   <script>
@@ -327,13 +319,13 @@
 
 
 
- <!-- 載入axios -->
+  <!-- 載入axios -->
   <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
-   <!-- 載入REACT -->
+  <!-- 載入REACT -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  
+
   <script src="../js/jquery/jquery-3.7.1.min.js"></script>
   <script src="../js/index.js"></script>
 

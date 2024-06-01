@@ -276,9 +276,11 @@
     <script type="text/babel">
 
         const { useState, useEffect } = React;
+        const productId = new URLSearchParams(window.location.search).get('id');
+
 
         function Product({ product }) {
-            const imgSrc = `../imagesAll/productsDetail/product${product.id}`;
+            const imgSrc = `../imagesAll/productsDetail/product${productId}`;
             return (
                 <>
                     <section className="product-container">
@@ -316,14 +318,14 @@
 
         function MyApp() {
             const [product, setProduct] = useState([]);
-            const productId = new URLSearchParams(window.location.search).get('id');
 
             useEffect(() => {
                 if (productId) {
-                    axios.get(`http://localhost:3000/products/?id=${productId}`)
+                    axios.get(`../json/db.json`)
                         .then(res => {
-                            setProduct(res.data[0]);
-                           
+                            setProduct(res.data.products[productId-1]);
+                            console.log(setProduct)
+                            console.log("success")                          
                         })
                         .catch(err => {
                             console.error("Error fetching product:", err);
@@ -337,6 +339,8 @@
             }
 
             return <Product key={product.id} product={product} />;
+
+            
         }
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
@@ -365,6 +369,7 @@
             count = 1;  // Reset the product count after adding to cart
             document.getElementById('count').innerText = count;
         }
+        
     </script>
 
 
