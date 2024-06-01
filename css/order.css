@@ -189,6 +189,11 @@ ul{
     margin-top: 50px;
     /* text-align: center; */
 }
+@media (max-width:819px){
+    .box-1{
+        width: 90%;
+    }
+}
 
 .box-1-1 {
     display: flex;
@@ -202,9 +207,15 @@ ul{
     display: flex;
     margin-right: 8%;
     text-align: center;
-
-
+    /* margin-left: 0; */
 }
+@media (max-width:819px){
+    .box-1 .box-1-1 .bar-gap{
+        margin-right: 5%;
+        width: 15%;
+    }
+}
+
 .blank{
     width: 90px;
 }
@@ -227,6 +238,12 @@ ul{
     /* padding-left: 10px; */
     /* margin-left: -50px; */
 }
+@media (max-width:819px){
+    .rwdtitle{
+        padding-left: 10px;
+        
+    }
+}
 .rwdbox{
     display: flex;
     margin: auto;
@@ -234,6 +251,31 @@ ul{
     justify-content: center;
     text-align: center;
     align-self: center;
+}
+@media (max-width:819px){
+    .rwdbox{
+        display: none;
+    }
+}
+.phonerwd{
+
+    display: none;
+}
+@media (max-width:819px){
+    .phonerwd{
+        display: block;
+        display: flex;
+    }
+}
+
+.phonerwd2{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    padding-left: 30px;
 }
 .phone-bar{
     background-color: white;
@@ -247,9 +289,24 @@ ul{
     /* padding-left: 20px; */
     /* width: %; */
     text-align: center;
+    height: 50px;
+}
+@media (max-width:819px){
+    .box-1-2 .bar-gap-2{
+        padding-right: 10px;
+    }
 }
 
 
+.box-1-2 button {
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color: #FFC7C2;
+}
 .box-1-2 button {
     border: none;
     cursor: pointer;
@@ -263,11 +320,7 @@ ul{
 .box-1-2 button:hover {
     background-color: #FFECE4;
 }
-.phonerwd{
-    width: 100%;
-    background-color: rgb(255, 21, 21);
-    height: 50px;
-}
+
 /* 手機 */
 @media (max-width:640px){
     /* .box-1-2 button{
@@ -301,6 +354,12 @@ ul{
     flex-direction: column;
     display: block;
 }
+@media (max-width:819px){
+    .active {
+        width: 90%;
+    }
+}
+
 
 .dtlbar {
     display: flex;
@@ -335,6 +394,11 @@ ul{
     margin: auto;
     /* padding-right: 8%; */
 }
+@media (max-width:819px){
+    .odb-2 img {
+        display: none;
+    }
+}
 
 .odb-2 p {
     margin: auto ;
@@ -350,7 +414,11 @@ ul{
 .odr-money {
     display: flex;
     width: 100%;
-
+}
+@media (max-width:819px){
+    .odr-money {
+        width: 50%;;
+    }
 }
 
 .odr-money-1 {
@@ -382,6 +450,7 @@ ul{
 .package-dtl-2 {
     display: flex;
     margin-top: 20px;
+    text-align: center;
 }
 
 .package-dtl .cus-dtl {
