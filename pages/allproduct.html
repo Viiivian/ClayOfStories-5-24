@@ -213,12 +213,12 @@
 
     function MyApp() {
       const [products, setProducts] = useState([]);
-      // 選定的種類
+      // 選定的種類資料(預設為全品項資料)
       const [filteredProducts, setFilteredProducts] = useState([]);
-      // 選定全部
+      // 選定種類(預設為全品項)
       const [selectedCategory, setSelectedCategory] = useState('all');
 
-
+      // 取得所有產品資料
       useEffect(() => {
         axios.get("../json/db.json")
           .then(res => {
@@ -229,16 +229,21 @@
             console.error("Error fetching products:", err);
             setProducts([]);
             setFilteredProducts([]);
-
           });
       }, []);
 
+      //按鈕點擊事件
       const handleCategoryChange = (category) => {
+
+        // selectedCategory的參數為checked的值
         setSelectedCategory(category);
         if (category === 'all') {
+          // setFilteredProducts的資料為全部產品
           setFilteredProducts(products);
         } else {
+          // 將products裡的指定種類資料取出
           const filtered = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
+          // setFilteredProducts的資料更改為指定種類
           setFilteredProducts(filtered);
         }
       };
@@ -311,7 +316,7 @@
                   <Product key={product.id} product={product} />
                 ))
               ) : (
-                <p>No products available now.</p>
+                <p>No products available now. This may be a technical problem. Please report it by sending a mail to clayofstories@gmail.com. We'll fixed it ASAP!</p>
               )}
             </div>
           </div>
