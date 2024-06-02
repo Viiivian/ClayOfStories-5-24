@@ -473,26 +473,6 @@
         {
             "id": 48,
             "category": "Acessory",
-            "name": "Heartfelt Harmony Ring Set(Set of 2)",
-            "size": 1.7,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 700,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 49,
-            "category": "Acessory",
-            "name": "Stellar Sparkle Ring Set(Set of 2)",
-            "size": 1.7,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 700,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 50,
-            "category": "Acessory",
             "name": "Seashell Ring Set(Set of 2)",
             "size": 1.8,
             "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
@@ -501,97 +481,7 @@
             "time": "10\/26\/2023"
         },
         {
-            "id": 51,
-            "category": "Acessory",
-            "name": "Bestie Ring Set(Set of 2)",
-            "size": 1.7,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 700,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 52,
-            "category": "Acessory",
-            "name": "Star Couple Ring Set(Set of 2)",
-            "size": 1.8,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 700,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 53,
-            "category": "Acessory",
-            "name": "Big Diamond Ring Set(Set of 2)",
-            "size": 1.8,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 700,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 54,
-            "category": "Acessory",
-            "name": "Big Bow Tie Ring",
-            "size": 1.8,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 400,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 55,
-            "category": "Acessory",
-            "name": "Big Silver Ring",
-            "size": 1.9,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 450,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 56,
-            "category": "Acessory",
-            "name": "Silver Ring Set(Set of 3)",
-            "size": 1.8,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 1050,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 57,
-            "category": "Acessory",
-            "name": "Golden Ring Set(Set of 4)",
-            "size": 1.7,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 1350,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 58,
-            "category": "Acessory",
-            "name": "Rainbow Rings(Random)",
-            "size": 1.7,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 300,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 59,
-            "category": "Acessory",
-            "name": "Enchanted Serpent Ring",
-            "size": 1.8,
-            "description": "Adorn your fingers with our whimsical handmade stone clay rings! Each one boasts adorable designs and vibrant colors, adding a playful touch to your style. Cute and quirky, just like you!",
-            "price": 450,
-            "content": "Adorable Rings, Big Smiles!",
-            "time": "10\/26\/2023"
-        },
-        {
-            "id": 60,
+            "id": 49,
             "category": "Accessory",
             "name": "Serpent's Embrace Earrings",
             "size": "3*1.5",
