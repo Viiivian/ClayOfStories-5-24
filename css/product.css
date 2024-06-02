@@ -128,6 +128,10 @@
     background-color: #b68c8c;
 
 }
+.promotePro{
+    padding-bottom: 50px;
+
+}
 .ymal{
     padding-left: 20%;
     padding-top: 10vh;
@@ -175,6 +179,9 @@
 .box:hover button{
     background-color: #ffc7c2;
 }
+
+
+
 .box h1{
     /* padding-top: 50px; */
     margin-top: 10px;
@@ -216,12 +223,3 @@
 
 
 
-
-/* testxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-
-
-.trashcan img{
-    width: 60%;
-    margin: 30px auto;
-    
-}
