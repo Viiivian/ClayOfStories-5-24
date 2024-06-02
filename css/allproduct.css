@@ -26,9 +26,12 @@
 }
 
 .upper h1{
+    font-family: New York;
     position: absolute;
     font-size: 44px;
     top: 40%;
+    font-weight: 700;
+    color: #FFC7C2
 }
 
 
@@ -160,6 +163,7 @@ input[type="radio"]:checked::before {
     font-size: 18px;
     font-family: "New York";
     z-index: 99;
+    font-weight: 700;
 }
 
 .allproducts button {
