@@ -2,60 +2,43 @@
 /* ------------------------------------------------ */
 .main {
     background-color: #FFF9E2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
 }
 
 /* 產品標題 */
 .upper {
-    padding-top: 100px;
+    margin-top: 80px;
     display: flex;
     align-items: center;
-}
-
-.bigstar {
-    position: relative;
-    align-items: center;
-    margin: auto;
-}
-
-.bs {
-    position: absolute;
-    display: flex;
-    flex-direction: column-reverse;
-    left: 67%;
-    top: 10%;
-}
-
-.bluevase {
-    margin-left: 32%;
-}
-
-.splash {
-    z-index: 1;
-    width: 50.98px;
-    height: 39.08px;
-}
-
-.upper img {
+    justify-content: center;
     max-width: 100%;
-    height: auto;
+    /* height: 250px; */
+    position: relative;
+}
+.upper .vase-bkg{
+    max-width: 700px;
+}
+.upper .vase-bkg img{
+    width:100%;
 }
 
-.upper h1 {
+.upper h1{
     position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -420%);
-    z-index: 1;
-    margin: 0;
-    font-size: 60px;
+    font-size: 44px;
+    top: 40%;
 }
+
+
 
 /* 分類+產品排版 */
  .sidebarcontainer {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 40px;
+    margin-top: 40px;
     font-family: 'Noto Sans Carian';
     letter-spacing: 10%;
 }
