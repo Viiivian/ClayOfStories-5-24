@@ -456,8 +456,8 @@ footer .information ul {
 
 .detail {
     padding-top: 50px;
-    padding-left: 200px;
-    width: 25%;
+    padding-left: 50px;
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -474,12 +474,13 @@ footer .information ul {
     font-family: 'New York';
 }
 .detail p{
-    width: 80%;
-    line-height: 50px;
+    width: 100%;
+    line-height: 20px;
 }
 .btn-con{
     display: flex;
-    padding-left: 150px;
+    justify-content: center;
+    padding-top: 10px;
     width: 90%;
 }
 .btn-con button{

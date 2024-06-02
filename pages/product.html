@@ -126,7 +126,7 @@
 
 
             <section>
-                <h1 class="ymal">You may also like</h1>
+                <h1 class="ymal">You may also like...</h1>
                 <div class="list-box">
                     <div class="box">
                         <img src="../imagesAll/images/product1 1.svg" alt="">
@@ -278,7 +278,6 @@
         const { useState, useEffect } = React;
         const productId = new URLSearchParams(window.location.search).get('id');
 
-
         function Product({ product }) {
             const imgSrc = `../imagesAll/productsDetail/product${productId}`;
             return (
@@ -297,10 +296,13 @@
                             <small>{product.category}</small>
                             <h1>{product.name}</h1><br />
                             <h2>NT${product.price}</h2><br />
-                            <p>Product size： {product.size} cm <br />
+                            <div>
+                                <p>Product size： {product.size} cm <br />
                                 Product description: <br />
                                 {product.description}
-                            </p>
+                                </p>
+                            </div>
+                            
                             <div className="btn-con">
                                 <button onClick={decrease}><img src="../imagesAll/images/decrease.svg" alt="" /></button>
                                 <span className="count" id="count">1</span>
