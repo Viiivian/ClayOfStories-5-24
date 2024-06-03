@@ -38,7 +38,7 @@
     padding-top: 50px;
 }
 
-.smlpic figure {
+.smlpic .img-item {
     padding-bottom: 10px;
 }
 
@@ -128,6 +128,9 @@
     background-color: #b68c8c;
 
 }
+
+
+/* products recommedation */
 .promotePro{
     padding-bottom: 50px;
 
@@ -190,7 +193,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 .suggest-detail .content{
     text-align: center;
@@ -235,6 +238,8 @@
 
 .box button{
     background-color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
     border-radius: 30px;
     border: none; 
     outline: none;
@@ -246,6 +251,40 @@
 }
 .box button:hover{
    background-color: #fe9c93;
+   color: white;
+}
+
+
+
+
+
+
+
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+  flex-direction: column;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
 }
 
 

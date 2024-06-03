@@ -199,18 +199,45 @@
 
         function Product({ product }) {
             const imgSrc = `../imagesAll/productsDetail/product${productId}`;
+            const [currentImage, setCurrentImage] = useState(`${imgSrc}-a.JPG`);
+
+            const handleImageClick = (event, img) => {
+                event.preventDefault();
+                setCurrentImage(img);
+            };
+
             return (
                 <>
-                    <section className="product-container">
-                        <div className="smlpic">
-                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
-                            <figure><img src={`${imgSrc}-b.JPG`} alt="" /></figure>
-                            <figure><img src={`${imgSrc}-c.JPG`} alt="" /></figure>
-                            <figure><img src={`${imgSrc}-d.JPG`} alt="" /></figure>
+                    <section className="product-container product-imgs">
+                        <div className="smlpic img-select">
+                            <div className="img-item">
+                                <a href="#" data-id="1" onClick={(event) => handleImageClick(event, `${imgSrc}-a.JPG`)}>
+                                    <img src={`${imgSrc}-a.JPG`} alt="product image" />
+                                </a>
+                            </div>
+                            <div className="img-item">
+                                <a href="#" data-id="2" onClick={(event) => handleImageClick(event, `${imgSrc}-b.JPG`)}>
+                                    <img src={`${imgSrc}-b.JPG`} alt="product image" />
+                                </a>
+                            </div>
+                            <div className="img-item">
+                                <a href="#" data-id="3" onClick={(event) => handleImageClick(event, `${imgSrc}-c.JPG`)}>
+                                    <img src={`${imgSrc}-c.JPG`} alt="product image" />
+                                </a>
+                            </div>
+                            <div className="img-item">
+                                <a href="#" data-id="4" onClick={(event) => handleImageClick(event, `${imgSrc}-d.JPG`)}>
+                                    <img src={`${imgSrc}-d.JPG`} alt="product image" />
+                                </a>
+                            </div>
                         </div>
-                        <div className="bigpic">
-                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
+
+                        <div className="bigpic img-display">
+                            <div className="img-showcase">
+                                <img src={currentImage} alt="product image" />
+                            </div>
                         </div>
+
                         <div className="detail">
                             <small>{product.category}</small>
                             <h1>{product.name}</h1><br />
@@ -237,6 +264,7 @@
                 </>
             );
         }
+
         // 下方推薦產品區
         function Suggest({ productId }) {
             const [suggestedProducts, setSuggestedProducts] = useState([]);
@@ -350,7 +378,6 @@
         }
 
     </script>
-
 
 </body>
 
