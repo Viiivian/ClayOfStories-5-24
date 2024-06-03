@@ -14,4 +14,11 @@ $(function () {
         //離開時往上滑動
         $(">ul", this).slideUp("fast")
     })
+
+        /* 漢堡按鈕 */
+        $('.hamburger').click(function () {
+            /* 交換三 跟 X */
+            $(this).toggleClass('is-active');
+            $('.navigation').toggleClass('show');
+        });
 })
