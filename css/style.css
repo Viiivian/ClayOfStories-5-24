@@ -19,7 +19,7 @@
     background-color: #FFC7C2;
     margin-left: -70px;
     width: 100px;
-    height: 220px;
+    height: 250px;
     margin-top: 14px;
     border-radius: 10px; 
 }
@@ -28,9 +28,10 @@
     flex-direction: column;
 }
 .navigation .menu a{
-    margin-top: 20px;
+    margin-top: 25px;
     color: white;
     text-align: center;
+    font-size: 1.1rem;
     
 }
 .bar {
