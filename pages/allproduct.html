@@ -207,9 +207,13 @@
     }
   
     function MyApp() {
+      // 所有產品資料
       const [products, setProducts] = useState([]);
+      // 篩選過的產品資料
       const [filteredProducts, setFilteredProducts] = useState([]);
+      // 選定的分類(預設是all)
       const [selectedCategory, setSelectedCategory] = useState('all');
+      // 選定的排序
       const [sortType, setSortType] = useState('');
   
       useEffect(() => {
@@ -224,9 +228,24 @@
             setFilteredProducts([]);
           });
       }, []);
-  
-      const handleSortChange = (sortType, productsToSort) => {
+
+      //  點擊分類
+      const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+        let filtered;
+        if (category === 'all') {
+          filtered = products;
+        } else {
+          // 根據選的種類，篩選產品資料放入filtered
+          filtered = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
+        }
+        handleSortChange(sortType, filtered);
+      };
+
+       // 點擊排序
+       const handleSortChange = (sortType, productsToSort) => {
         setSortType(sortType);
+        // 拷貝分類好的資料到sortedProducts，並排序資料
         let sortedProducts = [...productsToSort];
         if (sortType === 'priceLh') {
           sortedProducts.sort((a, b) => a.price - b.price);
@@ -238,16 +257,6 @@
         setFilteredProducts(sortedProducts);
       };
   
-      const handleCategoryChange = (category) => {
-        setSelectedCategory(category);
-        let filtered;
-        if (category === 'all') {
-          filtered = products;
-        } else {
-          filtered = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
-        }
-        handleSortChange(sortType, filtered);
-      };
   
       return (
         <div className="sidebarcontainer">
