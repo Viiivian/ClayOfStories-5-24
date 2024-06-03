@@ -112,11 +112,7 @@
   <main class="main">
     <!-- Produt Title -->
     <div class="upper">
-      <img src="../imagesAll/images/Star 9.png" alt="" class="bigstar">
-      <div class="bs">
-        <img src="../imagesAll/images/blue vase.png" alt="" class="bluevase">
-        <img src="../imagesAll/images/splash.png" alt="" class="splash">
-      </div>
+      <div class="vase-bkg"><img src="../imagesAll/images/product-title.png" alt=""></div>
       <h1>Products</h1>
     </div>
 
@@ -196,10 +192,10 @@
 
   <script type="text/babel">
     const { useState, useEffect } = React;
+  
     function Product({ product }) {
       const imgSrc = `../imagesAll/psphoto/psphoto${product.id}.png`;
       return (
-
         <a href={`product.html?id=${product.id}`} key={product.id}>
           <div className="allproducts">
             <img className="default-img" src={imgSrc} alt={product.name} />
@@ -207,18 +203,19 @@
             <button>NT${product.price}</button>
           </div>
         </a>
-
       );
     }
-
+  
     function MyApp() {
+      // 所有產品資料
       const [products, setProducts] = useState([]);
-      // 選定的種類資料(預設為全品項資料)
+      // 篩選過的產品資料
       const [filteredProducts, setFilteredProducts] = useState([]);
-      // 選定種類(預設為全品項)
+      // 選定的分類(預設是all)
       const [selectedCategory, setSelectedCategory] = useState('all');
-
-      // 取得所有產品資料
+      // 選定的排序
+      const [sortType, setSortType] = useState('');
+  
       useEffect(() => {
         axios.get("../json/db.json")
           .then(res => {
@@ -232,22 +229,35 @@
           });
       }, []);
 
-      //按鈕點擊事件
+      //  點擊分類
       const handleCategoryChange = (category) => {
-
-        // selectedCategory的參數為checked的值
         setSelectedCategory(category);
+        let filtered;
         if (category === 'all') {
-          // setFilteredProducts的資料為全部產品
-          setFilteredProducts(products);
+          filtered = products;
         } else {
-          // 將products裡的指定種類資料取出
-          const filtered = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
-          // setFilteredProducts的資料更改為指定種類
-          setFilteredProducts(filtered);
+          // 根據選的種類，篩選產品資料放入filtered
+          filtered = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
         }
+        handleSortChange(sortType, filtered);
       };
 
+       // 點擊排序
+       const handleSortChange = (sortType, productsToSort) => {
+        setSortType(sortType);
+        // 拷貝分類好的資料到sortedProducts，並排序資料
+        let sortedProducts = [...productsToSort];
+        if (sortType === 'priceLh') {
+          sortedProducts.sort((a, b) => a.price - b.price);
+        } else if (sortType === 'priceHl') {
+          sortedProducts.sort((a, b) => b.price - a.price);
+        } else if (sortType === 'newest') {
+          sortedProducts.sort((a, b) => new Date(b.time) - new Date(a.time));
+        }
+        setFilteredProducts(sortedProducts);
+      };
+  
+  
       return (
         <div className="sidebarcontainer">
           <div className="sidebar">
@@ -285,30 +295,26 @@
               </ul>
               <br />
             </div>
-
+  
             <br />
-
+  
             <h2>Sort by</h2>
             <ul>
               <li>
-                <input type="radio" id="sort-bestselling" name="sorting" value="bestselling" />
-                <label htmlFor="sort-bestselling">Bestselling</label>
-              </li>
-              <li>
-                <input type="radio" id="sort-newest" name="sorting" value="newest" />
+                <input type="radio" id="sort-newest" name="sorting" value="newest" onChange={() => handleSortChange('newest', filteredProducts)} checked={sortType === 'newest'} />
                 <label htmlFor="sort-newest">Newest</label>
               </li>
               <li>
-                <input type="radio" id="sort-priceLh" name="sorting" value="price" />
+                <input type="radio" id="sort-priceLh" name="sorting" value="priceLh" onChange={() => handleSortChange('priceLh', filteredProducts)} checked={sortType === 'priceLh'} />
                 <label htmlFor="sort-priceLh">Price (low to high)</label>
               </li>
               <li>
-                <input type="radio" id="sort-priceHl" name="sorting" value="price" />
+                <input type="radio" id="sort-priceHl" name="sorting" value="priceHl" onChange={() => handleSortChange('priceHl', filteredProducts)} checked={sortType === 'priceHl'} />
                 <label htmlFor="sort-priceHl">Price (high to low)</label>
               </li>
             </ul>
           </div>
-
+  
           <div className="main-content">
             <div className="product-list">
               {filteredProducts && filteredProducts.length > 0 ? (
@@ -320,17 +326,15 @@
               )}
             </div>
           </div>
-
-
-
         </div>
       );
     }
-
+  
     const container = document.getElementById('root');
     const root = ReactDOM.createRoot(container);
     root.render(<MyApp />);
   </script>
+  
 
   <script>
 

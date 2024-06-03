@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clayofstories</title>
     <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
-    <!-- <link rel="stylesheet" href="../css/default-set.css"> -->
+    <link rel="stylesheet" href="../css/default-set.css">
     <link rel="stylesheet" href="../css/product.css">
-    <!-- <link rel="stylesheet" href="../css/default-set.css"> -->
 </head>
 
 <body>
@@ -122,84 +121,6 @@
             <div id="root">
 
             </div>
-
-
-
-            <section>
-                <h1 class="ymal">You may also like</h1>
-                <div class="list-box">
-                    <div class="box">
-                        <img src="../imagesAll/images/product1 1.svg" alt="">
-                        <h1>Blue Sky</h1>
-                        <small>Blue Sky and white cloud.</small>
-                        <div class="num-con">
-                            <h6>price <br>num</h6>
-                            <p>$700 <br>
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                            </p>
-                        </div>
-                        <button>ADD TO CART</button>
-                    </div>
-                    <div class="box">
-                        <img src="../imagesAll/images/product1 1.svg" alt="">
-                        <h1>Blue Sky</h1>
-                        <small>Blue Sky and white cloud.</small>
-                        <div class="num-con">
-                            <h6>price <br>num</h6>
-                            <p>$700 <br>
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                            </p>
-                        </div>
-                        <button>ADD TO CART</button>
-                    </div>
-                    <div class="box">
-                        <img src="../imagesAll/images/product1 1.svg" alt="">
-                        <h1>Blue Sky</h1>
-                        <small>Blue Sky and white cloud.</small>
-                        <div class="num-con">
-                            <h6>price <br>num</h6>
-                            <p>$700 <br>
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                            </p>
-                        </div>
-                        <button>ADD TO CART</button>
-                    </div>
-                    <div class="box">
-                        <img src="../imagesAll/images/product1 1.svg" alt="">
-                        <h1>Blue Sky</h1>
-                        <small>Blue Sky and white cloud.</small>
-                        <div class="num-con">
-                            <h6>price <br>num</h6>
-                            <p>$700 <br>
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                            </p>
-                        </div>
-                        <button>ADD TO CART</button>
-
-                    </div>
-                </div>
-
-            </section>
         </section>
 
 
@@ -278,7 +199,6 @@
         const { useState, useEffect } = React;
         const productId = new URLSearchParams(window.location.search).get('id');
 
-
         function Product({ product }) {
             const imgSrc = `../imagesAll/productsDetail/product${productId}`;
             return (
@@ -297,10 +217,13 @@
                             <small>{product.category}</small>
                             <h1>{product.name}</h1><br />
                             <h2>NT${product.price}</h2><br />
-                            <p>Product size： {product.size} cm <br />
-                                Product description: <br />
-                                {product.description}
-                            </p>
+                            <div>
+                                <p>Product size： {product.size} cm <br />
+                                    Product description: <br />
+                                    {product.description}
+                                </p>
+                            </div>
+
                             <div className="btn-con">
                                 <button onClick={decrease}><img src="../imagesAll/images/decrease.svg" alt="" /></button>
                                 <span className="count" id="count">1</span>
@@ -310,6 +233,81 @@
                                 <button className="add-to-cart" onClick={addToCart}>Add To Cart</button>
                                 <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
                             </section>
+                        </div>
+                    </section>
+
+                    <section className="promotePro">
+                        <h1 className="ymal">You may also like...</h1>
+                        <div className="list-box">
+                            <div className="box">
+                                <img src="../imagesAll/images/product1 1.svg" alt="" />
+                                <h1>Blue Sky</h1>
+                                <small>Blue Sky and white cloud.</small>
+                                <div className="num-con">
+                                    <h6>price <br />num</h6>
+                                    <p>$700 <br />
+                                        <select name="" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <button>ADD TO CART</button>
+                            </div>
+                            <div className="box">
+                                <img src="../imagesAll/images/product1 1.svg" alt="" />
+                                <h1>Blue Sky</h1>
+                                <small>Blue Sky and white cloud.</small>
+                                <div class="num-con">
+                                    <h6>price <br />num</h6>
+                                    <p>$700 <br />
+                                        <select name="" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <button>ADD TO CART</button>
+                            </div>
+                            <div className="box">
+                                <img src="../imagesAll/images/product1 1.svg" alt="" />
+                                <h1>Blue Sky</h1>
+                                <small>Blue Sky and white cloud.</small>
+                                <div class="num-con">
+                                    <h6>price <br />num</h6>
+                                    <p>$700 <br />
+                                        <select name="" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <button>ADD TO CART</button>
+                            </div>
+                            <div className="box">
+                                <img src="../imagesAll/images/product1 1.svg" alt="" />
+                                <h1>Blue Sky</h1>
+                                <small>Blue Sky and white cloud.</small>
+                                <div class="num-con">
+                                    <h6>price <br />num</h6>
+                                    <p>$700 <br />
+                                        <select name="" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <button>ADD TO CART</button>
+
+                            </div>
                         </div>
                     </section>
                 </>
@@ -323,9 +321,9 @@
                 if (productId) {
                     axios.get(`../json/db.json`)
                         .then(res => {
-                            setProduct(res.data.products[productId-1]);
+                            setProduct(res.data.products[productId - 1]);
                             console.log(setProduct)
-                            console.log("success")                          
+                            console.log("success")
                         })
                         .catch(err => {
                             console.error("Error fetching product:", err);
@@ -340,7 +338,7 @@
 
             return <Product key={product.id} product={product} />;
 
-            
+
         }
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
@@ -369,7 +367,7 @@
             count = 1;  // Reset the product count after adding to cart
             document.getElementById('count').innerText = count;
         }
-        
+
     </script>
 
 

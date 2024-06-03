@@ -19,7 +19,8 @@
                 <h1 class="logo">
                     <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
-                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png"
+                            alt="品牌LOGO"></a>
                 </h1>
 
                 <nav>
@@ -135,7 +136,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="envelope"><img src="./images/letter.png" alt=""></div> -->
 
             </div>
         </section>
@@ -186,7 +186,7 @@
             </div>
 
             <div class="border-s border"></div>
-            <div class="copyright-ms">               
+            <div class="copyright-ms">
                 <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
             </div>
         </div>
@@ -201,39 +201,35 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var foldButton = document.getElementById('foldButton');
-    
+
             foldButton.addEventListener('click', function () {
                 var upperPart = document.getElementById('upperPart');
                 var upperContent = document.querySelector('.upper-content');
                 var paper = document.getElementById('paper');
-    
-                // 禁用按钮防止多次点击
                 foldButton.disabled = true;
-    
-                // 折叠上半部分并隐藏内容
+
                 upperPart.classList.toggle('folded');
                 upperContent.classList.toggle('hidden-content');
-    
-                // 延迟 1 秒后使整个纸张慢慢变小
+
                 setTimeout(function () {
                     paper.classList.toggle('shrunk');
                     setTimeout(function () {
                         newMessage.classList.toggle('visible-message');
-                    }, 1000); // 等待 1 秒（与 CSS 过渡时间一致）
-                    // 延迟 2 秒（与缩小动画时间相同）后将纸张替换为图片
+                    }, 1000); 
                     setTimeout(function () {
                         var img = document.createElement('img');
-                        img.src = '../imagesAll/images/letter.png'; // 替换为你自己的图片路径
+                        img.src = '../imagesAll/images/letter.png'; 
                         img.id = 'image';
-                        document.body.appendChild(img); // 添加图片到body
+                        paper.style.opacity = 0;
+                        document.body.appendChild(img); 
                         setTimeout(function () {
                             img.style.opacity = 1;
-                        }, 50); // 等待50毫秒
-                    }, 2000); // 等待 2 秒
-                }, 1000); // 等待 1 秒
+                        }, 50); 
+                    }, 2000);
+                }, 1000);
             });
         });
-    
+
     </script>
 
 </body>

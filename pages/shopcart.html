@@ -7,7 +7,8 @@
     <title>clayofstories</title>
     <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
     <link rel="stylesheet" href="../css/default-set.css">
-    <link rel="stylesheet" href="../css/shopcart.css"></head>
+    <link rel="stylesheet" href="../css/shopcart.css">
+</head>
 
 <body>
     <!-- 頁首區 -->
@@ -19,7 +20,8 @@
                 <h1 class="logo">
                     <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
-                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png"
+                            alt="品牌LOGO"></a>
                 </h1>
 
                 <nav>
@@ -125,15 +127,17 @@
                     </div>
                 </div>
                 <div class="product-1">
-                    <img src="../imagesAll/images/cart_prt.svg" alt="">
-                    <h5>Dance with the clouds jewelry tray</h5>
-                    <div class="prt-detail">
-                        <p>$189</p>
-                        <p>1</p>
-                        <p>$189</p>
-                        <div>
-                            <button>remove
-                            </button>
+                    <div class="rwdbox">
+                        <img src="../imagesAll/images/cart_prt.svg" alt="">
+                        <h5>Dance with the clouds jewelry tray</h5>
+                        <div class="prt-detail">
+                            <p>$189</p>
+                            <p>1</p>
+                            <p class="rwdgap">$189</p>
+                            <div>
+                                <button>remove
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,7 +147,7 @@
                     <div class="prt-detail">
                         <p>$420</p>
                         <p>2</p>
-                        <p>$840</p>
+                        <p class="rwdgap">$840</p>
                         <div>
                             <button>remove</button>
                         </div>
@@ -151,38 +155,85 @@
             </section>
             <!-- 訂單備註區------------------------------------------ -->
             <section class="cus-detail">
-                <div class="note">
-                    <p>Note</p>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="pack-infor">
-                    <p>Store</p>
-                    <select name="" id="">
-                        <option value="">Choose</option>
-                        <option value="">7-ELEVEN</option>
-                        <option value="">FamilyMart</option>
-                        <option value="">HI-life</option>
-                    </select>
-                    <div class="coupon">
-                        <p>Coupon</p>
+                <div class="normalrwd">
+                    <div class="note">
+                        <p>Note</p>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="pack-infor">
+                        <p>Store</p>
                         <select name="" id="">
                             <option value="">Choose</option>
-                            <option value="">New friend(-NT$50)</option>
-                            <option value="">Happy brithday(-NT$50)</option>
+                            <option value="">7-ELEVEN</option>
+                            <option value="">FamilyMart</option>
+                            <option value="">HI-life</option>
                         </select>
+                        <div class="coupon">
+                            <p>Coupon</p>
+                            <select name="" id="">
+                                <option value="">Choose</option>
+                                <option value="">New friend(-NT$50)</option>
+                                <option value="">Happy brithday(-NT$50)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="store-infor">
+                        <h5 class="store-con">信義門市</h5>
+                        <p class="store-con">台北市大安區信義路四段265巷12弄1號<button>變更商家</button></p>
+                        <div class="store-con">
+                            <h6>Freight:</h6>
+                            <h6>&nbsp; NT$60</h6>
+                        </div>
                     </div>
                 </div>
-                <div class="store-infor">
-                    <h5 class="store-con">信義門市</h5>
-                    <p class="store-con">台北市大安區信義路四段265巷12弄1號<button>變更</button></p>
-                    <div class="store-con">
-                        <h6>Freight:</h6>
-                        <h6>&nbsp; NT$60</h6>
+                <div class="phonerwd">
+                    <div class="note">
+                        <p>Note</p>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="pack-infor">
+                        <p>Store</p>
+                        <select name="" id="">
+                            <option value="">Choose</option>
+                            <option value="">7-ELEVEN</option>
+                            <option value="">FamilyMart</option>
+                            <option value="">HI-life</option>
+                        </select>
+                        <div class="coupon">
+                            <p>Coupon</p>
+                            <select name="" id="">
+                                <option value="">Choose</option>
+                                <option value="">New friend(-NT$50)</option>
+                                <option value="">Happy brithday(-NT$50)</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="pay">
+            <div class="phonerwd2">
+                <div class="store-infor">
+                    <h5 class="store-con">信義門市</h5>
+                    <p class="store-con">台北市大安區信義路四段265巷12弄1號<button>變更商家</button></p>
+                    <div class="store-con">
+                        <h6>Freight:</h6>
+                        <h6>&nbsp; NT$60</h6>
+                    </div>                      
+                </div>
+            </div>
+            <!-- <section class="pay">
                 <h6 class="payment">Payment</h6>
+                <select name="" id="">
+                    <option value="">Payment options</option>
+                    <option value="">信用卡/金融卡</option>
+                    <option value="">網銀轉帳</option>
+                </select>
+                <h6 class="price">Total:</h6>
+                <p>$1089</p>
+                <div class="pay-btn">
+                    <button>Checkout</button>
+                </div>
+            </section> -->
+            <section class="pay">
                 <select name="" id="">
                     <option value="">Payment options</option>
                     <option value="">信用卡/金融卡</option>
@@ -244,7 +295,7 @@
             </div>
 
             <div class="border-s border"></div>
-            <div class="copyright-ms">               
+            <div class="copyright-ms">
                 <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
             </div>
         </div>

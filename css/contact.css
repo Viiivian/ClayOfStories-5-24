@@ -12,21 +12,46 @@
 .upper-content {
     transition: opacity 0.5s ease-in-out;
     width: 50%;
-    margin-top: 20px;
-    
+    margin-top: 20px; 
+}
+@media(max-width:819px){
+    .upper-content {
+        width: 80%;
+        padding-top: 30px;
+    }
+}
+@media(min-width:820px) and (max-width:1000px){
+    .upper-content{
+        width: 80%;
+    }
 }
 
-
+.envelope{
+    position: relative;
+}
 .paper {
     width: 35%;
     height: 550px;
     margin: auto;
     position: relative;
-    /* border: 1px solid #ccc; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    right: 25%;
+    left: 0;
+    opacity: 1;
+
+
+}
+@media(max-width:819px){
+    .paper{
+        width: 80%;
+    }
+}
+@media(min-width:820px) and (max-width:1000px){
+    .paper{
+        width: 70%;
+    }
 }
 #paper{
-        transition: transform 2s ease-in-out;
+        transition: transform 2s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .hidden-message{
@@ -57,6 +82,7 @@
     /* box-sizing: border-box; */
     z-index: 9;
 }
+
 
 .paper h1{
     width: 100%;
@@ -89,6 +115,11 @@ input:focus{
     flex-direction: column;
     width: 50%;
 }
+@media(max-width:820px){
+    .lower-content{
+        width: 80%;
+    }
+}
 
 .shrunk {
     transform: scale(0.7);
@@ -98,6 +129,7 @@ textarea{
     width: 100%;
     height: 150px;
     outline: none;
+    
 
 }
 
@@ -132,13 +164,20 @@ button:hover {
 }
 #image {
     position: absolute;
-    width: 580px; /* 设置图片的宽度 */
-    height: 350px; /* 保持图片的高度自动调整 */
-    top: 49%; /* 距离顶部50% */
-    left: 50%; /* 距离左边50% */
-    transform: translate(-50%, -50%); /* 使图片居中 */
-    opacity: 0; /* 设置初始透明度为0 */
-    transition: opacity 1s ease; /* 添加过渡效果，持续2秒，并使用缓动函数 */
+    width: 580px; 
+    height: 350px; 
+    top: 49%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+@media(max-width:819px){
+    #image{
+        width: 460px;
+        height:300px;
+        top: 50%;
+    }
 }
 
 
