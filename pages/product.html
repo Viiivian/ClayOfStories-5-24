@@ -193,134 +193,139 @@
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
     <!-- <script src="../js/product.js"></script> -->
-
     <script type="text/babel">
         const { useState, useEffect } = React;
         const productId = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
-      
+
         function Product({ product }) {
-          const imgSrc = `../imagesAll/productsDetail/product${productId}`;
-          return (
-            <>
-              <section className="product-container">
-                <div className="smlpic">
-                  <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
-                  <figure><img src={`${imgSrc}-b.JPG`} alt="" /></figure>
-                  <figure><img src={`${imgSrc}-c.JPG`} alt="" /></figure>
-                  <figure><img src={`${imgSrc}-d.JPG`} alt="" /></figure>
-                </div>
-                <div className="bigpic">
-                  <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
-                </div>
-                <div className="detail">
-                  <small>{product.category}</small>
-                  <h1>{product.name}</h1><br />
-                  <h2>NT${product.price}</h2><br />
-                  <div>
-                    <p>Product size： {product.size} cm <br />
-                      Product description: <br />
-                      {product.description}
-                    </p>
-                  </div>
-      
-                  <div className="btn-con">
-                    <button onClick={decrease}><img src="../imagesAll/images/decrease.svg" alt="" /></button>
-                    <span className="count" id="count">1</span>
-                    <button onClick={increase}><img src="../imagesAll/images/increase.svg" alt="" /></button>
-                  </div>
-                  <section className="add">
-                    <button className="add-to-cart" onClick={addToCart}>Add To Cart</button>
-                    <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
-                  </section>
-                </div>
-              </section>
-      
-              <Suggest productId={productId} />
-            </>
-          );
+            const imgSrc = `../imagesAll/productsDetail/product${productId}`;
+            return (
+                <>
+                    <section className="product-container">
+                        <div className="smlpic">
+                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
+                            <figure><img src={`${imgSrc}-b.JPG`} alt="" /></figure>
+                            <figure><img src={`${imgSrc}-c.JPG`} alt="" /></figure>
+                            <figure><img src={`${imgSrc}-d.JPG`} alt="" /></figure>
+                        </div>
+                        <div className="bigpic">
+                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
+                        </div>
+                        <div className="detail">
+                            <small>{product.category}</small>
+                            <h1>{product.name}</h1><br />
+                            <h2>NT${product.price}</h2><br />
+                            <div>
+                                <p>Product size： {product.size} cm <br />
+                                    Product description: <br />
+                                    {product.description}
+                                </p>
+                            </div>
+
+                            <div className="btn-con">
+                                <button onClick={decrease}><img src="../imagesAll/images/decrease.svg" alt="" /></button>
+                                <span className="count" id="count">1</span>
+                                <button onClick={increase}><img src="../imagesAll/images/increase.svg" alt="" /></button>
+                            </div>
+                            <section className="add">
+                                <button className="add-to-cart" onClick={addToCart}>Add To Cart</button>
+                                <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
+                            </section>
+                        </div>
+                    </section>
+                    <Suggest productId={productId} />
+                </>
+            );
         }
-      
+        // 下方推薦產品區
         function Suggest({ productId }) {
-          const [suggestedProducts, setSuggestedProducts] = useState([]);
-      
-          useEffect(() => {
-            axios.get(`../json/db.json`)
-              .then(res => {
-                const products = res.data.products;
-                let suggested = [];
-      
-                if (productId <= 3) {
-                  // 如果產品id是1, 2 或 3，推薦產品為後三筆
-                  suggested = products.slice(productId, productId+3);
-                } else {
-                  //其他都是推薦前三筆
-                  suggested = products.slice(productId-4, productId-1);
-                }
-      
-                setSuggestedProducts(suggested);
-              })
-              .catch(err => {
-                console.error("Error fetching suggested products:", err);
-              });
-          }, [productId]);
-      
-          return (
-            <section className="promotePro">
-              <h1 className="ymal">You may also like...</h1>
-              <div className="list-box">
-                {suggestedProducts.map((product, index) => (
-                  <div className="box" key={index}>
-                    <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
-                    <h1>{product.name}</h1>
-                    <small>{product.content}</small>
-                    <div className="num-con">
-                      <h6>price <br />num</h6>
-                      <p>NT${product.price} <br />
-                        <select name="" id="">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </p>
+            const [suggestedProducts, setSuggestedProducts] = useState([]);
+
+            useEffect(() => {
+                axios.get(`../json/db.json`)
+                    .then(res => {
+                        const products = res.data.products;
+                        let suggested = [];
+
+                        if (productId <= 3) {
+                            //如果產品id是1, 2 或 3，推薦產品為後三筆
+                            suggested = products.slice(productId, productId + 3);
+                        } else {
+                            //其他都是推薦前三筆
+                            suggested = products.slice(productId - 4, productId - 1);
+                        }
+
+                        setSuggestedProducts(suggested);
+                    })
+                    .catch(err => {
+                        console.error("Error fetching suggested products:", err);
+                    });
+            }, [productId]);
+
+            return (
+                <section className="promotePro">
+                    <h1 className="ymal">You may also like...</h1>
+                    <div className="list-box">
+                        {suggestedProducts.map((product, index) => (
+                            <div className="box" key={index}>
+                                <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
+
+                                <div className="suggest-detail">
+                                    <h1>{product.name}</h1>
+                                    <p className="content">{product.content}</p>
+                                    <div className="product-price">
+                                        <h6>price</h6>
+                                        <p>NT${product.price}</p>
+                                    </div>
+                                    <div className="select-num">
+                                        <h6>price num</h6>
+                                        <select name="" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+
+                                    <button className="suggest-add">ADD TO CART</button>
+                                </div>
+
+                            </div>
+                        ))}
                     </div>
-                    <button>ADD TO CART</button>
-                  </div>
-                ))}
-              </div>
-            </section>
-          );
+                </section>
+            );
         }
-      
+
         function MyApp() {
-          const [product, setProduct] = useState(null);
-      
-          useEffect(() => {
-            if (productId) {
-              axios.get(`../json/db.json`)
-                .then(res => {
-                  const foundProduct = res.data.products.find(p => p.id === productId);
-                  setProduct(foundProduct);
-                })
-                .catch(err => {
-                  console.error("Error fetching product:", err);
-                  setProduct(null);
-                });
+            const [product, setProduct] = useState(null);
+
+            useEffect(() => {
+                if (productId) {
+                    axios.get(`../json/db.json`)
+                        .then(res => {
+                            const foundProduct = res.data.products.find(p => p.id === productId);
+                            setProduct(foundProduct);
+                        })
+                        .catch(err => {
+                            console.error("Error fetching product:", err);
+                            setProduct(null);
+                        });
+                }
+            }, [productId]);
+
+            if (!product) {
+                return <p>Loading...</p>;
             }
-          }, [productId]);
-      
-          if (!product) {
-            return <p>Loading...</p>;
-          }
-      
-          return <Product product={product} />;
+
+            return <Product product={product} />;
         }
-      
+
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
         root.render(<MyApp />);
-      </script>
-      
+    </script>
+
 
     <script>
 
@@ -340,7 +345,7 @@
         function addToCart() {
             cartCount += count;
             document.getElementById('cart-count').innerText = cartCount;
-            count = 1;  // Reset the product count after adding to cart
+            count = 1;
             document.getElementById('count').innerText = count;
         }
 
