@@ -150,7 +150,6 @@ ul{
 .order-box {
     background-color: #FFECE4;
     width: 50%;
-    /* height: 900px; */
     margin: auto;
 
 }
@@ -187,7 +186,6 @@ ul{
     height: 110px;
     margin: auto;
     margin-top: 50px;
-    /* text-align: center; */
 }
 @media (max-width:819px){
     .box-1{
@@ -207,7 +205,6 @@ ul{
     display: flex;
     margin-right: 8%;
     text-align: center;
-    /* margin-left: 0; */
 }
 @media (max-width:819px){
     .box-1 .box-1-1 .bar-gap{
@@ -235,8 +232,6 @@ ul{
     text-align: center;
     align-self: center;
     padding-left: 20px;
-    /* padding-left: 10px; */
-    /* margin-left: -50px; */
 }
 @media (max-width:819px){
     .rwdtitle{
@@ -286,8 +281,6 @@ ul{
 
 .box-1-2 .bar-gap-2 {
     margin-right: 6%;
-    /* padding-left: 20px; */
-    /* width: %; */
     text-align: center;
     height: 50px;
 }
@@ -321,12 +314,6 @@ ul{
     background-color: #FFECE4;
 }
 
-/* 手機 */
-@media (max-width:640px){
-    /* .box-1-2 button{
-        
-    } */
-}
 
 
 .order-detail-box {
@@ -389,10 +376,8 @@ ul{
 
 .odb-2 img {
     width: 10%;
-    /* padding-left: 8%;s */
     padding-top: 20px;
     margin: auto;
-    /* padding-right: 8%; */
 }
 @media (max-width:819px){
     .odb-2 img {
@@ -455,7 +440,6 @@ ul{
 
 .package-dtl .cus-dtl {
     margin: auto;
-    /* margin-left: 40px; */
     text-align: center;
 }
 
