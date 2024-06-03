@@ -253,11 +253,20 @@
 }
 
 .slideText {
-    position: relative;
-    overflow: hidden;
+    /* position: relative;
+    overflow: hidden; */
     width: 100%;
     height: 2.4vw;
     /* 使用相對單位 */
+    display: flex;
+    align-items: center;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(140%); }
+    100% { transform: translateX(-140%); }
 }
 
 .slideText ul li {
@@ -271,6 +280,8 @@
 
 .slideText ul,
 .slideText li {
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -279,9 +290,9 @@
     /* 使用相對單位 */
 }
 
-.slideText ul {
+/* .slideText ul {
     position: absolute;
-}
+} */
 
 .slideText li {
     text-align: center;
@@ -581,7 +592,7 @@
 }
 
 .sloganTwo .slideText ul li {
-    color: #0f0f0f;
+    color: #464646;
 }
 
 
