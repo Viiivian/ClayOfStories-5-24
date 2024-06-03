@@ -277,6 +277,7 @@
                             <br>for
                             <br>Latest News
                         </h2>
+                        <div class="videosize">
                         <div class="subscribe-txt">
                             <ul>
                                 <li>High Quality and Enternal Beauty</li>
@@ -292,6 +293,7 @@
                                     id="subscribe-form-submit" title="訂閱按鈕" value="SUBSCRIBE">
                             </div>
                         </form>
+                    </div>
                     </div>
 
                 </div>
@@ -477,14 +479,13 @@
                 var comments = document.querySelectorAll('.slideright ');
                 var scrollPosition = window.scrollY;
 
-                // 当滚动到2000像素时，依次添加visible类
-                if (scrollPosition > 2650) {
+                if (scrollPosition > 2550) {
                     comments.forEach(function (comment, index) {
                         setTimeout(function () {
                             comment.style.opacity = '1';
                             comment.style.transform = 'translateX(0)';
                             comment.style.transition = 'opacity 0.5s, transform 1.5s';
-                        }, index * 200); // 将评论元素依次添加动画效果，每个评论间隔200毫秒
+                        }, index * 200); 
                     });
                 } else {
                     comments.forEach(function (comment) {
@@ -500,14 +501,13 @@
                 var comments1 = document.querySelectorAll('.slideleft ');
                 var scrollPosition1 = window.scrollY;
 
-                // 当滚动到2000像素时，依次添加visible类
-                if (scrollPosition1 > 2650) {
+                if (scrollPosition1 > 2550) {
                     comments1.forEach(function (comment1, index) {
                         setTimeout(function () {
                             comment1.style.opacity = '1';
                             comment1.style.transform = 'translateX(0)';
                             comment1.style.transition = 'opacity 0.5s, transform 1.5s';
-                        }, index * 300); // 将评论元素依次添加动画效果，每个评论间隔200毫秒
+                        }, index * 300); 
                     });
                 } else {
                     comments1.forEach(function (comment1) {
@@ -517,6 +517,55 @@
                     });
                 }
             });
+        });
+        // 調整尺寸動畫出現時間
+        document.addEventListener('DOMContentLoaded', function () {
+            function handleScrollAnimation() {
+                var scrollPosition = window.scrollY;
+                var windowHeight = window.innerHeight;
+                var windowWidth = window.innerWidth;
+                
+
+                var triggerPosition;
+                if (windowWidth <= 640) {
+                    triggerPosition = windowHeight * 1.2; 
+                } else if (windowWidth <= 820) {
+                    triggerPosition = windowHeight * 1.4; 
+                } else {
+                    triggerPosition = 2550; 
+                }
+
+                // 處理右邊滑出動畫
+                var commentsRight = document.querySelectorAll('.slideright');
+                commentsRight.forEach(function (comment, index) {
+                    if (scrollPosition > triggerPosition) {
+                        setTimeout(function () {
+                            comment.style.opacity = '1';
+                            comment.style.transform = 'translateX(0)';
+                        }, index * 200); 
+                    } else {
+                        comment.style.opacity = '0';
+                        comment.style.transform = 'translateX(-30%)';
+                    }
+                });
+                
+                // 處理左邊滑出動畫
+                var commentsLeft = document.querySelectorAll('.slideleft');
+                commentsLeft.forEach(function (comment, index) {
+                    if (scrollPosition > triggerPosition) {
+                        setTimeout(function () {
+                            comment.style.opacity = '1';
+                            comment.style.transform = 'translateX(0)';
+                        }, index * 300); 
+                    } else {
+                        comment.style.opacity = '0';
+                        comment.style.transform = 'translateX(150%)';
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScrollAnimation);
+            handleScrollAnimation(); 
         });
     </script>
 
