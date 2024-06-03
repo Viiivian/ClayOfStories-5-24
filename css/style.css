@@ -851,7 +851,7 @@ input.submit {
     .comment4 { background-color: #F5F5F5; width: 55%; }
     .comment5 { background-color: #E3ECFF; width: 70%; }
 }
-@media (max-width:390px) {
+@media (min-width:390px) and (max-width:500px){
     .feedback {
         height: 120vh;
         padding-bottom: 200px;
@@ -997,7 +997,7 @@ input.submit {
         padding: 0 10px;
     }
 }
-@media (max-width:390px) {
+@media (min-width:390px) and (max-width:500px){
     .banner .container {
         flex-direction: column;
         justify-content: center;
