@@ -182,7 +182,7 @@
 
 
     </footer>
-    <!-- 載入axios -->
+
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <!-- 載入REACT -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -192,13 +192,15 @@
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
-    <!-- <script src="../js/product.js"></script> -->
+
+    <!-- REACT -->
     <script type="text/babel">
         const { useState, useEffect } = React;
         const productId = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
 
         function Product({ product }) {
             const imgSrc = `../imagesAll/productsDetail/product${productId}`;
+            // 左邊產品細節圖，預設用第一張圖片展示
             const [currentImage, setCurrentImage] = useState(`${imgSrc}-a.JPG`);
 
             const handleImageClick = (event, img) => {
@@ -327,7 +329,6 @@
 
         function MyApp() {
             const [product, setProduct] = useState(null);
-
             useEffect(() => {
                 if (productId) {
                     axios.get(`../json/db.json`)
@@ -354,9 +355,8 @@
         root.render(<MyApp />);
     </script>
 
-
+<!-- 購物車新增(待修) -->
     <script>
-
         var count = 0;
         var cartCount = 0;
         function increase() {
@@ -376,7 +376,6 @@
             count = 1;
             document.getElementById('count').innerText = count;
         }
-
     </script>
 
 </body>
