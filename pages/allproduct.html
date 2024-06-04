@@ -16,20 +16,20 @@
       <div class="left-bar">
         <div class="nav-box">
           <button class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </button>
           <div class="navigation">
-              <ul class="menu">
-                  <li><a href="../index.html">HOME</a></li>
-                  <li><a href="./about.html">ABOUT</a></li>
-                  <li><a href="./allproduct.html">PRODUCT</a></li>
-                  <li><a href="./customintro.html">CUSTOM</a></li>
-                  <li><a href="./contact.html">CONTACT</a></li>
-              </ul>
+            <ul class="menu">
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="./about.html">ABOUT</a></li>
+              <li><a href="./allproduct.html">PRODUCT</a></li>
+              <li><a href="./customintro.html">CUSTOM</a></li>
+              <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
           </div>
-      </div>
+        </div>
         <h1 class="logo">
           <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
@@ -204,9 +204,20 @@
   </footer>
 
 
+
+
+  <!-- 載入axios -->
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  <!-- 載入REACT -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="../js/jquery/jquery-3.7.1.min.js"></script>
+  <script src="../js/index.js"></script>
+
   <script type="text/babel">
     const { useState, useEffect } = React;
-  
+
     function Product({ product }) {
       const imgSrc = `../imagesAll/psphoto/psphoto${product.id}.png`;
       return (
@@ -219,7 +230,7 @@
         </a>
       );
     }
-  
+
     function MyApp() {
       // 所有產品資料
       const [products, setProducts] = useState([]);
@@ -229,7 +240,7 @@
       const [selectedCategory, setSelectedCategory] = useState('all');
       // 選定的排序
       const [sortType, setSortType] = useState('');
-  
+
       useEffect(() => {
         axios.get("../json/db.json")
           .then(res => {
@@ -256,8 +267,8 @@
         handleSortChange(sortType, filtered);
       };
 
-       // 點擊排序
-       const handleSortChange = (sortType, productsToSort) => {
+      // 點擊排序
+      const handleSortChange = (sortType, productsToSort) => {
         setSortType(sortType);
         // 拷貝分類好的資料到sortedProducts，並排序資料
         let sortedProducts = [...productsToSort];
@@ -270,8 +281,8 @@
         }
         setFilteredProducts(sortedProducts);
       };
-  
-  
+
+
       return (
         <div className="sidebarcontainer">
           <div className="sidebar">
@@ -308,13 +319,13 @@
                   <input type="radio" id="type-holder" name="category" value="photoholder" onChange={() => handleCategoryChange('Photo-Holder')} checked={selectedCategory === 'Photo-Holder'} />
                   <label htmlFor="type-holder">Photo holder</label>
                 </li>
-    
+
               </ul>
               <br />
             </div>
-  
+
             <br />
-  
+
             <h2>Sort by</h2>
             <ul>
               <li>
@@ -331,7 +342,7 @@
               </li>
             </ul>
           </div>
-  
+
           <div className="main-content">
             <div className="product-list">
               {filteredProducts && filteredProducts.length > 0 ? (
@@ -346,29 +357,11 @@
         </div>
       );
     }
-  
+
     const container = document.getElementById('root');
     const root = ReactDOM.createRoot(container);
     root.render(<MyApp />);
   </script>
-  
-
-  <script>
-
-  </script>
-
-
-
-  <!-- 載入axios -->
-  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
-  <!-- 載入REACT -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <script src="../js/jquery/jquery-3.7.1.min.js"></script>
-  <script src="../js/index.js"></script>
-
 
 </body>
 

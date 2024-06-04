@@ -269,7 +269,8 @@
                                 <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
                             </section>
                         </div>
-                    </section>
+                    
+                        </section>
                     <Suggest productId={productId} />
                 </>
             );
@@ -284,6 +285,7 @@
                     .then(res => {
                         const products = res.data.products;
                         let suggested = [];
+
 
                         if (productId <= 3) {
                             //如果產品id是1, 2 或 3，推薦產品為後三筆
@@ -304,7 +306,8 @@
                 <section className="promotePro">
                     <h1 className="ymal">You may also like...</h1>
                     <div className="list-box">
-                        {suggestedProducts.map((product, index) => (
+                        {suggestedProducts.map((product, index) => (     
+                            <a href={`product.html?id=${product.id}`} key={product.id}>                      
                             <div className="box" key={index}>
                                 <div className="suggest-img">
                                     <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
@@ -332,7 +335,9 @@
                                 </div>
 
                             </div>
-                        ))}
+                            </a>
+                        ))
+                    }
                     </div>
                 </section>
             );
