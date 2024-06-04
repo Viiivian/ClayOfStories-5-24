@@ -588,7 +588,7 @@
 .subscribe-txt li {
     font-size: 18px;
     color: #FFF;
-    line-height: 2rem;
+    line-height: 1rem;
     font-weight: 600;
     letter-spacing: 1.8px;
     padding: 4px 0;
@@ -598,6 +598,7 @@
 .video-intro form {
     display: flex;
     width: 100%;
+    padding-top: 15px;
 }
 
 .youtube-video {
