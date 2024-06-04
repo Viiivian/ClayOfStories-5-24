@@ -283,29 +283,32 @@
                   <label htmlFor="type-all">All</label>
                 </li>
                 <li>
+                  <input type="radio" id="type-mirror" name="category" value="mirror" onChange={() => handleCategoryChange('Mirror')} checked={selectedCategory === 'Mirror'} />
+                  <label htmlFor="type-mirror">Mirror</label>
+                </li>
+                <li>
                   <input type="radio" id="type-tray" name="category" value="jewelrytray" onChange={() => handleCategoryChange('Jewelry-Tray')} checked={selectedCategory === 'Jewelry-Tray'} />
                   <label htmlFor="type-tray">Jewelry Tray</label>
-                </li>
-                <li>
-                  <input type="radio" id="type-holder" name="category" value="photoholder" onChange={() => handleCategoryChange('Photo-Holder')} checked={selectedCategory === 'Photo-Holder'} />
-                  <label htmlFor="type-holder">Photo holder</label>
-                </li>
-                <li>
-                  <input type="radio" id="type-vase" name="category" value="flowervase" onChange={() => handleCategoryChange('Flower-Vase')} checked={selectedCategory === 'Flower-Vase'} />
-                  <label htmlFor="type-vase">Flower Vase</label>
                 </li>
                 <li>
                   <input type="radio" id="type-accessory" name="category" value="accessory" onChange={() => handleCategoryChange('Accessory')} checked={selectedCategory === 'Accessory'} />
                   <label htmlFor="type-accessory">Accessory</label>
                 </li>
+
+                <li>
+                  <input type="radio" id="type-vase" name="category" value="flowervase" onChange={() => handleCategoryChange('Flower-Vase')} checked={selectedCategory === 'Flower-Vase'} />
+                  <label htmlFor="type-vase">Flower Vase</label>
+                </li>
+
                 <li>
                   <input type="radio" id="type-frame" name="category" value="ringholder" onChange={() => handleCategoryChange('Ring-Holder')} checked={selectedCategory === 'Ring-Holder'} />
                   <label htmlFor="type-frame">Ring Holder</label>
                 </li>
                 <li>
-                  <input type="radio" id="type-mirror" name="category" value="mirror" onChange={() => handleCategoryChange('Mirror')} checked={selectedCategory === 'Mirror'} />
-                  <label htmlFor="type-mirror">Mirror</label>
+                  <input type="radio" id="type-holder" name="category" value="photoholder" onChange={() => handleCategoryChange('Photo-Holder')} checked={selectedCategory === 'Photo-Holder'} />
+                  <label htmlFor="type-holder">Photo holder</label>
                 </li>
+    
               </ul>
               <br />
             </div>
