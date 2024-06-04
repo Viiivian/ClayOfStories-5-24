@@ -306,7 +306,10 @@
                     <div className="list-box">
                         {suggestedProducts.map((product, index) => (
                             <div className="box" key={index}>
-                                <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
+                                <div className="suggest-img">
+                                    <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
+
+                                </div>
 
                                 <div className="suggest-detail">
                                     <h1>{product.name}</h1>
@@ -363,7 +366,7 @@
         root.render(<MyApp />);
     </script>
 
-<!-- 購物車新增(待修) -->
+    <!-- 購物車新增(待修) -->
     <script>
         var count = 0;
         var cartCount = 0;
