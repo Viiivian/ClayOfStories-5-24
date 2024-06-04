@@ -217,8 +217,15 @@
             };
 
             return (
-                <>
-                    <section className="product-container product-imgs">
+                <>  
+                <div className="product-card">
+                    <div className="back-link">
+                        <a href="../index.html">HOME/</a>
+                        <a href="./allproduct.html">All Products/</a>
+                        <p>{product.name}</p>                       
+                    </div>
+
+                    <div className="product-container product-imgs">
                         <div className="left-showImg">
                             <div className="smlpic img-select">
                                 <div className="img-item">
@@ -273,8 +280,11 @@
                             </section>
                         </div>
 
-                    </section>
-                    <Suggest productId={productId} />
+                    </div>
+                   
+                </div>
+                <Suggest productId={productId} />
+
                 </>
             );
         }
