@@ -241,7 +241,28 @@
 .btlbtn:hover{
     color: #fc8277;
 }
-
+.pw-intro {
+    text-align: center;
+}
+.pw-intro h2 {
+    letter-spacing: 5%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.pw-intro p{
+    letter-spacing: 5%;
+    line-height: 20px;
+}
+.loginform2 {
+    width: 70%;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
   /* 小型手機版 */
 @media (max-width:390px) {
     .kittiehand {
