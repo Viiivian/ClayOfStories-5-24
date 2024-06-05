@@ -249,9 +249,9 @@
     flex-direction: column;
     justify-content: center;
     background-color: #ffc7c2;
-    width: 270px;
-    height: 370px;
-    margin: 20px;
+    width: 255px;
+    height: 360px;
+    margin: 5px;
     margin-top: 200px;
     border-radius: 30px;
 }
