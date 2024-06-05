@@ -217,35 +217,45 @@
             };
 
             return (
-                <>
-                    <section className="product-container product-imgs">
-                        <div className="smlpic img-select">
-                            <div className="img-item">
-                                <a href="#" data-id="1" onClick={(event) => handleImageClick(event, `${imgSrc}-a.JPG`)}>
-                                    <img src={`${imgSrc}-a.JPG`} alt="product image" />
-                                </a>
-                            </div>
-                            <div className="img-item">
-                                <a href="#" data-id="2" onClick={(event) => handleImageClick(event, `${imgSrc}-b.JPG`)}>
-                                    <img src={`${imgSrc}-b.JPG`} alt="product image" />
-                                </a>
-                            </div>
-                            <div className="img-item">
-                                <a href="#" data-id="3" onClick={(event) => handleImageClick(event, `${imgSrc}-c.JPG`)}>
-                                    <img src={`${imgSrc}-c.JPG`} alt="product image" />
-                                </a>
-                            </div>
-                            <div className="img-item">
-                                <a href="#" data-id="4" onClick={(event) => handleImageClick(event, `${imgSrc}-d.JPG`)}>
-                                    <img src={`${imgSrc}-d.JPG`} alt="product image" />
-                                </a>
-                            </div>
-                        </div>
+                <>  
+                <div className="product-card">
+                    <div className="back-link">
+                        <a href="../index.html">HOME/</a>
+                        <a href="./allproduct.html">All Products/</a>
+                        <p>{product.name}</p>                       
+                    </div>
 
-                        <div className="bigpic img-display">
-                            <div className="img-showcase">
-                                <img src={currentImage} alt="product image" />
+                    <div className="product-container product-imgs">
+                        <div className="left-showImg">
+                            <div className="smlpic img-select">
+                                <div className="img-item">
+                                    <a href="#" data-id="1" onClick={(event) => handleImageClick(event, `${imgSrc}-a.JPG`)}>
+                                        <img src={`${imgSrc}-a.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                                <div className="img-item">
+                                    <a href="#" data-id="2" onClick={(event) => handleImageClick(event, `${imgSrc}-b.JPG`)}>
+                                        <img src={`${imgSrc}-b.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                                <div className="img-item">
+                                    <a href="#" data-id="3" onClick={(event) => handleImageClick(event, `${imgSrc}-c.JPG`)}>
+                                        <img src={`${imgSrc}-c.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                                <div className="img-item">
+                                    <a href="#" data-id="4" onClick={(event) => handleImageClick(event, `${imgSrc}-d.JPG`)}>
+                                        <img src={`${imgSrc}-d.JPG`} alt="product image" />
+                                    </a>
+                                </div>
                             </div>
+
+                            <div className="bigpic img-display">
+                                <div className="img-showcase">
+                                    <img src={currentImage} alt="product image" />
+                                </div>
+                            </div>
+
                         </div>
 
                         <div className="detail">
@@ -253,7 +263,7 @@
                             <h1>{product.name}</h1><br />
                             <h2>NT${product.price}</h2><br />
                             <div>
-                                <p>Product size： {product.size} cm <br />
+                                <p>Product size： {product.size} cm <br/>
                                     Product description: <br />
                                     {product.description}
                                 </p>
@@ -269,9 +279,12 @@
                                 <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
                             </section>
                         </div>
-                    
-                        </section>
-                    <Suggest productId={productId} />
+
+                    </div>
+                   
+                </div>
+                <Suggest productId={productId} />
+
                 </>
             );
         }
@@ -306,38 +319,38 @@
                 <section className="promotePro">
                     <h1 className="ymal">You may also like...</h1>
                     <div className="list-box">
-                        {suggestedProducts.map((product, index) => (     
-                            <a href={`product.html?id=${product.id}`} key={product.id}>                      
-                            <div className="box" key={index}>
-                                <div className="suggest-img">
-                                    <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
+                        {suggestedProducts.map((product, index) => (
+                            <a href={`product.html?id=${product.id}`} key={product.id}>
+                                <div className="box" key={index}>
+                                    <div className="suggest-img">
+                                        <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
 
-                                </div>
-
-                                <div className="suggest-detail">
-                                    <h1>{product.name}</h1>
-                                    <p className="content">{product.content}</p>
-                                    <div className="product-price">
-                                        <h6>price</h6>
-                                        <p>NT${product.price}</p>
-                                    </div>
-                                    <div className="select-num">
-                                        <h6>price num</h6>
-                                        <select name="" id="">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                        </select>
                                     </div>
 
-                                    <button className="suggest-add">ADD TO CART</button>
-                                </div>
+                                    <div className="suggest-detail">
+                                        <h1>{product.name}</h1>
+                                        <p className="content">{product.content}</p>
+                                        <div className="product-price">
+                                            <h6>price</h6>
+                                            <p>NT${product.price}</p>
+                                        </div>
+                                        <div className="select-num">
+                                            <h6>price num</h6>
+                                            <select name="" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
 
-                            </div>
+                                        <button className="suggest-add">ADD TO CART</button>
+                                    </div>
+
+                                </div>
                             </a>
                         ))
-                    }
+                        }
                     </div>
                 </section>
             );

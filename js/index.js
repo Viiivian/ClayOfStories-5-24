@@ -12,7 +12,7 @@ $(function () {
         console.log("hello");
     }, function () {
         //離開時往上滑動
-        $(">ul", this).slideUp("fast")
+        $(">ul", this).stop().slideUp("fast")
     })
 
         /* 漢堡按鈕 */
