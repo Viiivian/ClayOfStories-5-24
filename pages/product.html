@@ -270,12 +270,15 @@
                             </div>
 
                             <div className="btn-con">
-                                <button onClick={decrease}><img src="../imagesAll/images/decrease.svg" alt="" /></button>
+                                <button><img src="../imagesAll/images/decrease.svg" alt="" />
+                                </button>
                                 <span className="count" id="count">1</span>
-                                <button onClick={increase}><img src="../imagesAll/images/increase.svg" alt="" /></button>
+                                <button><img src="../imagesAll/images/increase.svg" alt="" />
+                                </button>
                             </div>
+
                             <section className="add">
-                                <button className="add-to-cart" onClick={addToCart}>Add To Cart</button>
+                                <button className="add-to-cart">Add To Cart</button>
                                 <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
                             </section>
                         </div>
@@ -284,7 +287,6 @@
                    
                 </div>
                 <Suggest productId={productId} />
-
                 </>
             );
         }
@@ -294,7 +296,7 @@
             const [suggestedProducts, setSuggestedProducts] = useState([]);
 
             useEffect(() => {
-                axios.get(`../json/db.json`)
+                axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
                     .then(res => {
                         const products = res.data.products;
                         let suggested = [];
@@ -360,7 +362,7 @@
             const [product, setProduct] = useState(null);
             useEffect(() => {
                 if (productId) {
-                    axios.get(`../json/db.json`)
+                    axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
                         .then(res => {
                             const foundProduct = res.data.products.find(p => p.id === productId);
                             setProduct(foundProduct);
@@ -384,8 +386,13 @@
         root.render(<MyApp />);
     </script>
 
+
+
+</body>
+
+</html>
     <!-- 購物車新增(待修) -->
-    <script>
+    <!-- <script>
         var count = 0;
         var cartCount = 0;
         function increase() {
@@ -405,8 +412,4 @@
             count = 1;
             document.getElementById('count').innerText = count;
         }
-    </script>
-
-</body>
-
-</html>
+    </script> -->
