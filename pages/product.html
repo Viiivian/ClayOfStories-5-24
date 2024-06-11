@@ -216,77 +216,90 @@
                 event.preventDefault();
                 setCurrentImage(img);
             };
+            // 新增到購物車
+            const addToCart = () => {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Product added to cart!');
+            };
 
             return (
-                <>  
-                <div className="product-card">
-                    <div className="back-link">
-                        <a href="../index.html">HOME/</a>
-                        <a href="./allproduct.html">All Products/</a>
-                        <p>{product.name}</p>                       
-                    </div>
+                <>
+                    <div className="product-card">
+                        <div className="back-link">
+                            <a href="../index.html">HOME</a>
+                            <a href="./allproduct.html">/ All Products</a>
+                            <p>/ {product.name}</p>
+                        </div>
 
-                    <div className="product-container product-imgs">
-                        <div className="left-showImg">
-                            <div className="smlpic img-select">
-                                <div className="img-item">
-                                    <a href="#" data-id="1" onClick={(event) => handleImageClick(event, `${imgSrc}-a.JPG`)}>
-                                        <img src={`${imgSrc}-a.JPG`} alt="product image" />
-                                    </a>
+                        <div className="product-container product-imgs">
+                            <div className="left-showImg">
+                                <div className="smlpic img-select">
+                                    <div className="img-item">
+                                        <a href="#" data-id="1" onClick={(event) => handleImageClick(event, `${imgSrc}-a.JPG`)}>
+                                            <img src={`${imgSrc}-a.JPG`} alt="product image" />
+                                        </a>
+                                    </div>
+                                    <div className="img-item">
+                                        <a href="#" data-id="2" onClick={(event) => handleImageClick(event, `${imgSrc}-b.JPG`)}>
+                                            <img src={`${imgSrc}-b.JPG`} alt="product image" />
+                                        </a>
+                                    </div>
+                                    <div className="img-item">
+                                        <a href="#" data-id="3" onClick={(event) => handleImageClick(event, `${imgSrc}-c.JPG`)}>
+                                            <img src={`${imgSrc}-c.JPG`} alt="product image" />
+                                        </a>
+                                    </div>
+                                    <div className="img-item">
+                                        <a href="#" data-id="4" onClick={(event) => handleImageClick(event, `${imgSrc}-d.JPG`)}>
+                                            <img src={`${imgSrc}-d.JPG`} alt="product image" />
+                                        </a>
+                                    </div>
                                 </div>
-                                <div className="img-item">
-                                    <a href="#" data-id="2" onClick={(event) => handleImageClick(event, `${imgSrc}-b.JPG`)}>
-                                        <img src={`${imgSrc}-b.JPG`} alt="product image" />
-                                    </a>
+
+                                <div className="bigpic img-display">
+                                    <div className="img-showcase">
+                                        <img src={currentImage} alt="product image" />
+                                    </div>
                                 </div>
-                                <div className="img-item">
-                                    <a href="#" data-id="3" onClick={(event) => handleImageClick(event, `${imgSrc}-c.JPG`)}>
-                                        <img src={`${imgSrc}-c.JPG`} alt="product image" />
-                                    </a>
-                                </div>
-                                <div className="img-item">
-                                    <a href="#" data-id="4" onClick={(event) => handleImageClick(event, `${imgSrc}-d.JPG`)}>
-                                        <img src={`${imgSrc}-d.JPG`} alt="product image" />
-                                    </a>
-                                </div>
+
                             </div>
 
-                            <div className="bigpic img-display">
-                                <div className="img-showcase">
-                                    <img src={currentImage} alt="product image" />
+                            <div className="detail">
+                                <small>{product.category}</small>
+                                <h1>{product.name}</h1><br />
+                                <h2>NT${product.price}</h2><br />
+                                <div>
+                                    <p>Product size： {product.size} cm <br />
+                                        Product description: <br />
+                                        {product.description}
+                                    </p>
                                 </div>
+
+                                <div className="btn-con">
+                                    <button><img src="../imagesAll/images/decrease.svg" alt="" />
+                                    </button>
+                                    <span className="count" id="count">1</span>
+                                    <button><img src="../imagesAll/images/increase.svg" alt="" />
+                                    </button>
+                                </div>
+
+                                <section className="add">
+                                    <button className="add-to-cart" onClick={addToCart}>Add To Cart</button>
+                                    <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
+                                </section>
                             </div>
 
                         </div>
 
-                        <div className="detail">
-                            <small>{product.category}</small>
-                            <h1>{product.name}</h1><br />
-                            <h2>NT${product.price}</h2><br />
-                            <div>
-                                <p>Product size： {product.size} cm <br/>
-                                    Product description: <br />
-                                    {product.description}
-                                </p>
-                            </div>
-
-                            <div className="btn-con">
-                                <button><img src="../imagesAll/images/decrease.svg" alt="" />
-                                </button>
-                                <span className="count" id="count">1</span>
-                                <button><img src="../imagesAll/images/increase.svg" alt="" />
-                                </button>
-                            </div>
-
-                            <section className="add">
-                                <button className="add-to-cart">Add To Cart</button>
-                                <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
-                            </section>
-                        </div>
-
                     </div>
+<<<<<<< Updated upstream
                 </div>
                 <Suggest productId={productId} />
+=======
+                    <Suggest productId={productId} />
+>>>>>>> Stashed changes
                 </>
             );
         }
@@ -391,8 +404,8 @@
 </body>
 
 </html>
-    <!-- 購物車新增(待修) -->
-    <!-- <script>
+<!-- 購物車新增(待修) -->
+<!-- <script>
         var count = 0;
         var cartCount = 0;
         function increase() {
