@@ -253,6 +253,24 @@
         padding-top: 50px;
     }
 }
+@media (max-width:400px) {
+    #banner .star {
+        margin: 0;
+        padding: 0;
+    }
+    #banner .star img {
+        width: 300%;
+        padding-top: 100px;
+        padding-left: 20px;
+    }
+    #banner .container{
+        margin: 0 50px 0 30px;
+        align-items: center;
+    }
+    #choose {
+        margin-left: 15px;
+    }
+}
 /* 
 #choose .polaroid {
     display: flex;
