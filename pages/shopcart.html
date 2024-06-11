@@ -125,34 +125,77 @@
     </header>
 
     <main>
-        <!-- 購物車商品列表 -->
-        <div class="cart-container">
-            <div id="root"></div>
+        <!-- Produt Title -->
+        <div class="upper">
+            <div class="vase-bkg"><img src="../imagesAll/images/product-title.png" alt=""></div>
+            <h1>Cart</h1>
+        </div>
 
-            <!-- 訂單備註區------------------------------------------ -->
-            <div class="cus-detail">
-                <div class="normalrwd">
-                    <div class="note">
-                        <p>Note</p>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="pack-infor">
-                        <p>Store</p>
-                        <select name="" id="">
-                            <option value="">Choose</option>
-                            <option value="">7-ELEVEN</option>
-                            <option value="">FamilyMart</option>
-                            <option value="">HI-life</option>
-                        </select>
-                        <div class="coupon">
-                            <p>Coupon</p>
+        <!-- 購物車商品列表 -->
+        <section class="shopping-cart">
+            <div class="cart-container">
+
+                <div id="root"></div>
+
+                <!-- 訂單備註區 -->
+                <div class="cus-detail">
+                    <div class="normalrwd">
+                        <div class="note">
+                            <p>Note</p>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="pack-infor">
+                            <p>Store</p>
                             <select name="" id="">
                                 <option value="">Choose</option>
-                                <option value="">New friend(-NT$50)</option>
-                                <option value="">Happy brithday(-NT$50)</option>
+                                <option value="">7-ELEVEN</option>
+                                <option value="">FamilyMart</option>
+                                <option value="">HI-life</option>
                             </select>
+                            <div class="coupon">
+                                <p>Coupon</p>
+                                <select name="" id="">
+                                    <option value="">Choose</option>
+                                    <option value="">New friend(-NT$50)</option>
+                                    <option value="">Happy brithday(-NT$50)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="store-infor">
+                            <h5 class="store-con">信義門市</h5>
+                            <p class="store-con">台北市大安區信義路四段265巷12弄1號<button>變更商家</button></p>
+                            <div class="store-con">
+                                <h6>Freight:</h6>
+                                <h6>&nbsp; NT$60</h6>
+                            </div>
                         </div>
                     </div>
+                    <div class="phonerwd">
+                        <div class="note">
+                            <p>Note</p>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="pack-infor">
+                            <p>Store</p>
+                            <select name="" id="">
+                                <option value="">Choose</option>
+                                <option value="">7-ELEVEN</option>
+                                <option value="">FamilyMart</option>
+                                <option value="">HI-life</option>
+                            </select>
+                            <div class="coupon">
+                                <p>Coupon</p>
+                                <select name="" id="">
+                                    <option value="">Choose</option>
+                                    <option value="">New friend(-NT$50)</option>
+                                    <option value="">Happy brithday(-NT$50)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phonerwd2">
                     <div class="store-infor">
                         <h5 class="store-con">信義門市</h5>
                         <p class="store-con">台北市大安區信義路四段265巷12弄1號<button>變更商家</button></p>
@@ -162,55 +205,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="phonerwd">
-                    <div class="note">
-                        <p>Note</p>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="pack-infor">
-                        <p>Store</p>
-                        <select name="" id="">
-                            <option value="">Choose</option>
-                            <option value="">7-ELEVEN</option>
-                            <option value="">FamilyMart</option>
-                            <option value="">HI-life</option>
-                        </select>
-                        <div class="coupon">
-                            <p>Coupon</p>
-                            <select name="" id="">
-                                <option value="">Choose</option>
-                                <option value="">New friend(-NT$50)</option>
-                                <option value="">Happy brithday(-NT$50)</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="phonerwd2">
-                <div class="store-infor">
-                    <h5 class="store-con">信義門市</h5>
-                    <p class="store-con">台北市大安區信義路四段265巷12弄1號<button>變更商家</button></p>
-                    <div class="store-con">
-                        <h6>Freight:</h6>
-                        <h6>&nbsp; NT$60</h6>
-                    </div>
-                </div>
-            </div>
 
-            <section class="pay">
-                <select name="" id="">
-                    <option value="">Payment options</option>
-                    <option value="">信用卡/金融卡</option>
-                    <option value="">網銀轉帳</option>
-                </select>
-                <h6 class="price">Total:</h6>
-                <p>$1089</p>
-                <div class="pay-btn">
-                    <button>Checkout</button>
-                </div>
-            </section>
-        </div>
+                <section class="pay">
+                    <select name="" id="">
+                        <option value="">Payment options</option>
+                        <option value="">信用卡/金融卡</option>
+                        <option value="">網銀轉帳</option>
+                    </select>
+                    <h6 class="price">Total:</h6>
+                    <p>$1089</p>
+                    <div class="pay-btn">
+                        <button>Checkout</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
 
     </main>
 
@@ -300,36 +310,47 @@
             return (
                 <section className="cart">
                     <div className="prtbar">
-                        <div>
-                            <h3>Order</h3>
+                        <div className="pro-name">
+                            <p>Order</p>
                         </div>
 
                         <div className="list-title">
-                            <h3>Price</h3>
-                            <h3>Quantity</h3>
-                            <h3>Total</h3>
+                            <p>Price</p>
+                            <p>Num</p>
+                            <p>Total</p>
                             <span></span>
                         </div>
                     </div>
 
-                    {cart.map((product, index) => (
-                        <div className="cart-product" key={product.id}>
-                            <div className="pro-img">
-                                <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
-                                <h5>{product.name}</h5>
-                            </div>
+                    {
+                        cart.length === 0 ? (
+                            <a className="suggestion" href="./allproduct.html">
+                            <img src="../imagesAll/indexPic/dog2.png" alt=""/>    
+                            <p>No products in your cart! Go Shopping!</p>
+                            <img src="../imagesAll/indexPic/dog4.png" alt=""/>
+                            </a>
+                        ) : (
+                            cart.map((product, index) => (
+                                <div className="cart-product" key={product.id}>
+                                    <div className="pro-title">
+                                        <div>
+                                            <img src={`../imagesAll/productsDetail/product${product.id}-a.JPG`} alt={product.name} />
+                                        </div>
+                                        <a href={`product.html?id=${product.id}`} key={product.id}>{product.name}</a>
+                                    </div>
 
-                            <div className="prt-detail">
-                                <p>NT${product.price}</p>
-                                <p className="pro-num" value="1">1</p>
-                                <p className="pro-total">{product.price * 1}</p>
-                                <div>
-                                    <button onClick={() => handleRemove(index)}>Remove</button>
+                                    <div className="prt-detail">
+                                        <p>NT${product.price}</p>
+                                        <p className="pro-num" value="1">1</p>
+                                        <p className="pro-total">NT${product.price * 1}</p>
+                                        <div>
+                                            <button onClick={() => handleRemove(index)}>Remove</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    ))}
-
+                            ))
+                        )
+                    }
                 </section>
             );
         }
