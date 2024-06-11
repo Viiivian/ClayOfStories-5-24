@@ -323,26 +323,34 @@
                     </div>
 
                     {
-                        cart.map((product, index) => (
-                            <div className="cart-product" key={product.id}>
-                                <div className="pro-title">
-                                    <div>
-                                        <img src={`../imagesAll/productsDetail/product${product.id}-a.JPG`} alt={product.name} />
+                        cart.length === 0 ? (
+                            <a className="suggestion" href="./allproduct.html">
+                            <img src="../imagesAll/indexPic/dog2.png" alt=""/>    
+                            <p>No products in your cart! Go Shopping!</p>
+                            <img src="../imagesAll/indexPic/dog4.png" alt=""/>
+                            </a>
+                        ) : (
+                            cart.map((product, index) => (
+                                <div className="cart-product" key={product.id}>
+                                    <div className="pro-title">
+                                        <div>
+                                            <img src={`../imagesAll/productsDetail/product${product.id}-a.JPG`} alt={product.name} />
+                                        </div>
+                                        <a href={`product.html?id=${product.id}`} key={product.id}>{product.name}</a>
                                     </div>
-                                    <a href={`product.html?id=${product.id}`} key={product.id}>{product.name}</a>
-                                </div>
 
-                                <div className="prt-detail">
-                                    <p>NT${product.price}</p>
-                                    <p className="pro-num" value="1">1</p>
-                                    <p className="pro-total">${product.price * 1}</p>
-                                    <div>
-                                        <button onClick={() => handleRemove(index)}>Remove</button>
+                                    <div className="prt-detail">
+                                        <p>NT${product.price}</p>
+                                        <p className="pro-num" value="1">1</p>
+                                        <p className="pro-total">NT${product.price * 1}</p>
+                                        <div>
+                                            <button onClick={() => handleRemove(index)}>Remove</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-
+                            ))
+                        )
+                    }
                 </section>
             );
         }

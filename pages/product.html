@@ -116,6 +116,7 @@
             </div>
 
             <ul class="right-bar icon">
+                <li><a href="#" class="icon-search"></a></li>
                 <li><a href="./login.html" class="icon-user"></a></li>
                 <li><a href="./fqa.html" class="icon-fqa"></a></li>
                 <li><a href="./shopcart.html" class="icon-cart cart" id="shopCart"></a></li>
@@ -219,7 +220,7 @@
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 cart.push(product);
                 localStorage.setItem('cart', JSON.stringify(cart));
-                alert(`${product.name} has been added to the cart!`);
+                alert(`${product.name} has been added to the cart`);
             };
 
             return (
@@ -301,13 +302,15 @@
         function Suggest({ productId }) {
 
             const [suggestedProducts, setSuggestedProducts] = useState([]);
-            const addToCart = () => {
+
+            const addToCart = (event, product) => {
                 event.preventDefault();
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 cart.push(product);
                 localStorage.setItem('cart', JSON.stringify(cart));
-                alert('Product added to cart!');
+                alert(`${product.name} has been added to the cart`);
             };
+
             useEffect(() => {
                 axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
                     .then(res => {
@@ -359,7 +362,7 @@
                                             </select>
                                         </div>
 
-                                        <button className="suggest-add" onClick={addToCart} >ADD TO CART</button>
+                                        <button className="suggest-add" onClick={(event) => addToCart(event, product)} >ADD TO CART</button>
                                     </div>
 
                                 </div>
