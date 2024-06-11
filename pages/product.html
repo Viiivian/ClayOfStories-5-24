@@ -198,7 +198,6 @@
     <!-- 啟用jquery原生碼 -->
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
     <!-- 自訂的js -->
-    <script src="../js/product.js"></script>
     <script src="../js/index.js"></script>
 
     <!-- REACT -->
@@ -220,7 +219,7 @@
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 cart.push(product);
                 localStorage.setItem('cart', JSON.stringify(cart));
-                alert('Product added to cart!');
+                alert(`${product.name} has been added to the cart!`);
             };
 
             return (
@@ -293,20 +292,22 @@
                         </div>
 
                     </div>
-<<<<<<< Updated upstream
-                </div>
-                <Suggest productId={productId} />
-=======
                     <Suggest productId={productId} />
->>>>>>> Stashed changes
                 </>
             );
         }
 
         // 下方推薦產品區
         function Suggest({ productId }) {
-            const [suggestedProducts, setSuggestedProducts] = useState([]);
 
+            const [suggestedProducts, setSuggestedProducts] = useState([]);
+            const addToCart = () => {
+                event.preventDefault();
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Product added to cart!');
+            };
             useEffect(() => {
                 axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
                     .then(res => {
@@ -358,7 +359,7 @@
                                             </select>
                                         </div>
 
-                                        <button className="suggest-add">ADD TO CART</button>
+                                        <button className="suggest-add" onClick={addToCart} >ADD TO CART</button>
                                     </div>
 
                                 </div>
