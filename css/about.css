@@ -230,12 +230,14 @@
         margin-left: 24%;
     }
     #choose {
-        width: 100%;
+        width: 95%;
         flex-direction: column;
         padding-top: 10px;
+        margin: auto;
+        align-items: center;
     }
     #choose .choosecontainer {
-        width: 100%;
+        width: 80%;
         padding-right: 80px;
     }
     #choose h1 {
