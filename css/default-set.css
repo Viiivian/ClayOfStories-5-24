@@ -386,10 +386,11 @@ a {
     background-image: url(../imagesAll/indexPic/shopping-cart.svg);
 }
 
+
 .nav-box{
     display: none;
 }
-@media(max-width:820px){
+@media(min-width:200px) and (max-width:820px){
     .nav-box{
         display: block;
     }
@@ -404,21 +405,23 @@ a {
 
 .navigation{
     display: none;
-    background-color: #FFC7C2;
-    /* margin-left: -70px; */
-    width: 100px;
-    height: 220px;
+    background-color: rgba(255, 199, 194, 0.9); 
+    width: 200px;
+    height: 260px;
     margin-top: 14px;
-    border-radius: 10px; 
+    border-radius: 10px;
+    letter-spacing: 4px;
+    font-weight: 700; 
 }
 .navigation .menu{
     display: flex;
     flex-direction: column;
 }
 .navigation .menu a{
-    margin-top: 20px;
+    margin-top: 25px;
     color: white;
     text-align: center;
+    font-size: 1.1rem;
     
 }
 .bar {
