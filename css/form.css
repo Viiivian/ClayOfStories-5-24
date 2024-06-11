@@ -60,7 +60,39 @@
         font-size: 14px;
     }
 } 
+/* 手機 */
+@media (max-width:400px){
+    .notes .container2 {
+        margin-top: 50px;
+        padding-left: 40px;
 
+    }
+    .notes .container2 img{
+        width: 330px;
+        height: 200px;
+    }
+    .icon-vase {
+        width: 10px;
+        height: 80px;
+    }
+    .notes {
+        margin-right: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .container2 .text {
+        width: 350px;
+        font-size: 14px;
+    }
+    .notes .container1 {
+        overflow: hidden;
+        padding-left: 0;
+        margin-left: 0;
+    }
+} 
 .container2 .text{
     position: absolute;
     text-align: center;
@@ -296,7 +328,31 @@ input[type="checkbox"]:checked::before {
 
     margin:0  auto;
   }
-  
+/* 手機 */
+@media (max-width:400px){
+    .form-container header h2{
+        font-size: 18px;
+    }
+    .form-container label{
+        font-size: 14px;
+    }
+    .form-container legend {
+        font-size: 14px;
+    }
+    .reminder .h-li {
+        display: none;
+    }
+    .reminder .container2{
+        padding-top: 0px;
+        margin-top: 0;
+    }
+    .reminder img{
+        float: left;
+    }
+    .reminder .text {
+        font-size: 14px;
+    }
+} 
 
 /* reminder */
 .reminder{
@@ -363,7 +419,7 @@ input[type="checkbox"]:checked::before {
     }
 } 
 /* 手機 */
-@media (max-width:390px){
+@media (max-width:400px){
     
 } 
 
