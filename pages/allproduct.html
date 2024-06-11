@@ -242,7 +242,7 @@
       const [sortType, setSortType] = useState('');
 
       useEffect(() => {
-        axios.get("../json/db.json")
+        axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
           .then(res => {
             setProducts(res.data.products);
             setFilteredProducts(res.data.products);
