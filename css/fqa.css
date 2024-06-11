@@ -27,6 +27,11 @@
 #faq .ani-pic img{
     width: 200px;
 }
+@media(min-width:100px) and (max-width:500px){
+    #faq .ani-pic img{
+        width: 150px;
+    }
+}
 #faq .faqbk1 {
     display: flex;
     justify-content: center;
