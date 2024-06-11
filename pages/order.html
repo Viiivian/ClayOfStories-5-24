@@ -6,25 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClayOfStories|手作黏土</title>
     <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
-    <script src="/js/jquery/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="../css/default-set.css">
     <link rel="stylesheet" href="../css/order.css">
 </head>
 
-<script>
-    $(document).ready(function () {
-        $('.btn').on('click', function () {
-            $('.open').toggleClass('active');
-        });
-    });
-    // $(document).ready(function () {
-    //     $('.btn2').on('click', function () {
-    //         $('.open2').toggleClass('active'); // 切换显示与隐藏
-    //         // $('.order-detail-box').toggleClass('active'); // 切换按钮的活动状态
-    //     });
-    // });
-
-</script>
 
 <body>
 
@@ -32,8 +17,22 @@
     <header class="topbar">
         <div class="container">
             <div class="left-bar">
-                <!-- 漢堡按鈕位置
-                    <div class="burger-btn"></div> -->
+                <div class="nav-box">
+                    <button class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="navigation">
+                        <ul class="menu">
+                            <li><a href="../index.html">HOME</a></li>
+                            <li><a href="./about.html">ABOUT</a></li>
+                            <li><a href="./allproduct.html">PRODUCT</a></li>
+                            <li><a href="./customintro.html">CUSTOM</a></li>
+                            <li><a href="./contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <h1 class="logo">
                     <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
@@ -409,6 +408,15 @@
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.btn').on('click', function () {
+                $('.open').toggleClass('active');
+            });
+        });
+    
+    </script>
 
 
 </body>

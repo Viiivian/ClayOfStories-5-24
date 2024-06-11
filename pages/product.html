@@ -15,8 +15,22 @@
     <header class="topbar">
         <div class="container">
             <div class="left-bar">
-                <!-- 漢堡按鈕位置
-                    <div class="burger-btn"></div> -->
+                <div class="nav-box">
+                    <button class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="navigation">
+                        <ul class="menu">
+                            <li><a href="../index.html">HOME</a></li>
+                            <li><a href="./about.html">ABOUT</a></li>
+                            <li><a href="./allproduct.html">PRODUCT</a></li>
+                            <li><a href="./customintro.html">CUSTOM</a></li>
+                            <li><a href="./contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <h1 class="logo">
                     <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
@@ -115,16 +129,10 @@
 
     <!-- 主要內容區 -->
     <main>
-
-
         <section class="bgimg">
             <div id="root">
-
             </div>
         </section>
-
-
-
     </main>
 
     <!-- 頁尾區 -->
@@ -182,7 +190,7 @@
 
 
     </footer>
-    <!-- 載入axios -->
+
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <!-- 載入REACT -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -192,33 +200,70 @@
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
-    <!-- <script src="../js/product.js"></script> -->
 
+    <!-- REACT -->
     <script type="text/babel">
-
         const { useState, useEffect } = React;
-        const productId = new URLSearchParams(window.location.search).get('id');
+        const productId = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
 
         function Product({ product }) {
             const imgSrc = `../imagesAll/productsDetail/product${productId}`;
+            // 左邊產品細節圖，預設用第一張圖片展示
+            const [currentImage, setCurrentImage] = useState(`${imgSrc}-a.JPG`);
+
+            const handleImageClick = (event, img) => {
+                event.preventDefault();
+                setCurrentImage(img);
+            };
+
             return (
-                <>
-                    <section className="product-container">
-                        <div className="smlpic">
-                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
-                            <figure><img src={`${imgSrc}-b.JPG`} alt="" /></figure>
-                            <figure><img src={`${imgSrc}-c.JPG`} alt="" /></figure>
-                            <figure><img src={`${imgSrc}-d.JPG`} alt="" /></figure>
+                <>  
+                <div className="product-card">
+                    <div className="back-link">
+                        <a href="../index.html">HOME/</a>
+                        <a href="./allproduct.html">All Products/</a>
+                        <p>{product.name}</p>                       
+                    </div>
+
+                    <div className="product-container product-imgs">
+                        <div className="left-showImg">
+                            <div className="smlpic img-select">
+                                <div className="img-item">
+                                    <a href="#" data-id="1" onClick={(event) => handleImageClick(event, `${imgSrc}-a.JPG`)}>
+                                        <img src={`${imgSrc}-a.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                                <div className="img-item">
+                                    <a href="#" data-id="2" onClick={(event) => handleImageClick(event, `${imgSrc}-b.JPG`)}>
+                                        <img src={`${imgSrc}-b.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                                <div className="img-item">
+                                    <a href="#" data-id="3" onClick={(event) => handleImageClick(event, `${imgSrc}-c.JPG`)}>
+                                        <img src={`${imgSrc}-c.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                                <div className="img-item">
+                                    <a href="#" data-id="4" onClick={(event) => handleImageClick(event, `${imgSrc}-d.JPG`)}>
+                                        <img src={`${imgSrc}-d.JPG`} alt="product image" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="bigpic img-display">
+                                <div className="img-showcase">
+                                    <img src={currentImage} alt="product image" />
+                                </div>
+                            </div>
+
                         </div>
-                        <div className="bigpic">
-                            <figure><img src={`${imgSrc}-a.JPG`} alt="" /></figure>
-                        </div>
+
                         <div className="detail">
                             <small>{product.category}</small>
                             <h1>{product.name}</h1><br />
                             <h2>NT${product.price}</h2><br />
                             <div>
-                                <p>Product size： {product.size} cm <br />
+                                <p>Product size： {product.size} cm <br/>
                                     Product description: <br />
                                     {product.description}
                                 </p>
@@ -234,96 +279,91 @@
                                 <img src="../imagesAll/images/product1 1.svg" alt="Product Image" />
                             </section>
                         </div>
-                    </section>
 
-                    <section className="promotePro">
-                        <h1 className="ymal">You may also like...</h1>
-                        <div className="list-box">
-                            <div className="box">
-                                <img src="../imagesAll/images/product1 1.svg" alt="" />
-                                <h1>Blue Sky</h1>
-                                <small>Blue Sky and white cloud.</small>
-                                <div className="num-con">
-                                    <h6>price <br />num</h6>
-                                    <p>$700 <br />
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </p>
-                                </div>
-                                <button>ADD TO CART</button>
-                            </div>
-                            <div className="box">
-                                <img src="../imagesAll/images/product1 1.svg" alt="" />
-                                <h1>Blue Sky</h1>
-                                <small>Blue Sky and white cloud.</small>
-                                <div class="num-con">
-                                    <h6>price <br />num</h6>
-                                    <p>$700 <br />
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </p>
-                                </div>
-                                <button>ADD TO CART</button>
-                            </div>
-                            <div className="box">
-                                <img src="../imagesAll/images/product1 1.svg" alt="" />
-                                <h1>Blue Sky</h1>
-                                <small>Blue Sky and white cloud.</small>
-                                <div class="num-con">
-                                    <h6>price <br />num</h6>
-                                    <p>$700 <br />
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </p>
-                                </div>
-                                <button>ADD TO CART</button>
-                            </div>
-                            <div className="box">
-                                <img src="../imagesAll/images/product1 1.svg" alt="" />
-                                <h1>Blue Sky</h1>
-                                <small>Blue Sky and white cloud.</small>
-                                <div class="num-con">
-                                    <h6>price <br />num</h6>
-                                    <p>$700 <br />
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </p>
-                                </div>
-                                <button>ADD TO CART</button>
+                    </div>
+                   
+                </div>
+                <Suggest productId={productId} />
 
-                            </div>
-                        </div>
-                    </section>
                 </>
             );
         }
 
-        function MyApp() {
-            const [product, setProduct] = useState([]);
+        // 下方推薦產品區
+        function Suggest({ productId }) {
+            const [suggestedProducts, setSuggestedProducts] = useState([]);
 
+            useEffect(() => {
+                axios.get(`../json/db.json`)
+                    .then(res => {
+                        const products = res.data.products;
+                        let suggested = [];
+
+
+                        if (productId <= 3) {
+                            //如果產品id是1, 2 或 3，推薦產品為後三筆
+                            suggested = products.slice(productId, productId + 3);
+                        } else {
+                            //其他都是推薦前三筆
+                            suggested = products.slice(productId - 4, productId - 1);
+                        }
+
+                        setSuggestedProducts(suggested);
+                    })
+                    .catch(err => {
+                        console.error("Error fetching suggested products:", err);
+                    });
+            }, [productId]);
+
+            return (
+                <section className="promotePro">
+                    <h1 className="ymal">You may also like...</h1>
+                    <div className="list-box">
+                        {suggestedProducts.map((product, index) => (
+                            <a href={`product.html?id=${product.id}`} key={product.id}>
+                                <div className="box" key={index}>
+                                    <div className="suggest-img">
+                                        <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
+
+                                    </div>
+
+                                    <div className="suggest-detail">
+                                        <h1>{product.name}</h1>
+                                        <p className="content">{product.content}</p>
+                                        <div className="product-price">
+                                            <h6>price</h6>
+                                            <p>NT${product.price}</p>
+                                        </div>
+                                        <div className="select-num">
+                                            <h6>price num</h6>
+                                            <select name="" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+
+                                        <button className="suggest-add">ADD TO CART</button>
+                                    </div>
+
+                                </div>
+                            </a>
+                        ))
+                        }
+                    </div>
+                </section>
+            );
+        }
+
+        function MyApp() {
+            const [product, setProduct] = useState(null);
             useEffect(() => {
                 if (productId) {
                     axios.get(`../json/db.json`)
                         .then(res => {
-                            setProduct(res.data.products[productId - 1]);
-                            console.log(setProduct)
-                            console.log("success")
+                            const foundProduct = res.data.products.find(p => p.id === productId);
+                            setProduct(foundProduct);
                         })
                         .catch(err => {
                             console.error("Error fetching product:", err);
@@ -336,18 +376,16 @@
                 return <p>Loading...</p>;
             }
 
-            return <Product key={product.id} product={product} />;
-
-
+            return <Product product={product} />;
         }
+
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
         root.render(<MyApp />);
-
     </script>
 
+    <!-- 購物車新增(待修) -->
     <script>
-
         var count = 0;
         var cartCount = 0;
         function increase() {
@@ -364,12 +402,10 @@
         function addToCart() {
             cartCount += count;
             document.getElementById('cart-count').innerText = cartCount;
-            count = 1;  // Reset the product count after adding to cart
+            count = 1;
             document.getElementById('count').innerText = count;
         }
-
     </script>
-
 
 </body>
 

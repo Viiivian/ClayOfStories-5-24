@@ -1,3 +1,4 @@
+
 .nav-box{
     display: none;
 }
@@ -84,6 +85,7 @@
     display: flex;
     flex-direction: column;
 }
+
 /* 按鈕設定 */
 .cta {
     border: none;
@@ -154,7 +156,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-
 }
 
 .banner .box {
@@ -245,6 +246,7 @@
 .sloganOne {
     background-color: #E3ECFF;
     padding: 1vw;
+    overflow: hidden;
     /* 使用相對單位 */
 
     /* border-top: 0.3vw solid var(--title-color-1);  
@@ -589,6 +591,7 @@
 .sloganTwo {
     background-color: #FFF9E2;
     padding: 15px;
+    overflow: hidden;
 }
 
 .sloganTwo .slideText ul li {
@@ -673,7 +676,7 @@
 .subscribe-txt li {
     font-size: 18px;
     color: #FFF;
-    line-height: 2rem;
+    line-height: 1rem;
     font-weight: 600;
     letter-spacing: 1.8px;
     padding: 4px 0;
@@ -683,6 +686,7 @@
 .video-intro form {
     display: flex;
     width: 100%;
+    padding-top: 15px;
 }
 
 .youtube-video {
@@ -1190,6 +1194,16 @@ input.submit {
     }
     .cta span {
         letter-spacing: 1px;
+    }
+    .slideText {
+        height: 10vw;
+    }
+    .slideText ul li {
+        font-size: 4vw;
+    }
+    @keyframes marquee {
+        0% { transform: translateX(400%); }
+        100% { transform: translateX(-400%); }
     }
 }
 
