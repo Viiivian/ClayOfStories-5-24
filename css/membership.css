@@ -14,7 +14,7 @@
     width: 50%;
     margin: auto;
     border-radius: 20px 20px 0 0;
-    padding: 20px 0 20px  0;
+    padding: 20px 0 20px 0;
     margin-bottom: 2px;
 }
 @media (min-width:821px) and (max-width:1140px){
@@ -32,6 +32,7 @@
     font-size: 1.3rem;
     letter-spacing: 0.5px;
     color: #646464;
+    font-weight: 450;
 }
 .list{
     display: flex;
@@ -60,6 +61,7 @@
     font-size: 1rem;
     letter-spacing: 0.5px;
     line-height: 18px;
+    font-weight: 450;
 }
 .list a:hover{
     background-color: #FFECE4;
@@ -179,19 +181,19 @@
         padding-top: 20px;
     }
     .checkbox{
-        padding-left: 55px;
+        padding-left: 45px;
     }
     .checkbox label {
         text-align: center;
     }
     .memberinfo p{
-        font-size: 14px;
+        font-size: 16px;
     }
     .memberinfo input {
-        font-size: 14px;
+        font-size: 16px;
     }
     .checkbox span{
-        font-size: 14px;
+        font-size: 16px;
     }
     .allbar{
         height: 100px;
@@ -212,9 +214,8 @@
 .savebutton {
     margin-top: 1%;
     margin-bottom: 3%;
-    width: 150px;
 }
-button{
+.savebutton button{
     border: none;
     width: 100%;
     border-radius: 100px;
@@ -222,8 +223,11 @@ button{
     padding: 6px;
     margin-top: 20px;
     font-size: 16px;
+    width: 150px;
+    color: #646464;
 }
-button:hover{
+.savebutton button:hover{
     background-color:#ffb0a8; 
     cursor: pointer;
+    color: #646464;
 }

@@ -40,12 +40,12 @@ ul{
 .background {
     background-color: #FFF9E2;
     width: 100%;
-    height: 1400px;
+    height: 1800px;
 }
 
 .allbar{
     width: 100%;
-    height: 100px;
+    height: 150px;
     background-color: #FFF9E2;
 }
 
@@ -54,9 +54,8 @@ ul{
     width: 50%;
     margin: auto;
     border-radius: 20px 20px 0 0;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 3px;
+    padding: 20px 0 20px 0;
+    margin-bottom: 2px;
 }
 @media (min-width:821px) and (max-width:1010px){
     .mainbar{
@@ -79,21 +78,48 @@ ul{
     }
 }
 
-.mainbar h5 {
+.mainbar h5{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    color: #646464;
+    font-weight: 450;
 }
-
-.list .first {
-    background-color: #ffece4;
-}
-
-.list {
+.list{
     display: flex;
     justify-content: center;
     width: 50%;
     margin: auto;
-    margin-top: 2px;
+    gap: 2px;
+}
+.list >* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list a {
+    background-color: #FFC7C2;
+    margin: auto;
+    width: 25%;
+    text-align: center;
+    height: 80px;
+    color: #646464;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    font-weight: 450;
+}
+.list a:hover{
+    background-color: #FFECE4;
+    cursor: pointer;
+    color: #646464;
+}
+.list .first{
+    background-color: #ffece4;
+    color: #646464;
+}
+.list .gap{
+    color: white;
 }
 @media (min-width:821px) and (max-width:1010px){
     .list{
@@ -116,42 +142,11 @@ ul{
     }
 }
 
-.list a {
-    background-color: #FFC7C2;
-    margin: auto;
-    padding-top: 25px;
-    width: 25%;
-    text-align: center;
-    height: 80px;
-    font-weight: bold;
-    color: rgb(49, 49, 49);
-    font-size: 18px;
-}
-@media (max-width:819px){
-    .list a{
-        font-size: 13px;
-    }
-}
-
-
-.list a:hover {
-    background-color: #FFECE4;
-    cursor: pointer;
-}
-
-.first {
-    background-color: #ffece4;
-}
-
-.list .gap {
-    margin-right: 2px;
-}
-
+/* 下方資訊 */
 .order-box {
     background-color: #FFECE4;
     width: 50%;
     margin: auto;
-
 }
 @media (min-width:821px) and (max-width:1010px){
     .order-box{
@@ -179,13 +174,14 @@ ul{
     width: 100%;
     height: 10px;
 }
-
 .box-1 {
     background-color: white;
-    width: 80%;
-    height: 110px;
+    width: 90%;
+    height: 130px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    padding: 0 20px 0 20px;
+    border-radius: 10px;
 }
 @media (max-width:819px){
     .box-1{
@@ -199,252 +195,255 @@ ul{
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+    width: 100%;
 }
-
-.box-1 .box-1-1 .bar-gap {
+.box-1-1 >* {
     display: flex;
-    margin-right: 8%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
-@media (max-width:819px){
-    .box-1 .box-1-1 .bar-gap{
-        margin-right: 5%;
-        width: 15%;
-    }
-}
-
-.blank{
-    width: 90px;
-}
-
-
 .box-1-2 {
     display: flex;
-    padding-top: 15px;
-    width: 100%;
-    margin: auto;
-}
-.rwdtitle{
-    display: flex;
-    margin: auto;
     width: 100%;
     justify-content: center;
     text-align: center;
     align-self: center;
-    padding-left: 20px;
+    padding-top: 10px;
 }
-@media (max-width:819px){
-    .rwdtitle{
-        padding-left: 10px;
-        
-    }
-}
-.rwdbox{
+.box-1-2 >* {
     display: flex;
-    margin: auto;
-    width: 100%;
+    width: 20%;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    align-self: center;
 }
-@media (max-width:819px){
-    .rwdbox{
-        display: none;
-    }
-}
-.phonerwd{
-
-    display: none;
-}
-@media (max-width:819px){
-    .phonerwd{
-        display: block;
-        display: flex;
-    }
-}
-
-.phonerwd2{
-    display: flex;
-    margin: auto;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    align-self: center;
-    padding-left: 30px;
-}
-.phone-bar{
-    background-color: white;
-    width: 100%;
-    height: 50px;
-}
-
-
-.box-1-2 .bar-gap-2 {
-    margin-right: 6%;
-    text-align: center;
-    height: 50px;
-}
-@media (max-width:819px){
-    .box-1-2 .bar-gap-2{
-        padding-right: 10px;
-    }
-}
-
 
 .box-1-2 button {
     border: none;
     cursor: pointer;
     padding: 5px;
-    margin-right: 2px;
-    margin-bottom: 25px;
+    /* margin-right: 2px;
+    margin-bottom: 25px; */
     border-radius: 20px;
     background-color: #FFC7C2;
 }
-.box-1-2 button {
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    margin-right: 2px;
-    margin-bottom: 25px;
-    border-radius: 20px;
-    background-color: #FFC7C2;
-}
-
 .box-1-2 button:hover {
     background-color: #FFECE4;
 }
-
-
-
 .order-detail-box {
     display: none;
 }
-
-/* .active {
-    display: flex;
-    background-color: white;
-    width: 80%;
-    height: 650px;
-    margin: auto;
-    margin-top: 30px;
-    flex-direction: column;
-    display: block;
-} */
-
 .active {
     display: flex;
     background-color: white;
-    width: 80%;
-    height: 650px;
+    width: 90%;
+    padding: 0 20px 0 20px;
+    height: 1000px;
     margin: auto;
     margin-top: 30px;
     flex-direction: column;
     display: block;
+    border-radius: 10px;
 }
 @media (max-width:819px){
     .active {
         width: 90%;
     }
 }
-
-
-.dtlbar {
+.odb-1 {
+    padding-top: 30px;
     display: flex;
-    border-bottom: 1px solid #cecece;
-    width: 100%;
-    height: 80px;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-}
-
-.order-detail-box p {
-    margin: auto;
-    margin-right: 4%;
-}
-
-.order-detail-box .gap {
-    margin: auto;
-    margin-right: 30%;
-}
-
-.odb-2 {
     width: 100%;
-    height: 100px;
+}
+.odb-1 >* {
+    width: 20%;
+}
+.productinfo {
+    width: 60%;
+    padding-left: 2%;
+    text-align: left;
+}
+.odb-2 {
     display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
     border-bottom: 1px solid #cecece;
-    padding-bottom: 20px;
 }
-
+.odb-2 >* {
+    width: 20%;
+}
 .odb-2 img {
-    width: 10%;
-    padding-top: 20px;
     margin: auto;
+    padding: 20px 10px 20px 10px;
 }
-@media (max-width:819px){
-    .odb-2 img {
-        display: none;
-    }
-}
-
-.odb-2 p {
-    margin: auto ;
-    padding-top: 10px;
-}
-
 .order-detail-box .odb-2>p.odrname {
-    width: 130px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 900;
+    width: 40%;
+    text-align: left;
 }
-
 .odr-money {
     display: flex;
-    width: 100%;
+    margin-top: 20px;
 }
-@media (max-width:819px){
-    .odr-money {
-        width: 50%;;
+.odr-money p{
+    padding: 10px 0 10px 0;
+}
+.odr-money >* {
+    width: 20%;
+}
+.odr-money-1 {
+    padding-left: 4%;
+}
+.odr-money-2 {
+    padding-right: 3%;
+    text-align: right;
+}
+.updown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 9px 0 9px;
+}
+.row {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+}
+@media (max-width:700px) {
+    .row {
+        gap: 20px;
     }
 }
-
-.odr-money-1 {
-    padding-left: 54%;
-    padding-top: 25px;
-    padding-right: 10px;
-    margin: auto;
+.row >* {
+    width: 50%;
 }
-
-.odr-money-2 {
-    padding-top: 25px;
-    padding-right: 80px;
-
-}
-
-.odr-money .money-gap {
-    padding-top: 5px;
-    font-weight: bold;
-}
-
-.package-dtl {
+.detailbig {
     display: flex;
-    margin: auto;
+    flex-direction: column;
+}
+.detailsmall {
+    display: flex;
+    justify-content: space-between;
+}
+.row h1 {
+    font-size: 18px;
+    font-weight: 900;
     margin-top: 50px;
-    border-bottom: 1px solid #cecece;
-    padding-bottom: 10px;
 }
-
-.package-dtl-2 {
-    display: flex;
-    margin-top: 20px;
-    text-align: center;
+.row p {
+    font-size: 16px;
+    margin-top: 15px;
 }
-
-.package-dtl .cus-dtl {
-    margin: auto;
-    text-align: center;
+@media (max-width: 500px) {
+    .background {
+        height: 1900px;
+    }
+    .active {
+        height: 1080px;
+    }
+    .odb-1 span {
+        display: none;
+    }
+    .updown {
+        margin: 0;
+        padding-top: 15px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .detailbig h1{
+        margin-top: 20px;
+    }
+    .detailbig {
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .detailsmall {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .allbar{
+        height: 100px;
+    }
+    .box-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 180px;
+        padding-left: 50px;
+    }
+    .box-1-1 {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+    .box-1-2 {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .box-1-2 .btn {
+        width: 50%;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .bar-gap {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .blank {
+        width: 100%;
+        height: 40px;
+    }
+    .box-1-1 >* {
+        justify-content: left;
+    }
+    .box-1-2 >* {
+        justify-content: left;
+        margin-top: 10px;
+    }
+    .odr-money span {
+        display: none;
+    }
+    .odr-money {
+        display: flex;
+        gap:50px;
+        margin: 0;
+        padding: 0;
+        justify-content: end;
+    }
+    .odr-money-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        padding: 0;
+        margin: 0;
+    }
 }
-
-.package-dtl-2 .cus-dtl {
-    margin: auto;
+@media (min-width:600px) and (max-width:1440px){
+    .active {
+        height: 900px;
+    }
 }
 
 .nbsp {
@@ -474,25 +473,3 @@ ul{
         width: 95%;
     }
 }
-
-.flower {
-    width: 8%;
-    padding-left: 70%;
-    margin-top: -13%;
-}
-
-
-/* rwd */
-/* 桌機 */
-@media (min-width:821px){}
-
-/* 平板 */
-@media (max-width:820px){
-}
-
-/* 手機 */
-@media (max-width:640px){
-
-}
-
-
