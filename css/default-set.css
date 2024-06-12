@@ -411,7 +411,6 @@ a {
     margin-top: 14px;
     border-radius: 10px;
     letter-spacing: 4px;
-    font-weight: 700; 
 }
 .navigation .menu{
     display: flex;
@@ -422,6 +421,7 @@ a {
     color: white;
     text-align: center;
     font-size: 1.1rem;
+    font-weight: 1200; 
     
 }
 .bar {
