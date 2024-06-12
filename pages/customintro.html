@@ -33,7 +33,8 @@
                 <h1 class="logo">
                     <a class="logo-s" href="../index.html"><img src="../imagesAll/indexPic/Logo-s.png" alt="品牌LOGO"></a>
 
-                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png" alt="品牌LOGO"></a>
+                    <a class="logo-m" href="../index.html"><img src="../imagesAll/indexPic/newlogo.png"
+                            alt="品牌LOGO"></a>
                 </h1>
 
                 <nav>
@@ -143,7 +144,7 @@
             </div>
         </section>
         <section class="threestep">
-            
+
             </div>
             <div class="formicon">
                 <img src="../imagesAll/images/formicon.png">
@@ -165,16 +166,16 @@
         <div class="pinksec">
             <div class="design">
                 <div class="line2">
-                <div>
-                <h1>DESIGN IT YOUR WAY</h1>
-                </div>
+                    <div>
+                        <h1>DESIGN IT YOUR WAY</h1>
+                    </div>
                 </div>
                 <div class="line3">
-                <div>
-                <p>Every clay art tells a story.<br>
-                    Story about you, your feeling and your life.<br>
-                    And we want to keep it forever.</p>
-                </div>
+                    <div>
+                        <p>Every clay art tells a story.<br>
+                            Story about you, your feeling and your life.<br>
+                            And we want to keep it forever.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,46 +189,51 @@
         <div id="customorders">
             <div class="leftside">
                 <div class="leftsizemaker">
-                <img src="../imagesAll/images/customjewelrytray.png" alt="">
+                    <img src="../imagesAll/images/customjewelrytray.png" alt="">
                 </div>
                 <div class="leftproduct">
                     <div>
-                    <h1>Flower Vase</h1>
-                    <p>"Bloom Your Way: Personalized Vases for Inspired Displays."<span>Elevate your floral arrangements with
-                        a touch of individuality, create your perfect vase!</span></p>
-                    <button onclick="location.href='form.html'">Customize <span>now</span></button>
+                        <h1>Flower Vase</h1>
+                        <p>"Bloom Your Way: Personalized Vases for Inspired Displays."<span>Elevate your floral
+                                arrangements with
+                                a touch of individuality, create your perfect vase!</span></p>
+                        <button onclick="location.href='form.html'">Customize <span>now</span></button>
                     </div>
                 </div>
                 <div class="leftsizemaker">
-                <img src="../imagesAll/images/custommirror.png" alt="">
+                    <img src="../imagesAll/images/custommirror.png" alt="">
                 </div>
                 <div class="leftproduct">
                     <div class="center">
-                    <h1>Photo Holder</h1>
-                    <p>"Preserve Moments, Personalize Memories." <span>Capture and display your cherished memories with our
-                        personalized photo holders, designed to showcase your favorite moments in style.</span></p>
-                    <button onclick="location.href='form.html'">Customize <span>now</span></button>
+                        <h1>Photo Holder</h1>
+                        <p>"Preserve Moments, Personalize Memories." <span>Capture and display your cherished memories
+                                with our
+                                personalized photo holders, designed to showcase your favorite moments in style.</span>
+                        </p>
+                        <button onclick="location.href='form.html'">Customize <span>now</span></button>
                     </div>
                 </div>
             </div>
             <div class="rightside">
                 <div class="rightproduct">
                     <h1>Jewelry Tray</h1>
-                    <p>Put your favorite jewelries on our customized jewelry tray! <span>Our customized jewelry trays are
-                        designed to harmonize with your unique style!</span></p>
+                    <p>Put your favorite jewelries on our customized jewelry tray! <span>Our customized jewelry trays
+                            are
+                            designed to harmonize with your unique style!</span></p>
                     <button onclick="location.href='form.html'">Customize <span>now</span></button>
                 </div>
                 <div class="flowervase">
-                <img src="../imagesAll/images/customflowervase.png" alt="">
+                    <img src="../imagesAll/images/customflowervase.png" alt="">
                 </div>
                 <div class="rightproduct">
                     <h1>Mirror</h1>
-                    <p>Elevate your on-the-go style with our portable, customized pocket mirrors.<span> Perfect for adding a
-                        touch of glamour anywhere you go.</span></p>
+                    <p>Elevate your on-the-go style with our portable, customized pocket mirrors.<span> Perfect for
+                            adding a
+                            touch of glamour anywhere you go.</span></p>
                     <button onclick="location.href='form.html'">Customize <span>now</span></button>
                 </div>
                 <div class="kirby">
-                <img src="../imagesAll/images/customphotoholder.png" alt="">
+                    <img src="../imagesAll/images/customphotoholder.png" alt="">
                 </div>
             </div>
         </div>
@@ -242,8 +248,9 @@
                 </div>
             </div>
         </section>
+        <div id="root"></div>
 
-       
+
     </main>
     <footer>
         <div class="footer-container">
@@ -291,7 +298,7 @@
             </div>
 
             <div class="border-s border"></div>
-            <div class="copyright-ms">               
+            <div class="copyright-ms">
                 <p>Copyright © ClayOfStories 2024 All Rights Reserved</p>
             </div>
         </div>
@@ -300,10 +307,98 @@
 
     </footer>
 
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <!-- 啟用jquery原生碼 -->
-     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery/jquery-3.7.1.min.js"></script>
+    <!-- 載入REACT -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
+    <!-- REACT -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // 下方推薦產品區
+        function Suggest({ products }) {
+            const addToCart = (event, product) => {
+                event.preventDefault();
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const checkNum = cart.findIndex(item => item.id === product.id);
+                if (checkNum === -1) {
+                    product.num = 1;
+                    cart.push(product);
+                } else {
+                    cart[checkNum].num += 1;
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${product.name} has been added to the cart`);
+            };
+
+            return (
+                <section className="promotePro">
+                    <h1 className="ymal">You may also like...</h1>
+                    <div className="list-box">
+                        {products.map((product, index) => (
+                            <a href={`product.html?id=${product.id}`} key={product.id}>
+                                <div className="box" key={index}>
+                                    <div className="suggest-img">
+                                        <img src={`../imagesAll/psphoto/psphoto${product.id}.png`} alt={product.name} />
+                                    </div>
+                                    <div className="suggest-detail">
+                                        <h1>{product.name}</h1>
+                                        <p className="content">{product.content}</p>
+                                        <div className="product-price">
+                                            <h6>Price</h6>
+                                            <p>NT${product.price}</p>
+                                        </div>
+                                        <div className="select-num">
+                                            <h6>Num</h6>
+                                            <select name="" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                        <button className="suggest-add" onClick={(event) => addToCart(event, product)}>ADD TO CART</button>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        function MyApp() {
+            const [products, setProducts] = useState([]);
+
+            useEffect(() => {
+                axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
+                    .then(res => {
+                        // 取得前三筆產品
+                        const suggested = res.data.products.slice(0, 3);
+                        setProducts(suggested);
+                    })
+                    .catch(err => {
+                        console.error("Error fetching products:", err);
+                    });
+            }, []);
+
+            if (products.length === 0) {
+                return <p>Loading...</p>;
+            }
+
+            return <Suggest products={products} />;
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<MyApp />);
+    </script>
 
 </body>
+
 </html>
