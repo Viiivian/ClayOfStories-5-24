@@ -715,6 +715,7 @@ input.submit {
     width: 65%;
 }
 
+
 .feedback-section .comments {
     position: absolute;
     display: flex;
@@ -773,7 +774,7 @@ input.submit {
     }
     .feedback-section img {
         width: 100%;
-        height: 150%;
+        height: 130%;
     }
     .comment1 { background-color: #E3ECFF; width: 80%; }
     .comment2 { background-color: #F5F5F5; width: 90%; }

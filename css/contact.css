@@ -207,6 +207,12 @@ button:hover {
     #newMessage {
         font-size: 28px;
     }
+@media(max-width:460px){
+    #image{
+        width: 390px;
+        height:280px;
+    }
+}
 
 }
 
