@@ -223,8 +223,9 @@
                 setCart(newCart);
                 localStorage.setItem('cart', JSON.stringify(newCart));
             };
+
             const getTotalAmount = () => {
-                return cart.reduce((total, product) => total + product.price, 0);
+                return cart.reduce((total, product) => total + (product.price * product.num), 0);
             };
 
             return (
@@ -261,8 +262,8 @@
 
                                         <div className="prt-detail">
                                             <p>NT${product.price}</p>
-                                            <p className="pro-num txt-center" value="1">1</p>
-                                            <p className="pro-total">NT${product.price * 1}</p>
+                                            <p className="pro-num txt-center">{product.num}</p>
+                                            <p className="pro-total">NT${product.price * product.num}</p>
                                             <div>
                                                 <button onClick={() => handleRemove(index)}>Remove</button>
                                             </div>
@@ -324,7 +325,7 @@
                             </select>
                         </div>
                         <div className="order-total">
-                            <p>Total:${getTotalAmount()+60}</p>
+                            <p>Total:${getTotalAmount() + 60}</p>
                         </div>
                         <div className="pay-btn">
                             <button>Checkout</button>
