@@ -640,14 +640,6 @@
 }
 
 
-.ymal {
-    padding-left: 20%;
-    padding-top: 120px;
-    font-size: 36px;
-    color: #646464;
-    font-family: 'New York';
-}
-
 .list-box {
     display: flex;
     justify-content: center;
@@ -752,13 +744,6 @@
 
 /* 平板 */
 @media (max-width:900px) {
-    .ymal {
-        padding:100px;
-        padding-top: 100px;
-        display: flex;
-        justify-content: center;
-    }
-
     .list-box {
         display: flex;
         flex-direction: column;
@@ -780,15 +765,6 @@
 
 /* 手機 */
 @media (max-width:640px) {
-    .ymal {
-        padding: 100px;
-        padding-top: 70px;
-        display: flex;
-        justify-content: center;
-        font-size: 32px;
-        font-weight: 700;
-    }
-
     .list-box {
         display: flex;
         flex-direction: column;
