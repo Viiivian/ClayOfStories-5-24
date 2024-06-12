@@ -50,7 +50,7 @@
     font-family: 'Noto Sans Carian';
     letter-spacing: 10%;
 }
-@media (max-width:600px){
+@media (max-width:640px){
     .sidebarcontainer{
         display: block;
         /* text-align: center; */
@@ -65,7 +65,7 @@
     left: 20px;
     align-self: flex-start;
 }
-@media (max-width:600px){
+@media (max-width:640px){
     .sidebar{
         display: flex;
         width: 100%;
@@ -86,7 +86,7 @@
     font-weight: bold;
     font-size: 14px;
 }
-@media (max-width:600px){
+@media (max-width:640px){
     .sidebar h2{
         margin-left: 10px;
     }
@@ -96,13 +96,13 @@
     border-bottom: 1px solid #000;
     margin-bottom: 10px;
 }
-@media (max-width:600px){
+@media (max-width:640px){
     .sidebar1{
         border-bottom: none;
         width: 40%;
     }
 }
-@media (max-width:600px){
+@media (max-width:640px){
     .sidebar2{
         width: 40%;
     }
@@ -175,6 +175,7 @@ input[type="radio"]:checked::before {
     cursor: pointer;
     background-color: white;
     border-radius: 10px;
+    text-align: center;
 }
 
 .allproducts:hover {
@@ -227,17 +228,31 @@ input[type="radio"]:checked::before {
 /* 平板 */
 @media (max-width:820px){
     .allproducts{
-        width: 250px;
-        height: 370px;
+        width: 190px;
+        height: 300px;
     }
     .allproducts img{
-        height: 180px;
+        height: 150px;
+    }
+    .allproducts button {
+        width: 150px;
+        height: 46px;
     }
 }
+@media (max-width:440px){
+    .allproducts{
+        width: 140px;
+        height: 240px;
+        font-size: 14px;
 
-/* 手機 */
-@media (max-width:640px){
-
+    }
+    .allproducts img{
+        height: 110px;
+    }
+    .allproducts button {
+        width: 120px;
+        height: 30px;
+    }
 }
 
 
@@ -507,7 +522,7 @@ input[type="radio"]:checked::before {
     display: none;
 }
 
-@media (max-width:600px){
+@media (max-width:640px){
     .gotop{
         position: fixed;
         border-radius: 99px;
