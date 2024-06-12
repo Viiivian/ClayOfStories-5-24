@@ -3,7 +3,14 @@
     display: block;
     width: 100%;
 }
-
+.icon .cart-count {
+    color: #fff;
+    margin-left: -15px;
+    background-color: #e90000;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50px;
+}
 
 /* 主要區 */
 .product-card{
@@ -31,14 +38,7 @@
     text-decoration: underline;
 }
 
-.icon span {
-    color: #fff;
-    margin-left: -15px;
-    background-color: #e90000;
-    height: 20px;
-    padding: 2px;
-    border-radius: 50px;
-}
+
 
 .bgimg {
     background-image: url(../imagesAll/images/information.png);
