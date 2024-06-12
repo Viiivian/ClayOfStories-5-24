@@ -367,6 +367,7 @@ ul{
     }
     .detailbig h1{
         margin-top: 20px;
+        font-size: 17px;
     }
     .detailbig {
         justify-content: center;
@@ -438,6 +439,12 @@ ul{
         align-items: end;
         padding: 0;
         margin: 0;
+    }
+    .order-detail-box .odb-2>p.odrname {
+        font-weight: 400;
+    }
+    .order-detail-box .odb-2>p.odrname span {
+        display: none;
     }
 }
 @media (min-width:600px) and (max-width:1440px){
