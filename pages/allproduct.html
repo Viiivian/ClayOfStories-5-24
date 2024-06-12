@@ -324,22 +324,23 @@
             </div>
 
             <br />
-
-            <h2>Sort by</h2>
-            <ul>
-              <li>
-                <input type="radio" id="sort-newest" name="sorting" value="newest" onChange={() => handleSortChange('newest', filteredProducts)} checked={sortType === 'newest'} />
-                <label htmlFor="sort-newest">Newest</label>
-              </li>
-              <li>
-                <input type="radio" id="sort-priceLh" name="sorting" value="priceLh" onChange={() => handleSortChange('priceLh', filteredProducts)} checked={sortType === 'priceLh'} />
-                <label htmlFor="sort-priceLh">Price (low to high)</label>
-              </li>
-              <li>
-                <input type="radio" id="sort-priceHl" name="sorting" value="priceHl" onChange={() => handleSortChange('priceHl', filteredProducts)} checked={sortType === 'priceHl'} />
-                <label htmlFor="sort-priceHl">Price (high to low)</label>
-              </li>
-            </ul>
+            <div className="sidebar2">
+              <h2>Sort by</h2>
+              <ul>
+                <li>
+                  <input type="radio" id="sort-newest" name="sorting" value="newest" onChange={() => handleSortChange('newest', filteredProducts)} checked={sortType === 'newest'} />
+                  <label htmlFor="sort-newest">Newest</label>
+                </li>
+                <li>
+                  <input type="radio" id="sort-priceLh" name="sorting" value="priceLh" onChange={() => handleSortChange('priceLh', filteredProducts)} checked={sortType === 'priceLh'} />
+                  <label htmlFor="sort-priceLh">Price (low to high)</label>
+                </li>
+                <li>
+                  <input type="radio" id="sort-priceHl" name="sorting" value="priceHl" onChange={() => handleSortChange('priceHl', filteredProducts)} checked={sortType === 'priceHl'} />
+                  <label htmlFor="sort-priceHl">Price (high to low)</label>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="main-content">
@@ -349,7 +350,7 @@
                   <Product key={product.id} product={product} />
                 ))
               ) : (
-                <img src="../imagesAll/psphoto/loading.gif"/>
+                <img src="../imagesAll/psphoto/loading.gif" />
               )}
             </div>
           </div>
