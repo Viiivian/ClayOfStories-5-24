@@ -117,7 +117,6 @@
         <li><a href="./login.html" class="icon-user"></a></li>
         <li><a href="./fqa.html" class="icon-fqa"></a></li>
         <li><a href="./shopcart.html" class="icon-cart"></a></li>
-        <span class="cart-count" id="cart-count">0</span>
 
       </ul>
     </div>
@@ -242,16 +241,6 @@
       // 選定的排序
       const [sortType, setSortType] = useState('');
 
-      function countCartTotal() {
-        const cartCount = document.querySelector('.cart-count');
-        let cartlist = JSON.parse(localStorage.getItem('cart'));
-        if (!cartlist || cartlist.length === 0) {
-          cartCount.innerHTML = '0';
-        }
-        let total = cartlist.reduce((total, product) => total + product.num, 0);
-        cartCount.innerHTML = total.toString();
-      }
-
 
       useEffect(() => {
         axios.get("https://viiivian.github.io/ClayOfStories-5-24/json/db.json")
@@ -265,7 +254,6 @@
             setFilteredProducts([]);
           });
       }, []);
-      countCartTotal()
 
       //  點擊分類
       const handleCategoryChange = (category) => {

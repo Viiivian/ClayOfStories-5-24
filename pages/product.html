@@ -120,7 +120,6 @@
                 <li><a href="./login.html" class="icon-user"></a></li>
                 <li><a href="./fqa.html" class="icon-fqa"></a></li>
                 <li><a href="./shopcart.html" class="icon-cart cart" id="shopCart"></a></li>
-                <span class="cart-count" id="cart-count">0</span>
             </ul>
         </div>
 
@@ -206,15 +205,7 @@
 
         const { useState, useEffect } = React;
         const productId = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
-        function countCartTotal() {
-                const cartCount = document.querySelector('.cart-count');
-                let cartlist = JSON.parse(localStorage.getItem('cart'));
-                if (!cartlist || cartlist.length === 0) {
-                    cartCount.innerHTML = '0';
-                }
-                let total = cartlist.reduce((total, product) => total + product.num, 0);
-                cartCount.innerHTML = total.toString();
-        }
+
 
         function Product({ product }) {
             const imgSrc = `../imagesAll/productsDetail/product${productId}`;
@@ -237,7 +228,6 @@
                 }
                 localStorage.setItem('cart', JSON.stringify(cart));
                 alert(`${product.name} has been added to the cart`);
-                countCartTotal()
             };
 
             return (
@@ -331,7 +321,6 @@
                 }
                 localStorage.setItem('cart', JSON.stringify(cart));
                 alert(`${product.name} has been added to the cart`);
-                countCartTotal()
             };
 
             useEffect(() => {
@@ -371,11 +360,11 @@
                                         <h1>{product.name}</h1>
                                         <p className="content">{product.content}</p>
                                         <div className="product-price">
-                                            <h6>price</h6>
+                                            <h6>Price</h6>
                                             <p>NT${product.price}</p>
                                         </div>
                                         <div className="select-num">
-                                            <h6>price num</h6>
+                                            <h6>Num</h6>
                                             <select name="" id="">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -419,7 +408,6 @@
             if (!product) {
                 return <p>Loading...</p>;
             }
-            countCartTotal();
             return <Product product={product} />;
         }
 

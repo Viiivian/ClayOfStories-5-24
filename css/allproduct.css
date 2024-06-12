@@ -6,14 +6,7 @@
     flex-direction: column;
     gap: 10px;
 }
-.icon .cart-count {
-    color: #fff;
-    margin-left: -15px;
-    background-color: #e90000;
-    height: 20px;
-    padding: 2px;
-    border-radius: 50px;
-}
+
 
 /* 產品標題 */
 .upper {
