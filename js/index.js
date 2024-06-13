@@ -1,8 +1,3 @@
-// $('.smoove').smoove({
-//     offset: '30%',
-// });
-
-
 $(function () {
     // 隱藏第二層的選單
     $(".menu-drop-L").hide();
@@ -14,11 +9,11 @@ $(function () {
         //離開時往上滑動
         $(">ul", this).stop().slideUp("fast")
     })
-
         /* 漢堡按鈕 */
         $('.hamburger').click(function () {
-            /* 交換三 跟 X */
+            /* 交換漢堡按鈕 跟 取消按鈕 */
             $(this).toggleClass('is-active');
             $('.navigation').toggleClass('show');
         });
 })
+

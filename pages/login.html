@@ -137,8 +137,9 @@
                             <img src="../imagesAll/images/lefthand.png" alt="" id="lefthand">
                             <img src="../imagesAll/images/righthand.png" alt="" class="righthand" id="righthand">
                         </div>
+
                         <!-- Form -->
-                        <form action="" name="form-login" class="form-login" title="loginbox" method="post">
+                        <div name="form-login" class="form-login" title="loginbox">
                             <!-- Email -->
                             <label for="emailaddress"></label>
                             <input type="text" name="emailaddress" id="emailaddress" title="Email address"
@@ -156,7 +157,7 @@
                             <div class="forgot">
                                 <div>
                                     <a href="forgotpassword.html" class="forgotpassword">
-                                        <span>forgotpassword?</span>
+                                        <span>forgot password?</span>
                                     </a>
                                 </div>
                             </div>
@@ -174,14 +175,16 @@
                             <div class="kittiesizemaker">
                                 <!-- login btn -->
                                 <div class="signin-login">
-                                    <button type="submit" class="signin"
-                                        onclick="location.href='./membership.html'">LOGIN</button>
+                                    <button id="login" class="signin">LOGIN</button>
                                     <div class="createaccount">
                                         <a href="./createaccount.html" class="create">create an account</a>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -246,8 +249,53 @@
     <!-- 啟用jquery原生碼 -->
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
     <!-- 自訂的js -->
-    <script src="../js/login.js"></script>
     <script src="../js/index.js"></script>
+
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+    <!-- Firebase Auth (必要) -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    window.location.href = './membership.html';
+                } 
+            });
+        });
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCtpbXYwmNqsx7ffFFhA6I9hYFjDbs6UsI",
+            authDomain: "clayofstories.firebaseapp.com",
+            projectId: "clayofstories",
+            storageBucket: "clayofstories.appspot.com",
+            messagingSenderId: "481158061383",
+            appId: "1:481158061383:web:fa342f66dfe5e8f4e58062"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        const loginButton = document.getElementById('login');
+
+        // 登入事件
+        loginButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailaddress').value;
+            const password = document.getElementById('password').value;
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    const displayName = user.displayName || "User";
+                    alert(`Dear ${displayName}, Welcome Back!`);
+                    window.location.href = './membership.html';
+                })
+                .catch((error) => {
+                    alert('登入失敗: ' + error.message);
+                });
+        });
+
+    </script>
 
 
 </body>

@@ -14,14 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         rightHand.classList.remove('rotate-right');
     });
 
-    togglePassword.addEventListener('click', function() {
-        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordField.setAttribute('type', type);
+    // togglePassword.addEventListener('click', function() {
+    //     const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    //     passwordField.setAttribute('type', type);
 
-        if (type === 'password') {
-            togglePassword.setAttribute('src', '../imagesAll/images/eye-off.png'); // Show icon
-        } else {
-            togglePassword.setAttribute('src', '../imagesAll/images/eye.png'); // Hide icon (replace with the correct path)
-        }
-    });
+    //     if (type === 'password') {
+    //         togglePassword.setAttribute('src', '../imagesAll/images/eye-off.png');
+    //         togglePassword.setAttribute('src', '../imagesAll/images/eye.png'); 
+    //     }
+    // });
 });
