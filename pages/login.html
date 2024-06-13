@@ -8,6 +8,21 @@
     <link rel="icon" href="../imagesAll/indexPic/video-icon2.png">
     <link rel="stylesheet" href="../css/default-set.css">
     <link rel="stylesheet" href="../css/login.css">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+    <!-- 自訂的js -->
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    window.location.href = './membership.html';
+                }
+            });
+        });
+
+    </script>
 </head>
 
 <body>
@@ -246,26 +261,10 @@
 
 
     </footer>
-    <!-- 啟用jquery原生碼 -->
+
     <script src="../js/jquery/jquery-3.7.1.min.js"></script>
-    <!-- firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
-    <!-- 自訂的js -->
-
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            firebase.auth().onAuthStateChanged((user) => {
-                if (user) {
-                    window.location.href = './membership.html';
-                }
-            });
-        });
-
-    </script>
-        <script src="../js/index.js"></script>
-        <script src="../js/login.js"></script>
-
+    <script src="../js/index.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,4 @@
 
-/* .box{
-    background-color: #584f4f;
-    width: 100%;
-    height: 500px;
-    background-image: url(../imagesAll/images/login-bg.png);
-} */
-/* .yellow-wave{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.yellow-wave>img{
-    width: 100%;
-}
-*/
-
 #loginbk {
     background-color: #FFC7C2;
     position: relative;
@@ -329,10 +313,3 @@
         display: none;
     }
 }
-
-
-/* .loginform .backtologin a{
-display: flex;
-justify-content: center;
-align-items: center;} */
-

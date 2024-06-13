@@ -18,12 +18,12 @@ register.addEventListener('click', (e) => {
     const password = document.getElementById('password').value;
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            // 獲取新創建的用戶
+            // 註冊成功，建立用戶資料
             const user = userCredential.user;
-            // 更新名稱
             user.updateProfile({
                 displayName: `${firstName} ${lastName}`
             }).then(() => {
+                // 取得用戶名稱
                 alert(`親愛的 ${firstName}，恭喜註冊成功!`);
                 window.location.href = './login.html';
             }).catch((error) => {
@@ -31,7 +31,12 @@ register.addEventListener('click', (e) => {
             });
         })
         .catch((error) => {
-            // 註冊失敗
-            alert('註冊失敗: ' + error.message);
+           // 註冊失敗，顯示原因
+            if(error.message==="Firebase: The email address is already in use by another account. (auth/email-already-in-use)."){
+                alert('註冊失敗: 該信箱已被註冊!');
+            }else{
+                alert('註冊失敗: 請確實填寫資料!');
+            }
+            
         });
 });

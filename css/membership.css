@@ -213,7 +213,6 @@
 }
 .savebutton {
     margin-top: 1%;
-    margin-bottom: 3%;
 }
 .savebutton button{
     border: none;
@@ -229,5 +228,5 @@
 .savebutton button:hover{
     background-color:#ffb0a8; 
     cursor: pointer;
-    color: #646464;
+    color: white;
 }
