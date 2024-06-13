@@ -164,7 +164,7 @@ textarea:focus{
     transform: perspective(600px) rotateX(-180deg);
 }
 
-button {
+.foldbtn {
     background-color: #FFC7C2;
     border: none;
     margin-top: 20px;
@@ -173,7 +173,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
 }
-button:hover {
+.foldbtn :hover {
     background-color: #fadbd8;
 }
 #image {
