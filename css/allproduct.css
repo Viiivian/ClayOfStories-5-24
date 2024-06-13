@@ -529,7 +529,7 @@ input[type="radio"]:checked::before {
         bottom: 0;
         right: 0;
         z-index: 9999;
-        width: 15%;
+        width: 30%;
         text-align: center;
         font-style: 'Noto Sans Carian';
         cursor: pointer;
@@ -549,7 +549,7 @@ input[type="radio"]:checked::before {
         bottom: 0;
         right: 0;
         z-index: 9999;
-        width: 18%;
+        width: 30%;
         text-align: center;
         cursor: pointer;
     }

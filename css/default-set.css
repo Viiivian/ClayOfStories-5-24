@@ -417,9 +417,9 @@ a {
 .bar {
     display: block;
     width: 25px;
-    height: 3px;
-    background-color: #919191;
-    margin: 5px auto;
+    height: 1px;
+    background-color: black;
+    margin: 7px auto;
     transition: .35s;
 }
 .hamburger.is-active .bar:nth-child(1) {
