@@ -227,6 +227,12 @@
             const getTotalAmount = () => {
                 return cart.reduce((total, product) => total + (product.price * product.num), 0);
             };
+         
+            const handleCheckout = () => {
+                alert("Checkout Successful!");
+                localStorage.removeItem('cart');
+                setCart([]);
+            };
 
             return (
                 <section className="cart">
@@ -328,7 +334,7 @@
                             <p>Total:${getTotalAmount() + 60}</p>
                         </div>
                         <div className="pay-btn">
-                            <button>Checkout</button>
+                            <button onClick={handleCheckout}>Checkout</button>
                         </div>
                     </div>
 
