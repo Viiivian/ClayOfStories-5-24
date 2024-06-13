@@ -1,4 +1,4 @@
-/* 主要區----------------------------------------------- */
+/* 主要區 */
 .background {
     background-color: #FFF9E2;
     width: 100%;
@@ -186,8 +186,6 @@
     border: none;
     cursor: pointer;
     padding: 5px;
-    /* margin-right: 2px;
-    margin-bottom: 25px; */
     border-radius: 20px;
     background-color: #FFC7C2;
 }

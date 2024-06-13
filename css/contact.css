@@ -1,4 +1,4 @@
-/* 主要區----------------------------------------------------------------------------- */
+/* 主要區 */
 .allbar{
     height: 100px;
     background-color: #FFECE4;
@@ -153,7 +153,6 @@ textarea:focus{
 .lower-content button{
     width: 50%;
     margin: auto;
-    /* margin-top: px; */
 }
 
 .hidden-content {
@@ -190,7 +189,6 @@ textarea:focus{
     #image{
         width: 500px;
         height:300px;
-        /* top: 50%; */
     }
 }
 @media(min-width:401px) and (max-width:500px){
@@ -214,19 +212,3 @@ textarea:focus{
         font-size: 28px;
     }
 }
-
-
-
-/* test========================================= */
-
-
-
-
-/* 
-@keyframes pushLetter {
-  0% {transform: translateY(-8rem) scale(0.3, 0.5);}
-  50% {transform: translateY(-8rem) scale(0.3, 0.5);}
-  90% {transform: translateY(-8.5rem) scale(0.3, 0.5);}
-  100% {transform: translateY(-8rem) scale(0.3, 0.5);}
-} */
-
