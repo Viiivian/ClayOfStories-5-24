@@ -1,26 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const passwordField = document.getElementById('password');
-    const togglePassword = document.getElementById('toggle-password');
-    const leftHand = document.getElementById('lefthand');
-    const rightHand = document.getElementById('righthand');
+const firebaseConfig = {
+    apiKey: "AIzaSyCtpbXYwmNqsx7ffFFhA6I9hYFjDbs6UsI",
+    authDomain: "clayofstories.firebaseapp.com",
+    projectId: "clayofstories",
+    storageBucket: "clayofstories.appspot.com",
+    messagingSenderId: "481158061383",
+    appId: "1:481158061383:web:fa342f66dfe5e8f4e58062"
+};
+firebase.initializeApp(firebaseConfig);
 
-    passwordField.addEventListener('focus', () => {
-        leftHand.classList.add('rotate');
-        rightHand.classList.add('rotate-right');
-    });
+const loginButton = document.getElementById('login');
 
-    passwordField.addEventListener('blur', () => {
-        leftHand.classList.remove('rotate');
-        rightHand.classList.remove('rotate-right');
-    });
+        // 登入事件
+        loginButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailaddress').value;
+            const password = document.getElementById('password').value;
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    const displayName = user.displayName || "User";
+                    alert(`Dear ${displayName}, Welcome Back!`);
+                    window.location.href = './membership.html';
+                })
+                .catch((error) => {
+                    alert('登入失敗: 您的帳號密碼有誤，請再確認!');
+                });
+        });
 
-    // togglePassword.addEventListener('click', function() {
-    //     const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    //     passwordField.setAttribute('type', type);
-
-    //     if (type === 'password') {
-    //         togglePassword.setAttribute('src', '../imagesAll/images/eye-off.png');
-    //         togglePassword.setAttribute('src', '../imagesAll/images/eye.png'); 
-    //     }
-    // });
-});

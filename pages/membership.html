@@ -137,20 +137,20 @@
             </div>
             <div id="customer" class="act-bar">
                 <div class="memberleft">
-                <div class="memberinfo">
-                    <p>Name</p>
-                    <input type="text" name="member-name" id="member-name" title="member-name" value="Coco">
+                    <div class="memberinfo">
+                        <p>Name</p>
+                        <input type="text" name="member-name" id="member-name" title="member-name" value="Coco">
+                    </div>
+                    <div class="memberinfo">
+                        <p>Birthday</p>
+                        <input type="text" name="member-name" id="member-name" title="member-name" value="2001/01/01">
+                    </div>
+                    <div class="memberinfo">
+                        <p>Gender</p>
+                        <input type="text" name="member-name" id="member-name" title="member-name" value="Female">
+                    </div>
                 </div>
-                <div class="memberinfo">
-                    <p>Birthday</p>
-                    <input type="text" name="member-name" id="member-name" title="member-name" value="2001/01/01">
-                </div>
-                <div class="memberinfo">
-                    <p>Gender</p>
-                    <input type="text" name="member-name" id="member-name" title="member-name" value="Female">
-                </div>
-                </div>
-                
+
                 <div class="memberright">
                     <div class="memberinfo">
                         <p>Phone</p>
@@ -158,30 +158,37 @@
                     </div>
                     <div class="memberinfo">
                         <p>Email</p>
-                        <input type="text" name="member-name" id="member-name" title="member-name" value="clayofstories@gmail.com">
+                        <input type="text" name="member-name" id="member-name" title="member-name"
+                            value="clayofstories@gmail.com">
                     </div>
                     <div class="memberinfo">
                         <p>Address</p>
-                        <input type="text" name="member-name" id="member-name" title="member-name" value="Taipei, Taiwan">
+                        <input type="text" name="member-name" id="member-name" title="member-name"
+                            value="Taipei, Taiwan">
                     </div>
                 </div>
             </div>
-            
+
             <div class="fin-bar">
                 <div class="confirm">
                     <div class="checkbox">
-                            <input type="checkbox" id="agreement" name="rule" value="rule">
-                            <label for="subscribe"><span>I want to receive the latest promotion information.</span></label>
+                        <input type="checkbox" id="agreement" name="rule" value="rule">
+                        <label for="subscribe"><span>I want to receive the latest promotion information.</span></label>
                     </div>
                     <div class="savebutton">
                         <button type="submit" class="button-confirm">
                             Save Changes
                         </button>
                     </div>
-                    <img src="../imagesAll/images/membership_flower.svg" alt="">
+                    <div class="savebutton">
+                        <button id="log-out" class="button-confirm">
+                            Log Out
+                        </button>
                     </div>
+                    <img src="../imagesAll/images/membership_flower.svg" alt="">
                 </div>
-                </div>
+            </div>
+            </div>
             </div>
         </section>
 
@@ -250,7 +257,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <!-- 自訂的js -->
     <script src="../js/index.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+    <script src="../js/member.js"></script>
 </body>
 
 </html>
